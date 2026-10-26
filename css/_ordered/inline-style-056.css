@@ -1,0 +1,49 @@
+
+/* تحسين وضوح لوحة السائق وتوازن المقاسات */
+#driverDashboardPage{background:#f3f6f2;color:#1f2a22;font-family:Tahoma,Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+#driverDashboardPage .mdd-topbar{height:64px;min-height:64px;padding-inline:14px;gap:10px}
+#driverDashboardPage .mdd-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:#f5f7f4;color:#26372b;font-size:22px;line-height:1;transition:background .15s}
+#driverDashboardPage .mdd-icon:active{background:#e8eee6}
+#driverDashboardPage .mdd-status{min-width:132px;height:42px;border-radius:14px;font-size:14px;letter-spacing:0;box-shadow:0 3px 8px #1e33200d}
+#driverDashboardPage .mdd-status i{width:8px;height:8px;flex:0 0 8px}
+#driverDashboardPage .mdd-status b{font-size:18px;line-height:1}
+#driverDashboardPage .mdd-main{padding:18px 14px 24px;scrollbar-width:thin;scrollbar-color:#d2dbd0 transparent}
+#driverDashboardPage .mdd-heading{margin-bottom:15px;gap:12px}
+#driverDashboardPage .mdd-heading small{font-size:11px;line-height:1.6;letter-spacing:.1px;color:#68766a}
+#driverDashboardPage .mdd-heading h1{font-size:23px;line-height:1.35;letter-spacing:-.25px;margin-top:3px}
+#driverDashboardPage #mddFilter{width:43px;height:43px;flex:0 0 43px;border-radius:14px;font-size:22px;box-shadow:0 2px 6px #14201406}
+#driverDashboardPage .mdd-hint{gap:10px;padding:12px 13px;margin-bottom:15px;border-radius:14px;font-size:12px;line-height:1.8;color:#58665a;box-shadow:0 2px 8px #14201404}
+#driverDashboardPage .mdd-hint i{width:9px;height:9px;flex:0 0 9px;box-shadow:0 0 0 3px #d8323714}
+#driverDashboardPage .mdd-hint i.online{box-shadow:0 0 0 3px #16834b18}
+#driverDashboardPage .mdd-rides{gap:12px}
+#driverDashboardPage .mdd-ride{padding:15px 14px 13px;border-radius:17px;border-color:#e2e9e0;box-shadow:0 4px 14px #17241707;transition:box-shadow .15s,border-color .15s}
+#driverDashboardPage .mdd-ride-top{gap:7px 8px;margin-bottom:13px;align-items:center}
+#driverDashboardPage .mdd-ride-top strong{font-size:26px;line-height:1.1;color:#1d442b;letter-spacing:-.4px}
+#driverDashboardPage .mdd-ride-top strong small{font-size:10px;letter-spacing:.15px}
+#driverDashboardPage .mdd-ride-top>span{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:#536354;background:#f2f6f0;border:1px solid #e8eee5;border-radius:9px;padding:7px 8px}
+#driverDashboardPage .mdd-ride-top label{font-size:10px;line-height:1.3;padding:6px 8px;border-radius:9px;white-space:nowrap}
+#driverDashboardPage .mdd-route{position:relative;gap:12px;padding:0 2px 14px;min-height:75px}
+#driverDashboardPage .mdd-route>div{position:relative;display:grid;gap:3px;padding-right:20px;min-width:0}
+#driverDashboardPage .mdd-route>div:before{content:"";position:absolute;right:4px;top:7px;bottom:9px;width:2px;border-radius:2px;background:#dce8dc}
+#driverDashboardPage .mdd-route>div:after{content:"";position:absolute;right:0;top:5px;width:10px;height:10px;border:2px solid #00FF66;border-radius:50%;background:#fff;box-shadow:0 0 0 2px #e9f6eb}
+#driverDashboardPage .mdd-route small{font-size:10px;line-height:1.5;color:#778477;font-weight:700}
+#driverDashboardPage .mdd-route b{font-size:14px;line-height:1.7;color:#253329;font-weight:800;overflow-wrap:anywhere;word-break:normal}
+#driverDashboardPage .mdd-view{height:40px;border-radius:11px;background:#f3faf3;border-color:#d5e8d5;font-size:12px;font-weight:800;letter-spacing:0;transition:background .15s,transform .15s}
+#driverDashboardPage .mdd-view:active{transform:scale(.99);background:#e7f5e8}
+#driverDashboardPage .mdd-nav{min-height:72px;padding:7px 8px calc(7px + env(safe-area-inset-bottom));gap:4px}
+#driverDashboardPage .mdd-nav button{min-width:0;gap:4px;border-radius:12px;font-size:10.5px;line-height:1.35;padding:5px 2px;color:#737f74}
+#driverDashboardPage .mdd-nav button span{width:31px;height:29px;display:grid;place-items:center;font-size:21px;line-height:1;border-radius:9px;background:#f5f7f4;color:#59685c}
+#driverDashboardPage .mdd-nav button.active{color:#00FF66;background:#edf7ed}
+#driverDashboardPage .mdd-nav button.active span{background:#dff1df;color:#00FF66}
+#driverDashboardPage .mdd-toast{font-size:13px;line-height:1.7;padding:13px 14px;border:1px solid #ffffff20;box-shadow:0 8px 24px #111a111f}
+@media(max-width:380px){
+ #driverDashboardPage .mdd-main{padding:14px 11px 20px}
+ #driverDashboardPage .mdd-heading h1{font-size:21px}
+ #driverDashboardPage .mdd-ride{padding:13px 12px 12px}
+ #driverDashboardPage .mdd-ride-top strong{font-size:24px}
+ #driverDashboardPage .mdd-route b{font-size:13.5px}
+ #driverDashboardPage .mdd-nav{padding-inline:5px;gap:2px}
+ #driverDashboardPage .mdd-nav button{font-size:9.5px}
+}
+@media(min-width:700px){#driverDashboardPage .mdd-main{width:min(620px,100%);padding-inline:22px}#driverDashboardPage .mdd-ride{padding:17px 17px 14px}}
+@media(prefers-reduced-motion:reduce){#driverDashboardPage *{transition:none!important;scroll-behavior:auto!important}}

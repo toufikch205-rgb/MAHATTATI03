@@ -1,0 +1,35 @@
+
+#vehicleRegistrationPage{position:fixed;inset:0;z-index:5102;display:none;flex-direction:column;background:#fbfcf8;color:#20231d;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow:auto;padding:calc(env(safe-area-inset-top) + 8px) 0 calc(env(safe-area-inset-bottom) + 14px);box-sizing:border-box}
+#vehicleRegistrationPage.open{display:flex}
+#vehicleRegistrationPage *{box-sizing:border-box}
+#vehicleRegistrationPage .dsp-header{height:76px;flex:none;border-bottom:1px solid #edf0e8;box-shadow:0 2px 8px rgba(28,38,16,.035);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(22px,5vw,30px)}
+#vehicleRegistrationPage .dsp-header button{border:0;background:transparent;padding:10px 0;font:600 clamp(16px,4vw,20px) system-ui;color:#20231d}
+#vehicleRegistrationPage #vehicleRegistrationHelp{color:#00FF66}
+#vehicleRegistrationPage .dsp-main{padding:clamp(54px,11vh,100px) clamp(22px,5vw,30px) 20px;flex:1;min-height:0}
+#vehicleRegistrationPage h1{font-size:clamp(27px,6.4vw,38px);line-height:1.35;letter-spacing:-.4px;margin:0 0 clamp(28px,5vh,42px);font-weight:800;color:#20231d}
+#vehicleRegistrationPage #vehicleRegistrationForm{width:100%}
+#vehicleRegistrationPage .vr-intro{margin:-8px 0 24px;color:#70766a;font-size:clamp(15px,3.8vw,18px);line-height:1.65;font-weight:450}
+#vehicleRegistrationPage .vr-options{display:grid;grid-template-columns:1fr;gap:14px;width:100%}
+#vehicleRegistrationPage .vr-option{width:100%;min-height:88px;display:flex;align-items:center;gap:15px;text-align:right;direction:rtl;padding:17px 18px;border:1.5px solid #e5e8df;border-radius:20px;background:#f5f6f3;color:#20231d;box-shadow:0 3px 10px rgba(28,38,16,.035);font:650 clamp(18px,4.8vw,23px)/1.4 system-ui;transition:border-color .18s,background .18s,transform .18s;cursor:pointer}
+#vehicleRegistrationPage .vr-option:active{transform:scale(.99)}
+#vehicleRegistrationPage .vr-option .vr-icon{width:48px;height:48px;flex:none;border-radius:15px;display:grid;place-items:center;background:#e8ebdf;color:#454b3e}
+#vehicleRegistrationPage .vr-option .vr-icon svg{width:27px;height:27px;display:block}
+#vehicleRegistrationPage .vr-option .vr-option-text{flex:1}
+#vehicleRegistrationPage .vr-option .vr-check{width:23px;height:23px;flex:none;border:2px solid #cbd0c3;border-radius:50%;display:grid;place-items:center;background:#fff}
+#vehicleRegistrationPage .vr-option .vr-check::after{content:'';width:9px;height:9px;border-radius:50%;background:transparent}
+#vehicleRegistrationPage .vr-option.selected{border-color:#00FF66;background:#f8ffe5;box-shadow:0 0 0 2px rgba(189,240,24,.15)}
+#vehicleRegistrationPage .vr-option.selected .vr-icon{background:#00FF66;color:#20231d}
+#vehicleRegistrationPage .vr-option.selected .vr-check{border-color:#20231d}
+#vehicleRegistrationPage .vr-option.selected .vr-check::after{background:#20231d}
+#vehicleRegistrationPage .vr-select-wrap{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+#vehicleRegistrationPage .vr-select-wrap span{font-size:16px}
+#vehicleRegistrationPage .vr-select-wrap select{width:1px;height:1px;opacity:0}
+#vehicleRegistrationPage .dsp-footer{flex:none;padding:12px clamp(22px,5vw,30px) 0;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end}
+#vehicleRegistrationPage .dsp-progress-label{font-size:clamp(22px,5.3vw,29px);font-weight:750;text-align:right;grid-column:2;grid-row:1;color:#25291f}
+#vehicleRegistrationPage .dsp-progress{height:7px;background:#e5e8df;border-radius:20px;overflow:hidden;grid-column:1;grid-row:2;align-self:center}
+#vehicleRegistrationPage .dsp-progress span{display:block;height:100%;background:#00FF66;border-radius:20px;margin-right:0}
+#vehicleRegistrationPage .dsp-actions{grid-column:1 / -1;display:flex;gap:10px;align-items:center;margin-top:4px}
+#vehicleRegistrationPage .dsp-actions button{height:clamp(66px,9vh,78px);border:0;border-radius:24px;font:750 clamp(22px,5.2vw,29px) system-ui}
+#vehicleRegistrationPage #vehicleRegistrationNext{flex:1;background:#00FF66;color:#171717}
+#vehicleRegistrationPage #vehicleRegistrationBack{width:clamp(72px,16vw,100px);background:#f2f3ef;color:#333}
+@media(max-height:700px){#vehicleRegistrationPage .dsp-header{height:68px}#vehicleRegistrationPage .dsp-main{padding-top:34px}#vehicleRegistrationPage h1{margin-bottom:22px}#vehicleRegistrationPage .dsp-actions button{height:58px}}

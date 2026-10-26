@@ -1,0 +1,68 @@
+
+/* Trip selection screen: consistent spacing, readable route rows, and safe bottom actions */
+#tripMapPage .trip-top-card{
+  background:rgba(255,255,255,.98)!important;
+  border:1px solid rgba(20,30,20,.06)!important;
+  box-shadow:0 8px 26px rgba(20,30,20,.10)!important;
+  padding:clamp(10px,2.4vh,16px) clamp(12px,3.5vw,20px)!important;
+  gap:clamp(2px,.7vh,7px)!important;
+}
+#tripMapPage .trip-location-row{
+  min-height:clamp(48px,7.5vh,62px)!important;
+  line-height:1.45!important;
+  gap:clamp(8px,2.4vw,14px)!important;
+}
+#tripMapPage .trip-location-row .trip-row-text{
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+}
+#tripMapPage .trip-location-row .trip-row-icon{color:#171917!important;flex-shrink:0!important}
+#tripMapPage .trip-location-row .trip-row-action{
+  width:38px!important;height:38px!important;min-width:38px!important;flex:0 0 38px!important;
+  border-radius:50%!important;background:#f8faf8!important;color:#171917!important;
+}
+#tripMapPage .trip-back{box-shadow:0 3px 12px rgba(20,30,20,.08)!important;background:#f1f3ef!important}
+#tripMapPage .trip-bottom{
+  padding:clamp(10px,2vh,16px) clamp(12px,3vw,20px) calc(12px + env(safe-area-inset-bottom))!important;
+  border:1px solid rgba(20,30,20,.05)!important;
+  box-shadow:0 -7px 26px rgba(20,30,20,.09)!important;
+  max-height:58dvh!important;overflow-y:auto!important;overscroll-behavior:contain!important;
+}
+#tripMapPage .fare-card{
+  display:grid!important;grid-template-columns: minmax(0,1fr) auto auto!important;
+  align-items:center!important;gap:clamp(8px,2.5vw,14px)!important;
+  padding:clamp(10px,2.5vw,16px)!important;background:#fff!important;
+  border:1px solid #E5E7EB!important;border-radius:24px!important;
+}
+#tripMapPage .fare-info{min-width:0!important}
+#tripMapPage .fare-title{line-height:1.4!important}
+#tripMapPage .fare-amount{display:inline-flex!important;align-items:center!important;gap:4px!important;margin-top:6px!important;padding:7px 12px!important;border:1px solid rgba(0,255,102,.35)!important;border-radius:15px!important;background:rgba(0,255,102,.07)!important;color:#00FF66!important;font-size:clamp(17px,4.8vw,23px)!important;font-weight:800!important;white-space:nowrap!important}
+#tripMapPage .fare-sub{line-height:1.5!important;margin-top:5px!important}
+#tripMapPage .fare-car{font-size:clamp(34px,9vw,46px)!important;line-height:1!important}
+#tripMapPage .fare-edit{width:42px!important;height:42px!important;background:#f3f5f1!important;border:1px solid #edf0ea!important}
+#tripMapPage .suggest-fare{gap:8px!important;padding:clamp(8px,1.8vh,13px) 0 3px!important;line-height:1.4!important}
+#tripMapPage .suggest-fare span{flex:1;min-width:0}
+#tripMapPage .fare-step{width:42px!important;height:42px!important;background:#f8faf8!important;color:#777!important;font-weight:600!important}
+#tripMapPage .trip-bottom-actions{display:grid!important;grid-template-columns:48px minmax(0,1fr) 32px!important;gap:clamp(8px,2.5vw,14px)!important;margin-top:clamp(8px,1.8vh,14px)!important;padding-top:clamp(10px,2vh,15px)!important;align-items:center!important}
+#tripMapPage .trip-filter{width:44px!important;height:44px!important;border-radius:14px!important;background:#f7f9f7!important;color:#171917!important;font-size:25px!important;display:grid!important;place-items:center!important}
+#tripMapPage .trip-search-offers{width:100%!important;min-width:0!important;min-height:clamp(56px,8vh,72px)!important;border-radius:20px!important;background:#00FF66!important;color:#101710!important;box-shadow:0 5px 14px rgba(0,255,102,.13)!important;line-height:1.2!important;padding:8px 10px!important}
+#tripMapPage .trip-cash{display:grid!important;place-items:center!important;width:30px!important;height:38px!important;border-radius:10px!important;color:#00FF66!important;font-size:24px!important}
+body.trip-page-active .map-controls{bottom:calc(min(57dvh, 460px) + 14px + env(safe-area-inset-bottom))!important}
+@media(max-height:700px){
+ #tripMapPage .trip-bottom{max-height:62dvh!important;padding-top:8px!important}
+ #tripMapPage .trip-location-row{min-height:clamp(42px,6.7vh,50px)!important}
+ #tripMapPage .fare-card{padding:9px!important}
+ #tripMapPage .suggest-fare{padding-top:7px!important}
+ #tripMapPage .trip-bottom-actions{margin-top:7px!important;padding-top:8px!important}
+ #tripMapPage .trip-search-offers{min-height:52px!important}
+}
+@media(max-width:360px){
+ #tripMapPage .trip-top-card{left:10px!important;right:10px!important}
+ #tripMapPage .trip-location-row{font-size:13px!important;gap:6px!important}
+ #tripMapPage .trip-location-row .trip-row-icon{width:23px!important;flex-basis:23px!important;font-size:21px!important}
+ #tripMapPage .fare-card{grid-template-columns:minmax(0,1fr) auto auto!important;gap:6px!important}
+ #tripMapPage .fare-edit{width:35px!important;height:35px!important}
+ #tripMapPage .trip-bottom-actions{grid-template-columns:40px minmax(0,1fr) 24px!important;gap:6px!important}
+ #tripMapPage .trip-filter{width:38px!important;height:40px!important}
+ #tripMapPage .trip-search-offers{font-size:17px!important}
+}

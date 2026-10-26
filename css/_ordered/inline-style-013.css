@@ -1,0 +1,15 @@
+
+/* Keep the city-car illustration visually the same scale as the intercity car */
+#carService .trip-emoji.trip-car-photo{
+  width:100%!important;max-width:112px!important;height:35px!important;flex:0 0 35px!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  padding:0!important;overflow:hidden!important;background:transparent!important;border:0!important;box-shadow:none!important;border-radius:8px!important;
+}
+#carService .trip-emoji.trip-car-photo img{
+  display:block!important;width:auto!important;max-width:100%!important;height:30px!important;max-height:30px!important;
+  object-fit:contain!important;object-position:center!important;flex:0 1 auto!important;min-width:0!important;
+}
+@media(max-width:360px){
+  #carService .trip-emoji.trip-car-photo{height:31px!important;flex-basis:31px!important;max-width:100px!important}
+  #carService .trip-emoji.trip-car-photo img{height:27px!important;max-height:27px!important}
+}

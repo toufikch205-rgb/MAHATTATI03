@@ -1,0 +1,13 @@
+
+/* Elegant destination prompt: soft gray gradient, bold black text, neon green icon */
+.destination-search{
+  background:linear-gradient(135deg,#FFFFFF 0%,#F4F5F5 48%,#E6E8E8 100%)!important;
+  color:#000000!important;
+  border:1px solid #D9DDDA!important;
+  box-shadow:0 5px 16px rgba(20,25,22,.10),inset 0 1px 0 rgba(255,255,255,.95)!important;
+  gap:14px!important; padding-inline:clamp(14px,4vw,22px)!important;
+}
+#destinationPrompt{color:#000000!important;font-weight:850!important;font-size:clamp(21px,5.8vw,30px)!important;letter-spacing:.1px!important;line-height:1.25!important;flex:1 1 auto!important;min-width:0!important;text-align:center!important;}
+.destination-search .search-icon{color:#00FF66!important;background:transparent!important;border-color:transparent!important;text-shadow:0 1px 2px rgba(0,0,0,.12)!important;flex:0 0 auto!important;}
+.destination-search:active,.destination-search:focus-visible{background:linear-gradient(135deg,#FFFFFF 0%,#F1F4F1 48%,#E2E8E3 100%)!important;border-color:#00FF66!important;box-shadow:0 0 0 3px rgba(0,255,102,.14),0 5px 16px rgba(20,25,22,.10)!important;}
+@media(max-width:360px){#destinationPrompt{font-size:clamp(19px,5.5vw,23px)!important}.destination-search{gap:9px!important;padding-inline:12px!important}}

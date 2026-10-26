@@ -1,0 +1,5 @@
+
+/* Clear A/B labels for pickup and destination markers */
+.route-point-letter{position:absolute;top:-3px;right:-2px;min-width:19px;height:19px;padding:0 3px;border:2px solid #fff;border-radius:11px;display:flex;align-items:center;justify-content:center;font:800 11px/1 Arial,sans-serif;color:#fff;box-shadow:0 1px 5px #0004;box-sizing:border-box;z-index:5}
+.route-point-a{background:#00a957}
+.route-point-b{background:#e53935}

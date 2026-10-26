@@ -1,0 +1,23 @@
+
+#driverPermissionsPage{position:fixed;inset:0;z-index:5300;display:none;flex-direction:column;overflow:auto;background:#f7f8f5;color:#20231d;font-family:Tahoma,"Noto Sans Arabic",Arial,sans-serif;padding:calc(env(safe-area-inset-top) + 0px) 0 calc(env(safe-area-inset-bottom) + 18px);box-sizing:border-box}
+#driverPermissionsPage.open{display:flex}#driverPermissionsPage *{box-sizing:border-box}
+#driverPermissionsPage .dperm-header{height:60px;min-height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:#fff;border-bottom:1px solid #e9ece5}
+#driverPermissionsPage .dperm-header button{border:0;background:transparent;color:#20231d;font:700 16px Tahoma,Arial,sans-serif;padding:9px 10px;border-radius:10px;cursor:pointer}
+#driverPermissionsPage #driverPermissionsX{font-size:20px;min-width:40px}
+#driverPermissionsPage .dperm-main{width:100%;max-width:560px;margin:0 auto;padding:25px 20px 22px}
+#driverPermissionsPage .dperm-app-mark{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:#00FF66;color:#20231d;font:bold 22px Arial,sans-serif;margin-bottom:17px;box-shadow:0 4px 12px #b7d96a40}
+#driverPermissionsPage h1{font-size:clamp(24px,6vw,30px);line-height:1.5;font-weight:800;margin:0 0 10px;letter-spacing:0}
+#driverPermissionsPage .dperm-lead{font-size:15px;line-height:1.9;color:#686e62;margin:0 0 22px}
+#driverPermissionsPage .dperm-lead strong{color:#242820;direction:ltr;unicode-bidi:isolate;display:inline-block}
+#driverPermissionsPage .dperm-list{display:flex;flex-direction:column;gap:10px}
+#driverPermissionsPage .dperm-item{display:flex;align-items:center;gap:12px;min-height:76px;padding:13px 12px;background:#fff;border:1px solid #e7ebe1;border-radius:16px;box-shadow:0 3px 10px #26341508}
+#driverPermissionsPage .dperm-icon{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;border-radius:13px;background:#f0f7df;color:#00FF66;font-size:22px;font-weight:700}
+#driverPermissionsPage .dperm-copy{min-width:0;flex:1;display:flex;flex-direction:column;gap:4px}
+#driverPermissionsPage .dperm-copy strong{font-size:clamp(13px,3.7vw,16px);line-height:1.6;font-weight:750}
+#driverPermissionsPage .dperm-copy small{font-size:12px;line-height:1.55;color:#7b8175}
+#driverPermissionsPage .dperm-state{color:#8b9185;font-size:26px;padding:0 4px}
+#driverPermissionsPage .dperm-setting{border:0;border-radius:11px;background:#00FF66;color:#20231d;font:800 13px Tahoma,Arial,sans-serif;padding:10px 13px;white-space:nowrap;cursor:pointer}
+#driverPermissionsPage .dperm-number{width:26px;height:26px;display:grid;place-items:center;border-radius:50%;background:#f0f2ec;color:#6f7569;font-weight:800}
+#driverPermissionsPage .dperm-note{margin:17px 2px 16px;color:#777d71;font-size:12px;line-height:1.9}
+#driverPermissionsPage .dperm-done{width:100%;min-height:54px;border:0;border-radius:15px;background:#00FF66;color:#20231d;font:800 17px Tahoma,Arial,sans-serif;cursor:pointer}
+@media(max-width:370px){#driverPermissionsPage .dperm-main{padding:20px 14px}#driverPermissionsPage .dperm-item{gap:9px;padding:11px 9px}#driverPermissionsPage .dperm-icon{width:35px;height:35px;flex-basis:35px}#driverPermissionsPage .dperm-copy strong{font-size:13px}}

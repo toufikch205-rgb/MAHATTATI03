@@ -1,0 +1,30 @@
+
+#mahattatiAccountSettings{position:fixed;inset:0;z-index:3200;display:none;background:#f7f9f7;color:#172018;direction:rtl;overflow:auto;padding:calc(12px + env(safe-area-inset-top)) 14px calc(22px + env(safe-area-inset-bottom));font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
+#mahattatiAccountSettings.open{display:block}
+#mahattatiAccountSettings *{box-sizing:border-box}
+#mahattatiAccountSettings .mas-shell{width:100%;max-width:520px;margin:0 auto}
+#mahattatiAccountSettings .mas-header{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;margin:0 0 18px}
+#mahattatiAccountSettings .mas-back{width:42px;height:42px;border:1px solid #e3e9e3;border-radius:14px;background:#fff;color:#172018;font-size:27px;line-height:1;cursor:pointer}
+#mahattatiAccountSettings h1{font-size:clamp(22px,5.8vw,28px);line-height:1.25;margin:0;font-weight:800;text-align:center}
+#mahattatiAccountSettings .mas-header-spacer{width:42px}
+#mahattatiAccountSettings .mas-section-label{margin:18px 4px 8px;font-size:13px;font-weight:800;color:#758075}
+#mahattatiAccountSettings .mas-card{background:#fff;border:1px solid #e6ebe6;border-radius:18px;overflow:hidden;box-shadow:0 5px 18px rgba(22,40,22,.045)}
+#mahattatiAccountSettings .mas-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:62px;padding:12px 14px;border-bottom:1px solid #eef1ee}
+#mahattatiAccountSettings .mas-row:last-child{border-bottom:0}
+#mahattatiAccountSettings .mas-row-main{display:flex;align-items:center;gap:11px;min-width:0;flex:1}
+#mahattatiAccountSettings .mas-icon{width:36px;height:36px;flex:0 0 36px;border-radius:12px;display:grid;place-items:center;background:#effff5;color:#00FF66;font-size:18px;font-weight:700}
+#mahattatiAccountSettings .mas-labels{min-width:0;display:flex;flex-direction:column;gap:3px}
+#mahattatiAccountSettings .mas-label{font-size:14px;font-weight:750;line-height:1.4;overflow-wrap:anywhere}
+#mahattatiAccountSettings .mas-value{font-size:12px;color:#778077;line-height:1.4;overflow-wrap:anywhere}
+#mahattatiAccountSettings .mas-action{flex:0 0 auto;border:1px solid #dfe7df;border-radius:11px;background:#fff;color:#00FF66;font-size:12px;font-weight:750;padding:9px 11px;min-height:36px;cursor:pointer}
+#mahattatiAccountSettings select{max-width:135px;min-width:100px;padding:9px 8px;border:1px solid #dfe7df;border-radius:11px;background:#fff;color:#172018;font:600 12px system-ui;outline-color:#00FF66}
+#mahattatiAccountSettings .mas-switches{display:flex;gap:5px;background:#f0f3f0;padding:4px;border-radius:12px;flex:0 0 auto}
+#mahattatiAccountSettings .mas-switches button{border:0;background:transparent;color:#5d685e;border-radius:9px;padding:8px 10px;font-size:12px;font-weight:750;cursor:pointer}
+#mahattatiAccountSettings .mas-switches button.active{background:#00FF66;color:#10351d;box-shadow:0 2px 7px rgba(0,0,0,.08)}
+#mahattatiAccountSettings .mas-full-action{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:right;border:0;background:#fff;padding:14px;min-height:58px;color:#172018;font:750 14px system-ui;cursor:pointer;border-bottom:1px solid #eef1ee}
+#mahattatiAccountSettings .mas-full-action:last-child{border-bottom:0}
+#mahattatiAccountSettings .mas-full-action .mas-arrow{color:#8b968b;font-size:20px}
+#mahattatiAccountSettings .mas-full-action.danger{color:#d92d20}
+#mahattatiAccountSettings .mas-version{color:#7b857b;font-size:12px;font-weight:600}
+#mahattatiAccountSettings .mas-note{font-size:11px;color:#7b857b;line-height:1.6;margin:12px 5px 0}
+@media(max-width:360px){#mahattatiAccountSettings{padding-inline:10px}#mahattatiAccountSettings .mas-row{padding:10px 9px;gap:7px}#mahattatiAccountSettings .mas-icon{width:32px;height:32px;flex-basis:32px}#mahattatiAccountSettings .mas-action{padding:8px 9px}#mahattatiAccountSettings select{min-width:88px;max-width:108px;padding:8px 5px}#mahattatiAccountSettings .mas-switches button{padding:7px 8px}}

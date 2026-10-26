@@ -1,5 +1,3 @@
-/* Original inline style block 3 from index.html; order intentionally preserved. */
-
 /* Refined ride-type cards: larger clean car photo, balanced label, consistent layout */
 .trip-types{align-items:stretch!important;gap:12px!important}
 .trip-type{min-height:116px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:7px!important;padding:9px 8px!important;border:1px solid #E5E7EB!important;border-radius:17px!important;background:#fff!important;color:#20251c!important;box-shadow:0 3px 12px rgba(25,40,12,.045)!important;overflow:hidden}

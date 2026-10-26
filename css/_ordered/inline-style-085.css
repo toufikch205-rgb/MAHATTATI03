@@ -1,0 +1,32 @@
+
+/* Compact, balanced agent registration page for a single mobile viewport */
+#mahattatiAgentJoin{box-sizing:border-box;overflow:hidden!important;padding:calc(4px + env(safe-area-inset-top)) 16px calc(5px + env(safe-area-inset-bottom))!important}
+#mahattatiAgentJoin *{box-sizing:border-box}
+#mahattatiAgentJoin .maj-wrap{height:100%!important;min-height:0!important;display:flex!important;flex-direction:column!important;gap:0!important}
+#mahattatiAgentJoin .maj-top{flex:0 0 auto!important;min-height:32px!important;padding:0 0 4px!important}
+#mahattatiAgentJoin .maj-brand{font-size:17px!important}
+#mahattatiAgentJoin .maj-close{width:30px!important;height:30px!important;font-size:22px!important}
+#mahattatiAgentJoin .maj-hero{flex:0 0 auto!important;padding:clamp(7px,1.5vh,13px) 14px!important;border-radius:24px!important}
+#mahattatiAgentJoin .maj-emblem{width:clamp(42px,7vh,64px)!important;height:clamp(42px,7vh,64px)!important;margin:0 auto 5px!important;border-radius:18px!important;font-size:27px!important}
+#mahattatiAgentJoin h1{font-size:clamp(20px,4.8vw,27px)!important;line-height:1.2!important;margin:0 0 5px!important}
+#mahattatiAgentJoin .maj-intro{font-size:clamp(12px,2.1vh,15px)!important;line-height:1.45!important;margin:0!important}
+#mahattatiAgentJoin .maj-section-title{flex:0 0 auto!important;font-size:clamp(16px,2.8vh,21px)!important;line-height:1.25!important;margin:clamp(8px,1.8vh,15px) 2px clamp(5px,1vh,9px)!important}
+#mahattatiAgentJoin .maj-benefits{flex:0 0 auto!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;align-content:start!important}
+#mahattatiAgentJoin .maj-benefit{min-width:0!important;min-height:0!important;padding:clamp(8px,1.5vh,13px) 11px!important;border-radius:22px!important}
+#mahattatiAgentJoin .maj-benefit:last-child{grid-column:1/-1!important;display:grid!important;grid-template-columns:34px 1fr!important;column-gap:8px!important;align-items:center!important}
+#mahattatiAgentJoin .maj-benefit-icon{height:clamp(24px,4vh,34px)!important;font-size:clamp(22px,3.8vh,29px)!important;margin:0 0 4px!important}
+#mahattatiAgentJoin .maj-benefit:last-child .maj-benefit-icon{grid-row:1/3;align-self:center;margin:0!important}
+#mahattatiAgentJoin .maj-benefit h2{font-size:clamp(13px,2.4vh,17px)!important;line-height:1.25!important;margin:0 0 4px!important}
+#mahattatiAgentJoin .maj-benefit p{font-size:clamp(11px,1.9vh,13px)!important;line-height:1.4!important;margin:0!important}
+#mahattatiAgentJoin .maj-spacer{flex:1 1 auto!important;min-height:5px!important}
+#mahattatiAgentJoin .maj-register{flex:0 0 auto!important;width:100%!important;padding:clamp(9px,1.7vh,14px) 14px!important;border-radius:20px!important;font-size:clamp(17px,3vh,22px)!important;line-height:1.2!important}
+#mahattatiAgentJoin .maj-foot{flex:0 0 auto!important;font-size:10px!important;line-height:1.3!important;margin:5px 0 0!important;text-align:center!important}
+@media(max-height:680px){
+ #mahattatiAgentJoin{padding-top:3px!important;padding-bottom:3px!important}
+ #mahattatiAgentJoin .maj-top{min-height:27px!important}
+ #mahattatiAgentJoin .maj-hero{padding:5px 12px!important}
+ #mahattatiAgentJoin .maj-section-title{margin:6px 2px 4px!important}
+ #mahattatiAgentJoin .maj-benefit{padding:6px 9px!important}
+ #mahattatiAgentJoin .maj-spacer{min-height:2px!important}
+ #mahattatiAgentJoin .maj-foot{margin-top:3px!important}
+}

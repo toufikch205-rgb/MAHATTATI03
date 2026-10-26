@@ -1,4 +1,3 @@
-/* Extracted inline script 13 from index.html; original load position preserved. */
 (function(){
  function setup(){
   const box=document.querySelector('#mddRideRequestPage .mdd-request-offer');

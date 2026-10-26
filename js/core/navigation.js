@@ -1,4 +1,3 @@
-/* Extracted inline script 8 from index.html; original load position preserved. */
 (function(){
   function byId(id){return document.getElementById(id)}
   function openRequestPage(card){

@@ -1,0 +1,2 @@
+/* Extracted inline script 1 from index.html; original load position preserved. */
+(()=>{let timer;const glow=()=>{document.documentElement.classList.add('screen-touch-glow');clearTimeout(timer);timer=setTimeout(()=>document.documentElement.classList.remove('screen-touch-glow'),420)};document.addEventListener('pointerdown',glow,{passive:true});document.addEventListener('keydown',e=>{if(['Enter',' ','Escape'].includes(e.key))glow()});})();

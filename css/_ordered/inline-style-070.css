@@ -1,0 +1,11 @@
+
+/* Compact, balanced trust/car illustration in the promo card */
+.promo-card{min-height:118px!important;align-items:stretch!important;gap:8px!important}
+.promo-copy{padding:13px 13px!important;min-width:0!important}
+.promo-copy strong{font-size:clamp(14px,3.8vw,17px)!important;line-height:1.35!important}
+.promo-copy p{font-size:12px!important;line-height:1.4!important;margin:4px 0 8px!important}
+.promo-copy button{padding:8px 13px!important;font-size:12px!important;border-radius:10px!important}
+.promo-art.promo-car-image{width:27%!important;min-width:78px!important;max-width:112px!important;flex:0 0 27%!important;padding:8px!important}
+.promo-art .promo-car-photo{width:100%!important;height:76%!important;min-height:0!important;max-height:92px!important;object-fit:contain!important;object-position:center!important}
+.promo-art.promo-car-image span{top:5px!important;right:5px!important;width:21px!important;height:21px!important;font-size:12px!important}
+@media(max-width:360px){.promo-card{min-height:108px!important;gap:5px!important}.promo-copy{padding:10px!important}.promo-art.promo-car-image{min-width:68px!important;padding:5px!important}.promo-art .promo-car-photo{height:70%!important}.promo-copy p{font-size:11px!important}}

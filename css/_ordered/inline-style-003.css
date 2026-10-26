@@ -1,0 +1,10 @@
+/* Original inline style block 3 from index.html; order intentionally preserved. */
+
+/* Refined ride-type cards: larger clean car photo, balanced label, consistent layout */
+.trip-types{align-items:stretch!important;gap:12px!important}
+.trip-type{min-height:116px!important;display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:7px!important;padding:9px 8px!important;border:1px solid #E5E7EB!important;border-radius:17px!important;background:#fff!important;color:#20251c!important;box-shadow:0 3px 12px rgba(25,40,12,.045)!important;overflow:hidden}
+.trip-type.active{border:2px solid #00FF66!important;box-shadow:0 4px 14px rgba(100,140,20,.12)!important}
+.trip-emoji.trip-car-photo{width:100%!important;max-width:160px!important;height:64px!important;flex:0 0 64px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;background:#fff!important;border:0!important;border-radius:10px!important;padding:0!important}
+.trip-emoji.trip-car-photo img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important}
+.trip-type #carTitle,.trip-type #intercityTitle{display:block!important;font-size:13px!important;font-weight:800!important;line-height:1.3!important;text-align:center!important;white-space:normal!important}
+@media(max-width:360px){.trip-type{min-height:102px!important;padding:7px 4px!important}.trip-emoji.trip-car-photo{height:54px!important;flex-basis:54px!important;max-width:140px!important}.trip-type #carTitle,.trip-type #intercityTitle{font-size:12px!important}}

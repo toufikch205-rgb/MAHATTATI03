@@ -1,0 +1,45 @@
+
+/* Fix the ride-offers sheet on mobile: stable viewport height, readable spacing and visible driver results. */
+#requestSentModal.request-sent-backdrop{
+  position:fixed!important;inset:0!important;z-index:99999!important;
+  display:none;align-items:flex-end;justify-content:center;
+  padding:0!important;background:rgba(18,24,18,.32);
+  -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+  overflow:hidden;overscroll-behavior:contain;
+}
+#requestSentModal.request-sent-backdrop.open{display:flex!important}
+#requestSentModal .request-sent-card{
+  box-sizing:border-box;width:100%;max-width:560px;
+  height:auto;min-height:0;max-height:88dvh;max-height:88vh;
+  overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;
+  padding:12px 18px calc(18px + env(safe-area-inset-bottom));
+  border-radius:28px 28px 0 0;background:#fff;
+  -webkit-overflow-scrolling:touch;text-align:initial;
+}
+#requestSentModal .search-driver-banner{width:100%;box-sizing:border-box;margin:0 0 12px;min-height:58px}
+#requestSentModal .search-progress-grabber{margin:0 auto 14px}
+#requestSentModal .search-progress-heading{align-items:flex-start}
+#requestSentModal .search-progress-heading>div{min-width:0;flex:1}
+#requestSentModal .search-progress-heading p{overflow-wrap:anywhere}
+#requestSentModal .search-progress-track{margin-bottom:12px}
+#requestSentModal .search-fare-control{margin-bottom:10px}
+#requestSentModal #requestSentOkay{display:block;width:100%;position:relative}
+#requestSentModal .search-auto-accept,
+#requestSentModal .search-cash-row,
+#requestSentModal .search-route-card{box-sizing:border-box;width:100%}
+#requestSentModal #availableDriversResults{
+  max-height:19vh!important;overflow-y:auto!important;overscroll-behavior:contain;
+  border-radius:14px;
+}
+#requestSentModal #availableDriversResults>div{box-sizing:border-box;max-width:100%;overflow-wrap:anywhere}
+@media(max-height:740px){
+ #requestSentModal .request-sent-card{max-height:91dvh;max-height:91vh;padding-top:9px}
+ #requestSentModal .search-progress-grabber{margin-bottom:9px}
+ #requestSentModal .search-progress-heading p{margin-bottom:7px}
+ #requestSentModal .search-fare-control button{width:40px;height:40px;flex-basis:40px}
+ #requestSentModal #availableDriversResults{max-height:15vh!important}
+}
+@media(min-width:600px){
+ #requestSentModal.request-sent-backdrop{align-items:center;padding:18px!important}
+ #requestSentModal .request-sent-card{max-height:88vh;border-radius:28px}
+}

@@ -1,5 +1,3 @@
-/* Original inline style block 2 from index.html; order intentionally preserved. */
-
 /* Responsive layout refinement for the dedicated "Suggest your fare" screen */
 #suggestFarePage{box-sizing:border-box;min-height:100vh;min-height:100dvh;gap:clamp(8px,1.25dvh,14px);padding:calc(8px + env(safe-area-inset-top)) 0 calc(12px + env(safe-area-inset-bottom));overflow-x:hidden}
 #suggestFarePage *,#suggestFarePage *::before,#suggestFarePage *::after{box-sizing:border-box}

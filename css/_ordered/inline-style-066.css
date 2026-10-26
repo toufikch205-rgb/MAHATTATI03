@@ -1,0 +1,8 @@
+
+#mahattatiLiveDispatch{margin:14px 0;padding:14px;border:1px solid #dfe9e1;border-radius:18px;background:#fff;color:#23352a;direction:rtl}
+#mahattatiLiveDispatch h3{margin:0 0 8px;font-size:18px}#mahattatiLiveDispatch .mld-note{font-size:12px;color:#69786d;line-height:1.7;margin:4px 0 12px}
+#mahattatiLiveDispatch .mld-card{padding:12px;margin:9px 0;border:1px solid #e5ece6;border-radius:14px;background:#f9fcf9}
+#mahattatiLiveDispatch .mld-route{font-weight:750;line-height:1.8;overflow-wrap:anywhere}#mahattatiLiveDispatch .mld-meta{font-size:12px;color:#647268;margin-top:5px}
+#mahattatiLiveDispatch button{border:0;border-radius:10px;padding:10px 13px;font:inherit;font-weight:800;cursor:pointer;margin:8px 5px 0 0}
+#mahattatiLiveDispatch .mld-accept,#mahattatiLiveDispatch .mld-complete{background:#b7f34a;color:#18320a}#mahattatiLiveDispatch .mld-reload,#mahattatiLiveDispatch .mld-online{background:#edf4ee;color:#25442f}#mahattatiLiveDispatch button:disabled{opacity:.6;cursor:wait}
+#mahattatiLiveDispatch .mld-status{font-size:12px;color:#287b45;margin-top:8px;white-space:pre-wrap}

@@ -1,0 +1,125 @@
+
+/* One responsive sizing system for every screen in MAHATTATI */
+:root{
+ --ui-max-width:480px;
+ --ui-gutter:clamp(12px,4vw,20px);
+ --ui-radius:clamp(16px,4.5vw,26px);
+ --ui-green:#00FF66;
+ --ui-line:#E5E7EB;
+}
+html,body{width:100%;min-width:0;min-height:100%;-webkit-text-size-adjust:100%;}
+body{overflow:hidden;}
+button,input,textarea,select{font:inherit;max-width:100%;}
+button{touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+.app{width:100%;max-width:var(--ui-max-width);height:100vh;height:100dvh;min-height:0;margin:0 auto;overflow:hidden;isolation:isolate;}
+.map-wrap,#map{width:100%;height:100%;min-width:0;}
+.map-head{top:calc(12px + env(safe-area-inset-top));left:var(--ui-gutter);right:var(--ui-gutter);gap:10px;align-items:flex-start;}
+.map-head>div:first-child{min-width:0;flex:1 1 auto;max-width:calc(100% - 54px);}
+.map-location{width:100%;min-width:0;max-width:100%;min-height:48px;padding:clamp(8px,2.6vw,12px) clamp(9px,3vw,15px);gap:clamp(7px,2.5vw,11px);border-radius:18px;box-shadow:0 5px 18px rgba(20,30,20,.10);}
+.map-location small{font-size:clamp(10px,3vw,13px);line-height:1.25;}
+.map-location strong{font-size:clamp(12px,3.6vw,16px);line-height:1.25;min-width:0;overflow:hidden;text-overflow:ellipsis;}
+.map-location .pin{flex:0 0 auto;font-size:clamp(18px,5.5vw,23px);}
+.back-arrow{flex:0 0 auto;font-size:22px;}
+.map-menu{width:clamp(44px,13vw,54px);height:clamp(44px,13vw,54px);flex:0 0 auto;font-size:clamp(25px,7vw,31px);box-shadow:0 4px 14px rgba(20,30,20,.12);}
+/* Bottom ride panel reserves space for the fixed navigation on every phone size */
+.bottom-sheet{left:0;right:0;bottom:calc(62px + env(safe-area-inset-bottom))!important;height:clamp(205px,27dvh,285px)!important;min-height:0!important;max-height:calc(100dvh - 150px)!important;padding:7px var(--ui-gutter) calc(8px + env(safe-area-inset-bottom))!important;border-radius:24px 24px 0 0!important;overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior:contain;}
+.sheet-handle{height:12px!important;}
+.sheet-handle span{width:46px!important;height:4px!important;}
+.trip-types{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(7px,2.5vw,11px)!important;margin:3px 0 9px!important;}
+.trip-type{width:100%;min-width:0;min-height:clamp(58px,8.2dvh,72px)!important;padding:5px 6px!important;gap:4px!important;border-radius:16px!important;font-size:clamp(12px,3.7vw,15px)!important;line-height:1.25;}
+.trip-emoji{font-size:clamp(23px,7vw,31px)!important;line-height:1.05;}
+.trip-emoji.trip-car-photo{height:clamp(31px,5.8dvh,42px)!important;max-width:min(116px,100%)!important;flex-basis:auto!important;}
+.destination-search{width:100%;min-width:0;height:clamp(48px,7.3dvh,60px)!important;min-height:48px!important;margin:0 0 7px!important;padding:0 clamp(12px,3.8vw,18px)!important;gap:9px!important;border-radius:17px!important;font-size:clamp(15px,4.7vw,22px)!important;line-height:1.25;}
+.search-icon{font-size:clamp(24px,7vw,32px)!important;flex:0 0 auto;}
+.route-fields,.pickup-options,.pickup-search-panel,.route-modal,.trip-options-card,.history-empty{border-radius:var(--ui-radius);}
+.map-controls{left:max(10px,calc((100vw - var(--ui-max-width))/2 + 10px))!important;bottom:calc(clamp(205px,27dvh,285px) + 76px + env(safe-area-inset-bottom))!important;gap:8px;}
+.map-control{width:clamp(40px,12vw,46px);height:clamp(40px,12vw,46px);font-size:clamp(19px,5.5vw,23px);}
+.toast{left:50%;width:max-content;max-width:calc(100vw - 28px);bottom:calc(clamp(205px,27dvh,285px) + 72px + env(safe-area-inset-bottom))!important;font-size:clamp(12px,3.5vw,14px);}
+.main-bottom-nav{left:0;right:0;bottom:0;width:100%;max-width:var(--ui-max-width);margin:0 auto;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:5px 10px calc(5px + env(safe-area-inset-bottom));}
+.bottom-nav-item{min-width:0;min-height:50px;padding:4px 2px;font-size:clamp(10px,3vw,12px);}
+.bottom-nav-icon{font-size:clamp(19px,6vw,23px);}
+/* All full-screen subpages share one centered mobile-app canvas on wider screens */
+#suggestFarePage,#tripMapPage,.request-history-page,.menu-backdrop,.route-modal-backdrop{box-sizing:border-box;}
+#suggestFarePage{width:100%;max-width:var(--ui-max-width);left:50%;right:auto;transform:translateX(-50%);padding:calc(10px + env(safe-area-inset-top)) 0 calc(12px + env(safe-area-inset-bottom));overflow-x:hidden;}
+#suggestFarePage.open{display:flex;}
+#suggestFarePage .sf-header{height:clamp(48px,8dvh,58px);flex:0 0 auto;padding:0 var(--ui-gutter);}
+#suggestFarePage .sf-header h1{font-size:clamp(21px,5.8vw,28px);}
+#suggestFarePage #sfClose{left:var(--ui-gutter);width:42px;height:44px;font-size:36px;}
+#suggestFarePage .sf-price-card,#suggestFarePage .sf-cash-card,#suggestFarePage .sf-route-card{margin-inline:var(--ui-gutter);padding:clamp(12px,3.8vw,20px);border-radius:var(--ui-radius);}
+#suggestFarePage .sf-price-card{min-height:clamp(120px,22dvh,175px);}
+#suggestFarePage .sf-price-line input{font-size:clamp(48px,15vw,82px);}
+#suggestFarePage .sf-price-line span{font-size:clamp(36px,10vw,58px);}
+#suggestFarePage .sf-cash-card{min-height:0;}
+#suggestFarePage .sf-cash-title{font-size:clamp(19px,5.5vw,27px);gap:12px;padding-bottom:clamp(10px,3vh,20px);}
+#suggestFarePage .sf-auto-row{font-size:clamp(16px,4.7vw,23px);gap:12px;}
+#suggestFarePage .sf-switch{width:70px;height:36px;}
+#suggestFarePage .sf-switch i{width:28px;height:28px;}
+#suggestFarePage .sf-switch i{transform:translateX(0);}
+#suggestFarePage .sf-auto-row.enabled .sf-switch i{transform:translateX(-34px);}
+#suggestFarePage .sf-route-row{min-height:clamp(48px,8dvh,68px);font-size:clamp(15px,4.5vw,22px);gap:12px;}
+#suggestFarePage .sf-route-icon{width:30px;flex-basis:30px;font-size:25px;}
+#suggestFarePage .sf-actions{padding:10px var(--ui-gutter) 0;gap:10px;flex:0 0 auto;}
+#suggestFarePage .sf-actions button{min-height:clamp(52px,8dvh,68px);font-size:clamp(17px,5vw,24px);border-radius:16px;}
+#suggestFarePage #sfFilters{width:clamp(62px,19vw,84px)!important;flex-basis:clamp(62px,19vw,84px)!important;min-height:clamp(52px,8dvh,68px)!important;}
+#tripMapPage{width:100%;max-width:var(--ui-max-width);left:50%;right:auto;transform:translateX(-50%);overflow:hidden;}
+#tripMapPage .trip-top-card{top:calc(10px + env(safe-area-inset-top));left:var(--ui-gutter);right:var(--ui-gutter);padding:10px 13px;border-radius:22px;gap:3px;}
+#tripMapPage .trip-location-row{min-height:clamp(45px,7.5dvh,58px);gap:9px;font-size:clamp(14px,4.1vw,20px);}
+#tripMapPage .trip-location-row .trip-row-icon{width:28px;flex-basis:28px;font-size:25px;}
+#tripMapPage .trip-location-row .trip-row-action{font-size:24px;min-width:34px;}
+#tripMapPage .trip-bottom{left:0;right:0;bottom:0;padding:10px var(--ui-gutter) calc(10px + env(safe-area-inset-bottom));border-radius:24px 24px 0 0;}
+#tripMapPage .fare-card{gap:8px;padding:10px;border-radius:22px;}
+#tripMapPage .fare-title{font-size:clamp(16px,4.5vw,22px);}
+#tripMapPage .fare-meta{font-size:clamp(14px,4vw,19px);}
+#tripMapPage .fare-sub{font-size:clamp(12px,3.5vw,16px);}
+#tripMapPage .fare-car{font-size:clamp(32px,10vw,44px);}
+#tripMapPage .fare-edit{width:38px;height:38px;}
+#tripMapPage .suggest-fare{font-size:clamp(15px,4.4vw,21px);padding:10px 3px 3px;}
+#tripMapPage .fare-step{width:44px;height:44px;font-size:26px;}
+#tripMapPage .trip-bottom-actions{gap:10px;margin-top:10px;padding-top:10px;}
+#tripMapPage .trip-search-offers{min-height:clamp(52px,8dvh,66px);font-size:clamp(17px,5vw,24px);border-radius:17px;}
+#tripMapPage .trip-back{top:calc(12px + env(safe-area-inset-top));left:var(--ui-gutter);width:38px;height:38px;font-size:23px;}
+body.trip-page-active .map-controls{bottom:calc(240px + env(safe-area-inset-bottom))!important;left:max(10px,calc((100vw - var(--ui-max-width))/2 + 10px))!important;}
+.request-history-page{width:100%;max-width:var(--ui-max-width);left:50%;right:auto;transform:translateX(-50%);padding:calc(16px + env(safe-area-inset-top)) var(--ui-gutter) calc(82px + env(safe-area-inset-bottom));overflow-x:hidden;}
+.request-history-header{gap:10px;margin:4px auto 18px;}
+.request-history-header h2{font-size:clamp(22px,6vw,27px);}
+.request-history-tabs{gap:5px;margin-bottom:14px;}
+.history-filter{padding:10px 5px;font-size:clamp(12px,3.5vw,14px);}
+.request-history-list{width:100%;}
+.trip-options-overlay{padding:var(--ui-gutter);padding-bottom:calc(var(--ui-gutter) + env(safe-area-inset-bottom));}
+.trip-options-card{width:100%;max-width:420px;max-height:calc(100dvh - 2 * var(--ui-gutter) - env(safe-area-inset-bottom));padding:clamp(16px,4.5vw,22px);border-radius:var(--ui-radius);}
+.menu-backdrop{justify-content:center;}
+.menu-panel,.side-menu,.menu-content{max-width:min(88vw,400px);}
+/* Neutral state stays neutral; green is reserved for active/focus/press states */
+.destination-search{background:#fff!important;color:#202522!important;border:1px solid #E5E7EB!important;box-shadow:0 2px 10px rgba(20,30,20,.04)!important;}
+.destination-search:active,.destination-search:focus-visible{border-color:var(--ui-green)!important;box-shadow:0 0 0 3px rgba(0,255,102,.14),0 0 16px rgba(0,255,102,.18)!important;}
+.trip-type{border-color:#E5E7EB!important;}
+.trip-type.active{border-color:var(--ui-green)!important;box-shadow:0 0 0 2px rgba(0,255,102,.12)!important;}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--ui-green)!important;outline-offset:2px;}
+@media(max-width:360px){
+ :root{--ui-gutter:10px;}
+ .bottom-sheet{height:clamp(200px,29dvh,245px)!important;padding-inline:10px!important;}
+ .trip-type{font-size:12px!important;}
+ #suggestFarePage .sf-route-row{font-size:14px;}
+ #tripMapPage .trip-location-row{font-size:13px;}
+ .request-history-header h2{font-size:21px;}
+}
+@media(max-height:650px){
+ .bottom-sheet{height:clamp(185px,31dvh,235px)!important;}
+ .trip-type{min-height:50px!important;}
+ .trip-emoji.trip-car-photo{height:30px!important;}
+ #suggestFarePage{overflow-y:auto;}
+ #suggestFarePage .sf-price-card{min-height:105px;}
+ #suggestFarePage .sf-cash-title{padding-bottom:8px;}
+ #suggestFarePage .sf-route-row{min-height:44px;}
+ #suggestFarePage .sf-actions button{min-height:48px;}
+ #tripMapPage .trip-location-row{min-height:42px;}
+ #tripMapPage .trip-search-offers{min-height:48px;}
+}
+@media(min-width:650px){
+ body{background:#F1F3F2;}
+ .app{border-inline:1px solid #E5E7EB;box-shadow:0 0 24px rgba(20,30,20,.06);}
+ .main-bottom-nav{left:50%;right:auto;transform:translateX(-50%);border-inline:1px solid #E5E7EB;}
+ #suggestFarePage,#tripMapPage,.request-history-page{border-inline:1px solid #E5E7EB;box-shadow:0 0 24px rgba(20,30,20,.05);}
+ .bottom-sheet{width:100%;}
+}
+@media(prefers-reduced-motion:reduce){.app *{scroll-behavior:auto!important;transition:none!important;animation:none!important;}}

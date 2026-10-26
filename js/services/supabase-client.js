@@ -1,4 +1,3 @@
-/* Extracted inline script 9 from index.html; original load position preserved. */
 (()=>{
  const page=document.getElementById('mddDriverSettings');if(!page)return;
  const get=(k,d)=>{try{return localStorage.getItem('mdd_setting_'+k)??d}catch(e){return d}};

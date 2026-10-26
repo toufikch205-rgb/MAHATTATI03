@@ -1,4 +1,3 @@
-/* Extracted inline script 15 from index.html; original load position preserved. */
 /* MAHATTATI: hide merchant/admin menu shortcuts on published version */
 (function(){
   const selectors = '#menuMerchant, #menuMerchantAdmin, #menuDriverAdmin, .merchant-menu-button, .merchant-admin-button';

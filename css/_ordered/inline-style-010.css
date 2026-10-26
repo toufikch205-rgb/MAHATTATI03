@@ -1,0 +1,14 @@
+
+/* Destination prompt: white base with a restrained neon-green signature */
+.destination-search{
+  background:#FFFFFF!important;
+  color:#202522!important;
+  border:1.5px solid #E6EAE7!important;
+  box-shadow:0 3px 12px rgba(20,30,20,.05)!important;
+  transition:background .2s,border-color .2s,box-shadow .2s,transform .2s!important;
+}
+.destination-search .search-icon{color:#00FF66!important;text-shadow:0 0 8px rgba(0,255,102,.22)!important}
+.destination-search:active,.destination-search:focus-visible{
+  background:#FFFFFF!important;color:#202522!important;border-color:#00FF66!important;
+  box-shadow:0 0 0 3px rgba(0,255,102,.13),0 0 18px rgba(0,255,102,.20)!important;
+}

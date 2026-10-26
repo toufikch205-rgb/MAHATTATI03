@@ -1,5 +1,0 @@
-
-/* The trip-selection page has its own bottom actions; keep the global tabs off this screen. */
-body.trip-page-active #mainBottomNav,
-body.trip-page-active .main-bottom-nav { display:none !important; visibility:hidden !important; pointer-events:none !important; }
-body.trip-page-active #tripMapPage { z-index: 1600; }

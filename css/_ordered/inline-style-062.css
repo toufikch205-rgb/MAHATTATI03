@@ -1,9 +1,0 @@
-
-/* The driver tab bar must sit above ride details, not inside their overlay. */
-#driverDashboardPage .mdd-nav{
-  position:fixed!important;left:50%!important;right:auto!important;bottom:0!important;
-  transform:translateX(-50%)!important;width:min(100%,560px)!important;
-  z-index:2147483001!important;display:flex!important;
-  padding-bottom:calc(8px + env(safe-area-inset-bottom))!important;
-}
-/* Ride-request screen sizing is defined in mdd-ride-request-canonical-styles. */

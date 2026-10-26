@@ -1,4 +1,0 @@
-/* Prevent an empty toast from appearing as a black pill on mobile */
-.toast:not(.show), .toast:empty { display:none !important; }
-.toast.show:empty { display:none !important; }
-@media (max-width: 600px) { .toast { max-width: calc(100vw - 32px); } }

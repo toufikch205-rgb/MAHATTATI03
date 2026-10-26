@@ -1,5 +1,0 @@
-
-/* The shared passenger menu must sit above the driver dashboard when opened from driver mode. */
-#menuBackdrop.driver-menu-open{z-index:6500!important;position:fixed!important;inset:0!important;display:block!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important}
-#menuBackdrop.driver-menu-open .side-menu{z-index:6501!important;visibility:visible!important;pointer-events:auto!important}
-#menuBackdrop.driver-menu-open .menu-partner{cursor:pointer!important}

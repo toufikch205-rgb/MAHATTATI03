@@ -1,5 +1,3 @@
-/* Original inline style block 7 from index.html; order intentionally preserved. */
-
 /* Prevent an empty toast from appearing as a black pill on mobile */
 .toast:not(.show), .toast:empty { display:none !important; }
 .toast.show:empty { display:none !important; }

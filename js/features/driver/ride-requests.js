@@ -1,4 +1,3 @@
-/* Extracted inline script 12 from index.html; original load position preserved. */
 (function(){
  'use strict';
  const $=id=>document.getElementById(id);

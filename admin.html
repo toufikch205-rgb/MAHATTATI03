@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>لوحة إدارة محطتي | مراجعة السائقين والوكلاء</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="stylesheet" href="css/pages/admin.css">
+</head>
+<body>
+<header><div class="brand"><div class="logo">M</div><div><strong>محطتي · لوحة الإدارة</strong><small>مراجعة طلبات السائقين والوكلاء وتفعيل الحسابات بعد الموافقة</small></div></div><button id="logoutBtn" class="secondary hidden">تسجيل الخروج</button></header>
+<main>
+<section id="loginView" class="panel login"><h1>دخول الإدارة</h1><p class="muted">هذه اللوحة مخصصة للمستخدمين المسجلين ضمن فريق الإدارة في قاعدة البيانات.</p><div id="loginMessage" class="notice hidden"></div><form id="loginForm"><label class="field"><span>البريد الإلكتروني الإداري</span><input id="email" type="email" autocomplete="username" required></label><label class="field"><span>كلمة المرور</span><input id="password" type="password" autocomplete="current-password" required></label><button id="loginBtn" class="primary" style="width:100%">دخول آمن</button></form></section>
+<section id="dashboardView" class="hidden">
+<div class="topline" style="margin-bottom:15px"><div><h1 style="margin:0 0 5px">طلبات السائقين</h1><div id="adminIdentity" class="muted">لوحة مراجعة خاصة</div></div><button id="refreshBtn" class="secondary">↻ تحديث القائمة</button></div>
+<div id="pageMessage" class="notice hidden"></div>
+<div class="actions dashboard-tabs" style="margin:0 0 16px"><button id="showDriversTab" class="primary" type="button">1 · طلبات السائقين</button><button id="showMerchantsTab" class="secondary" type="button">2 · طلبات الوكلاء والتجار</button><button id="showFundingTab" class="secondary" type="button">3 · طلبات تمويل رصيد الوكلاء</button></div>
+<div id="driversPanel">
+<div class="stats"><div class="stat"><small>كل الملفات</small><strong id="statAll">—</strong></div><div class="stat"><small>تحتاج مراجعة</small><strong id="statPending">—</strong></div><div class="stat"><small>معتمدون</small><strong id="statApproved">—</strong></div><div class="stat"><small>مرفوضون</small><strong id="statRejected">—</strong></div></div>
+<div class="panel"><div class="topline"><strong>قائمة الملفات</strong><span id="lastUpdated" class="muted"></span></div><div class="filters"><input id="searchInput" class="search" placeholder="ابحث بالاسم أو الهاتف أو البريد أو رقم الهوية"><select id="statusFilter"><option value="all">كل الحالات</option><option value="pending">قيد الانتظار</option><option value="under_review">قيد المراجعة</option><option value="approved">معتمد</option><option value="rejected">مرفوض</option></select><button id="clearFilter" class="secondary">مسح البحث</button></div></div>
+<div id="driverCards" class="cards"><div class="panel loading">جارٍ تحميل الملفات…</div></div>
+</div>
+<section id="merchantsPanel" class="hidden">
+<div class="stats"><div class="stat"><small>كل طلبات الوكلاء</small><strong id="merchantStatAll">—</strong></div><div class="stat"><small>تحتاج مراجعة</small><strong id="merchantStatPending">—</strong></div><div class="stat"><small>حسابات مفعلة</small><strong id="merchantStatApproved">—</strong></div><div class="stat"><small>مرفوضة</small><strong id="merchantStatRejected">—</strong></div></div>
+<div class="panel"><div class="topline"><strong>طلبات الوكلاء والتجار — طلبات الوكلاء تحتاج موافقة الإدارة قبل فتح واجهة الإرسال</strong><span id="merchantLastUpdated" class="muted"></span></div><div class="filters"><input id="merchantSearchInput" class="search" placeholder="ابحث باسم النشاط أو المالك أو الهاتف أو البريد أو نوع الطلب"><select id="merchantStatusFilter"><option value="all">كل الحالات</option><option value="pending">قيد الانتظار</option><option value="under_review">قيد المراجعة</option><option value="approved">معتمد</option><option value="rejected">مرفوض</option></select><button id="merchantClearFilter" class="secondary" type="button">مسح البحث</button></div></div>
+<div id="merchantCards" class="cards"><div class="panel loading">جارٍ تحميل طلبات الوكلاء…</div></div>
+<p class="muted" style="margin:14px 2px">تظهر هنا طلبات تسجيل الوكلاء والتجار من قاعدة البيانات. افتح هذا التبويب ثم اختر «قيد الانتظار» لمراجعة الطلبات الجديدة؛ يمكنك قبول الطلب أو رفضه مع إضافة ملاحظة. قبول طلب الوكيل يفعّل دور «وكيل» فقط بعد نجاح تحديث قاعدة البيانات.</p>
+</section>
+<section id="fundingPanel" class="hidden"><div class="panel"><div class="topline"><div><h2 style="margin:0 0 5px">طلبات تمويل رصيد الوكلاء</h2><span class="muted">راجع طلبات شحن الرصيد ووافق أو ارفض. العملات تُضاف عند الموافقة فقط.</span></div><button id="refreshFundingBtn" class="secondary" type="button">↻ تحديث طلبات التمويل</button></div><div id="agentFundingCards"><div class="loading">جارٍ تحميل طلبات التمويل…</div></div></div></section>
+<div class="footer">الوثائق الخاصة تُفتح بروابط مؤقتة بعد التحقق من صلاحية الإدارة. لا تشارك روابط الوثائق مع أي شخص.</div>
+</section>
+</main>
+<script src="js/features/admin/agent-approval.js"></script>
+</body></html>

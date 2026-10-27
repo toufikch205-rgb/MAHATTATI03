@@ -12,119 +12,138 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script defer src="js/core/events.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script defer src="js/core/app.js"></script>
+<script defer crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script defer src="js/features/maps/map-controller.js"></script>
+<script defer src="js/features/customer/ride-booking.js"></script>
+<script defer src="js/core/legacy-main-controller.js"></script>
+<script defer src="js/features/driver/ride-request-ui.js"></script>
+<script defer src="js/features/driver/driver-dashboard.js"></script>
+<script defer src="js/features/customer/customer-home.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script defer src="js/features/customer/booking-history.js"></script>
+<script defer src="js/services/cloud-session-tracking.js"></script>
+<script defer src="js/core/navigation.js"></script>
+<script defer src="js/services/supabase-client.js"></script>
+<script defer src="js/features/driver/live-ride-dispatch.js"></script>
+<script defer src="js/features/driver/merchant-portal.js"></script>
+<script defer src="js/features/driver/ride-requests.js"></script>
+<script defer src="js/features/agent/agent-registration.js"></script>
+<script defer src="js/features/admin/driver-approval.js"></script>
 </head>
 <body>
 <div id="mahattatiWelcome" role="dialog" aria-modal="true" aria-label="مرحبا بك في محطتي">
@@ -142,7 +161,7 @@
   </div>
  </div>
 </div>
-<script defer src="js/core/app.js"></script>
+
 
 <div class="app">
 <section aria-label="خريطة الموقع" class="map-wrap"><div id="map"></div>
@@ -485,7 +504,7 @@
   </main>
 </div>
 
-<script defer crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 <div aria-hidden="true" id="tripMapPage">
 <button aria-label="رجوع" class="trip-back" id="tripPageBack" type="button">←</button>
 <div class="trip-top-card">
@@ -527,9 +546,9 @@
 <div class="trip-options-actions"><button id="tripOptionsSave" type="button">حفظ الخيارات</button></div>
 </section>
 </div>
-<script defer src="js/features/maps/map-controller.js"></script>
-<script defer src="js/features/customer/ride-booking.js"></script>
-<script defer src="js/core/legacy-main-controller.js"></script>
+
+
+
 
 
 
@@ -626,7 +645,7 @@
 </section>
 
 
-<script defer src="js/features/customer/customer-home.js"></script>
+
 
 
 
@@ -635,9 +654,6 @@
  <form id="mahattatiAuthForm"><div id="mauthNameWrap" hidden><label for="mauthName">الاسم</label><input id="mauthName" autocomplete="name" maxlength="80" placeholder="اكتب اسمك"></div><label for="mauthEmail">البريد الإلكتروني</label><input id="mauthEmail" type="email" autocomplete="email" required placeholder="name@example.com"><label for="mauthPassword">كلمة المرور</label><input id="mauthPassword" type="password" autocomplete="current-password" minlength="6" required placeholder="6 أحرف على الأقل"><button class="mauth-submit" id="mauthSubmit" type="submit">تسجيل الدخول</button></form><p class="mauth-message" id="mauthMessage" role="status"></p><button class="mauth-switch" id="mauthSwitch" type="button">ليس لديك حساب؟ إنشاء حساب جديد</button>
  </div>
 </div>
-<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script defer src="js/features/customer/booking-history.js"></script>
-<script defer src="js/services/cloud-session-tracking.js"></script>
 
 
 
@@ -655,7 +671,10 @@
 
 
 
-\n<script defer src="js/core/navigation.js"></script>
+
+
+
+\n
 
 
 
@@ -709,11 +728,11 @@
   <p class="mds-foot">تُحفظ هذه الاختيارات على هذا الجهاز. السماح بخرائط التنقل يفعّل خيار فتح تطبيق الخرائط عند توفر ربطه في المشروع.</p>
  </div>
 </section>
-<script defer src="js/services/supabase-client.js"></script>
 
 
 
-<script defer src="js/features/customer/ride-booking-fixes.js"></script>
+
+
 
 
 
@@ -762,8 +781,8 @@
   </div>
  </div>
 </div>
-<script defer src="js/features/driver/driver-dashboard.js"></script>
-<script defer src="js/features/driver/ride-requests.js"></script>
+
+
 
 
 
@@ -810,7 +829,6 @@
 
 
 
-<script defer src="js/features/agent/agent-registration.js"></script>
 
 
 
@@ -819,7 +837,8 @@
 
 
 
-<script defer src="js/features/admin/driver-approval.js"></script>
+
+
 
 
 

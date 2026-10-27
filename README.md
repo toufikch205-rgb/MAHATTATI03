@@ -7,6 +7,11 @@ This package keeps the original application behavior as the priority.
 - The named CSS files under `css/core`, `css/layout`, `css/components`, and `css/pages` contain semantic review copies. They are **not linked at runtime yet**; this avoids changing cascade order before visual regression testing.
 - Inline JavaScript was externalized while preserving its original position in the HTML. Large mixed-responsibility blocks are not automatically split into guessed services/features because they depend on globals and execution order.
 - `supabase/functions` and `tests` are structure scaffolds only; no business logic or tests have been fabricated.
+- `index.html` now loads its classic scripts with `defer` in the Phase 8 dependency order, so DOM-dependent modules initialize after parsing while preserving script order.
+- The live driver queue is `js/features/driver/live-ride-dispatch.js`; it uses the authenticated database RPCs for accepting/completing trips and removes static demo ride cards at initialization.
+- The existing agent registration, funding request, and driver recharge flow is in `js/features/customer/customer-home.js`. The old `js/features/agent/customer-recharge.js` menu-hiding script is intentionally not loaded because it overrode role-based menu visibility.
+- `JS_DEPENDENCY_REPORT.md` and `JS_DEPENDENCY_REPORT.json` record the current script order and static checks. JavaScript syntax/path checks pass, but browser end-to-end and realtime acceptance tests have not been run.
+- A read-only Supabase advisor scan found outstanding database security/performance warnings; database policies and functions were not changed during this GitHub-only pass.
 
 ## Before publishing
 1. Run browser checks for home, map/location search, ride request/search/acceptance, driver dashboard, agent approval/funding/recharge, and admin.

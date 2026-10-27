@@ -55,11 +55,11 @@ The old `ride-booking-fixes.js` reference was removed; Phase 8's `live-ride-disp
 - Not found by exact symbol name: none
 
 ## Validation
-- GitHub Actions static validator passed on commit `be7dcbee75a1b09183828171a077392dd9d7c47d`: 34 JavaScript files parsed, 2 HTML files checked, and 104 CSS files scanned for import references.
+- GitHub Actions static validator passed on commit `5f2bf478e937af8c01a04cb7cee95088ac34b951`: JavaScript syntax, duplicate HTML IDs, local HTML references, and CSS imports all passed. The targeted GPS watcher correction was added afterward and separately passed JavaScript syntax parsing; its deployment validation is running.
 - `index.html`: 19 script tags; no duplicate IDs and no missing local references.
 - `admin.html`: no duplicate IDs or missing local references. Its Supabase CDN script remains synchronous intentionally so the admin script at the end of the body can use the global.
 - CSS: all 85 ordered imports exist; the 104 CSS files passed a basic brace-balance check.
-- The project contains all 162 files from the Phase 8 archive, plus the new static validation script and workflow.
+- The project contains all 162 files from the Phase 8 archive, plus the static validation script and workflow files. The driver GPS watcher was corrected to avoid being restarted on every five-second request refresh.
 - GitHub Pages deployment for the audited commit is tracked in the Actions runs.
 
 ## Outstanding risks and limitations

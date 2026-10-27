@@ -944,5 +944,26 @@
     "Live database schema and RPC signatures were inspected read-only; no database schema or permission changes were made.",
     "Browser end-to-end tests for map permissions, realtime acceptance, agent recharge, and admin approvals have not been run."
   ],
-  "next_safe_step": "Run browser regression tests for customer login, map search, request creation, true driver acceptance, live driver queue, agent approval/funding/recharge, and admin review before treating the deployment as fully verified."
+  "next_safe_step": "Run browser regression tests for customer login, map search, request creation, true driver acceptance, live driver queue, agent approval/funding/recharge, and admin review before treating the deployment as fully verified.",
+  "database_audit": {
+    "inspected_read_only": true,
+    "schema_and_rpc_checks": {
+      "driver_acceptance": "accept_trip_request requires an authenticated, approved, online, non-busy driver and atomically sets driver_id, status='accepted', and accepted_at.",
+      "agent_wallet": "The active agent UI calls agent_request_wallet_funding, agent_find_approved_driver, and agent_recharge_driver.",
+      "stale_rpc": "submit_agent_wallet_funding_request appears stale: it inserts into amount, while agent_wallet_funding_requests currently uses requested_amount. The UI does not call this stale RPC."
+    },
+    "security_advisor_findings": [
+      "RLS enabled but no policies on agent_wallet_funding_requests and agent_wallet_fundings.",
+      "assign_driver_code_on_approval() and get_my_driver_wallet_balance() are executable by anon despite SECURITY DEFINER.",
+      "18 SECURITY DEFINER functions are executable by authenticated users; each must be reviewed for intended authorization.",
+      "Leaked-password protection is disabled."
+    ],
+    "performance_advisor_findings": [
+      "3 unindexed foreign keys.",
+      "9 RLS init-plan warnings.",
+      "5 sets of multiple permissive policies.",
+      "2 unused indexes and 1 duplicate index."
+    ],
+    "database_changed": false
+  }
 }

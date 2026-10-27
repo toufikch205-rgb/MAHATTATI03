@@ -1,5 +1,5 @@
 {
-  "status": "Static dependency map after Phase 8 wiring and menu/agent-flow audit; browser runtime not tested.",
+  "status": "Static dependency map after Phase 8 script wiring and menu/agent-flow audit; browser runtime not tested.",
   "script_load_order": {
     "index.html": [
       "js/core/events.js",

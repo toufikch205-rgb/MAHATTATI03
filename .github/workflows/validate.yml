@@ -21,4 +21,4 @@ jobs:
         with:
           node-version: 22
       - name: Validate JavaScript and local references
-        run: node scripts/validate-project.mjs
+        run: node --check scripts/validate-project.mjs && node scripts/validate-project.mjs

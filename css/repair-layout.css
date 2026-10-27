@@ -197,3 +197,55 @@ input,select,textarea,button{min-width:0}
   #mahattatiAuthOverlay>div{padding:22px 18px;border-radius:22px}
   #mddDriverSettings{padding-inline:14px!important}
 }
+
+
+/* Final cascade guard: keep auth and driver settings controls styled even if
+   legacy page selectors later in the stylesheet target generic forms/buttons. */
+#mahattatiAuthOverlay,
+#mahattatiAuthOverlay *{
+  box-sizing:border-box!important;
+}
+#mahattatiAuthOverlay{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  isolation:isolate!important;
+}
+#mahattatiAuthOverlay[aria-hidden="true"]{display:none!important}
+#mahattatiAuthOverlay .mauth-card{
+  display:block!important;
+  position:relative!important;
+  width:min(100%,460px)!important;
+  min-width:0!important;
+  max-width:460px!important;
+  margin:auto!important;
+  padding:clamp(20px,5vw,32px)!important;
+  border:1px solid #e5ebe7!important;
+  border-radius:24px!important;
+  background:#fff!important;
+  color:#202522!important;
+  box-shadow:0 20px 65px rgba(0,0,0,.18)!important;
+  font:16px/1.5 system-ui,-apple-system,"Segoe UI",Arial,sans-serif!important;
+}
+#mahattatiAuthOverlay .mauth-brand{display:block!important;margin:0 0 14px!important;font-size:14px!important;font-weight:900!important;letter-spacing:2px!important;color:#00a85a!important}
+#mahattatiAuthOverlay #mahattatiAuthTitle{display:block!important;margin:0 0 10px!important;font-size:clamp(24px,6vw,32px)!important;line-height:1.25!important;font-weight:850!important;color:#17221b!important}
+#mahattatiAuthOverlay .mauth-sub{display:block!important;margin:0 0 18px!important;font-size:14px!important;line-height:1.75!important;color:#69766e!important}
+#mahattatiAuthOverlay #mahattatiAuthForm{display:flex!important;flex-direction:column!important;gap:9px!important;width:100%!important;margin:0!important}
+#mahattatiAuthOverlay #mahattatiAuthForm label{display:block!important;margin:5px 0 0!important;font-size:14px!important;line-height:1.5!important;font-weight:750!important;color:#303a34!important}
+#mahattatiAuthOverlay #mahattatiAuthForm input{display:block!important;width:100%!important;height:48px!important;min-width:0!important;margin:0!important;padding:0 13px!important;border:1px solid #dce4df!important;border-radius:12px!important;background:#f9fbfa!important;color:#202522!important;font:16px/1.4 system-ui,-apple-system,"Segoe UI",Arial,sans-serif!important}
+#mahattatiAuthOverlay #mahattatiAuthForm button,
+#mahattatiAuthOverlay #mauthClose,
+#mahattatiAuthOverlay #mauthSwitch{display:flex!important;align-items:center!important;justify-content:center!important;float:none!important;position:static!important;min-height:44px!important;height:auto!important;max-width:100%!important;margin:8px 0 0!important;padding:12px 16px!important;border-radius:12px!important;font:700 15px/1.4 system-ui,-apple-system,"Segoe UI",Arial,sans-serif!important;white-space:normal!important}
+#mahattatiAuthOverlay #mauthSubmit{width:100%!important;border:0!important;background:#00c96b!important;color:#102218!important}
+#mahattatiAuthOverlay #mauthSwitch{width:100%!important;border:1px solid #dce4df!important;background:#fff!important;color:#26342b!important}
+#mahattatiAuthOverlay #mauthClose{width:42px!important;min-height:42px!important;margin:0 0 12px auto!important;padding:0!important;border:1px solid #e2e8e4!important;background:#f7faf8!important;color:#26342b!important;font-size:24px!important}
+#mahattatiAuthOverlay #mauthMessage{display:block!important;min-height:0!important;margin:10px 0 0!important;font-size:13px!important;line-height:1.6!important}
+#mddDriverSettings,#mddDriverSettings *{box-sizing:border-box!important}
+#mddDriverSettings .mds-wrap{display:block!important;min-width:0!important}
+#mddDriverSettings .mds-head{display:flex!important;align-items:center!important}
+#mddDriverSettings .mds-head h2{display:block!important;margin:0!important;font-size:25px!important;line-height:1.3!important}
+#mddDriverSettings button{display:inline-flex!important;align-items:center!important;justify-content:center!important;float:none!important;min-height:44px!important;line-height:1.4!important}
+@media(max-width:600px){
+ #mahattatiAuthOverlay{padding:calc(14px + env(safe-area-inset-top)) 14px calc(14px + env(safe-area-inset-bottom))!important}
+ #mahattatiAuthOverlay .mauth-card{padding:22px 18px!important;border-radius:22px!important}
+}

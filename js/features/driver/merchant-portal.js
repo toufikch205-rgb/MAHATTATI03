@@ -122,4 +122,3 @@
  setTimeout(refreshStaffShortcut,900);
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){if($('merchantPortal').classList.contains('open'))closePage('merchantPortal');if($('merchantAdminPortal').classList.contains('open'))closePage('merchantAdminPortal');}});
 })();
-

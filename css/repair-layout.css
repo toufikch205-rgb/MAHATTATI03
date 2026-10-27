@@ -13,3 +13,82 @@ a img,button img{width:auto;max-width:100%;height:auto}
   main,section,article,.page,.screen,.container{min-width:0;max-width:100%}
   img,svg{max-width:100%}
 }
+
+
+/* Root fix: the welcome image must sit ABOVE the welcome background, not behind it. */
+#mahattatiWelcome{
+  position:fixed!important;inset:0!important;z-index:20000!important;
+  display:flex!important;flex-direction:column!important;
+  width:100%!important;height:100vh!important;height:100dvh!important;
+  min-height:0!important;max-width:none!important;margin:0!important;padding:0!important;
+  overflow:hidden!important;isolation:isolate;background:#061a1c!important;color:#fff!important;
+}
+#mahattatiWelcome[hidden],
+#mahattatiWelcome[aria-hidden="true"]{display:none!important}
+#mahattatiWelcome .mw-photo{
+  position:absolute!important;inset:0!important;z-index:0!important;
+  display:block!important;width:100%!important;height:100%!important;
+  max-width:none!important;max-height:none!important;object-fit:cover!important;
+  object-position:center center!important;
+}
+#mahattatiWelcome::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(4,19,34,.42) 0%,rgba(3,20,29,.08) 35%,rgba(1,16,19,.4) 65%,rgba(0,20,23,.98) 100%);
+}
+#mahattatiWelcome .mw-content{
+  position:relative!important;z-index:2!important;display:flex!important;
+  flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;
+  gap:0!important;width:100%!important;height:100%!important;min-height:0!important;
+  max-width:680px!important;margin:0 auto!important;
+  padding:calc(28px + env(safe-area-inset-top)) 22px calc(18px + env(safe-area-inset-bottom))!important;
+  text-align:center!important;overflow:hidden!important;
+}
+#mahattatiWelcome .mw-heading{flex:0 0 auto!important;width:100%!important;margin:0 auto!important;text-align:center!important}
+#mahattatiWelcome .mw-brand{
+  margin:0!important;color:#f5fff9!important;font-family:Arial,Tahoma,sans-serif!important;
+  font-size:clamp(32px,8vw,48px)!important;font-weight:900!important;letter-spacing:2px!important;
+  line-height:1.15!important;overflow-wrap:anywhere!important;text-align:center!important;
+}
+#mahattatiWelcome .mw-tagline{
+  display:flex!important;flex-direction:column!important;align-items:center!important;gap:8px!important;
+  margin:18px 0 0!important;color:#fff!important;font-family:Tahoma,Arial,sans-serif!important;
+  text-align:center!important;font-size:clamp(16px,4.5vw,21px)!important;line-height:1.5!important;
+}
+#mahattatiWelcome .mw-tagline strong{display:block!important;margin:0!important;color:#00f477!important;font-size:clamp(22px,5.5vw,29px)!important;font-weight:800!important}
+#mahattatiWelcome .mw-tagline strong::before{content:"";display:block;width:64px;height:4px;margin:0 auto 9px;border-radius:99px;background:#00f477}
+#mahattatiWelcome .mw-middle{flex:1 1 auto!important;min-height:12px!important;width:100%!important}
+#mahattatiWelcome .mw-actions{
+  position:relative!important;flex:0 0 auto!important;display:flex!important;flex-direction:column!important;
+  align-items:stretch!important;gap:15px!important;width:100%!important;max-width:100%!important;
+  margin:0 auto!important;padding:0!important;text-align:center!important;
+}
+#mahattatiWelcome .mw-start{
+  display:block!important;width:100%!important;max-width:100%!important;min-height:68px!important;
+  margin:0!important;padding:17px 20px!important;border:0!important;border-radius:28px!important;
+  background:#00f477!important;color:#052719!important;font-family:Tahoma,Arial,sans-serif!important;
+  font-size:clamp(22px,5.5vw,28px)!important;font-weight:900!important;line-height:1.25!important;
+  box-shadow:0 10px 32px rgba(0,244,119,.25)!important;cursor:pointer!important;
+}
+#mahattatiWelcome .mw-login-line{
+  display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:center!important;
+  gap:8px!important;margin:0!important;padding:0 0 2px!important;color:#f5fff9!important;
+  font-family:Tahoma,Arial,sans-serif!important;font-size:clamp(14px,3.8vw,18px)!important;
+  line-height:1.7!important;text-align:center!important;
+}
+#mahattatiWelcome .mw-login{
+  display:inline!important;width:auto!important;max-width:100%!important;margin:0!important;padding:0!important;
+  border:0!important;border-radius:0!important;background:transparent!important;color:#00f477!important;
+  font:inherit!important;font-weight:800!important;text-decoration:underline!important;
+  text-underline-offset:4px!important;cursor:pointer!important;
+}
+@media(max-width:380px){
+ #mahattatiWelcome .mw-content{padding-left:16px!important;padding-right:16px!important}
+ #mahattatiWelcome .mw-start{min-height:60px!important;border-radius:23px!important}
+}
+@media(max-height:650px){
+ #mahattatiWelcome .mw-content{padding-top:calc(16px + env(safe-area-inset-top))!important;padding-bottom:calc(10px + env(safe-area-inset-bottom))!important}
+ #mahattatiWelcome .mw-tagline{margin-top:10px!important;gap:5px!important}
+ #mahattatiWelcome .mw-middle{min-height:0!important}
+ #mahattatiWelcome .mw-actions{gap:9px!important}
+ #mahattatiWelcome .mw-start{min-height:54px!important;padding:12px 16px!important}
+}

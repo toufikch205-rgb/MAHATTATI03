@@ -1,0 +1,8 @@
+/* Original inline style block 12 from index.html; order intentionally preserved. */
+
+/* Keep the intercity car and suitcase visually balanced and aligned */
+#intercityService .trip-emoji.trip-car-photo{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;gap:3px!important;width:100%!important;height:35px!important;line-height:1!important;padding:0!important;}
+#intercityService .trip-emoji.trip-car-photo img{display:block!important;width:auto!important;max-width:calc(100% - 27px)!important;height:30px!important;max-height:30px!important;flex:0 1 auto!important;min-width:0!important;object-fit:contain!important;}
+#intercityService .trip-suitcase{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 23px!important;width:23px!important;height:27px!important;transform:translateY(1px);filter:drop-shadow(0 1px 1px rgba(0,0,0,.12));}
+#intercityService .trip-suitcase svg{display:block!important;width:100%!important;height:100%!important;overflow:visible!important;}
+@media(max-width:360px){#intercityService .trip-emoji.trip-car-photo{gap:2px!important}#intercityService .trip-suitcase{flex-basis:21px!important;width:21px!important}#intercityService .trip-emoji.trip-car-photo img{max-width:calc(100% - 24px)!important;height:28px!important;max-height:28px!important}}

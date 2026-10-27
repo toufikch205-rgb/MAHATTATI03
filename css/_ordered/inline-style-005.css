@@ -1,0 +1,19 @@
+/* Original inline style block 5 from index.html; order intentionally preserved. */
+
+:root{--bg:#fff;--panel:#fff;--panel2:#fff;--lime:#00FF66;--glow:#00FF66;--text:#17221b;--muted:#69766e;--line:#E5E7EB;--green:#00FF66}
+html,body,.app,.map-wrap,.leaflet-container{background:#fff!important;color:var(--text)}
+.bottom-sheet{background:#fff!important;color:var(--text);border:1px solid #f0f4f0;box-shadow:0 -8px 30px rgba(20,40,25,.09)}
+.sheet-handle span{background:#d7ded8}
+.map-location,.map-menu,.map-control,.trip-type,.route-fields,.pickup-options,.pickup-search-panel{background:#fff!important;border-color:#E5E7EB;color:var(--text);box-shadow:0 4px 18px rgba(25,45,30,.09)}
+.map-location .pin,.pickup-option .option-icon{color:#00FF66}
+.trip-type{transition:border-color .18s,box-shadow .18s,transform .18s;}
+.trip-type:active,.map-control:active,.map-menu:active,.pickup-option:active{border-color:#00FF66!important;box-shadow:0 0 0 3px rgba(0,255,102,.22),0 0 16px rgba(0,255,102,.24)!important;transform:scale(.98)}
+.trip-type.active{border:2px solid #00FF66!important;box-shadow:0 0 0 2px rgba(0,255,102,.15),0 0 18px rgba(0,255,102,.20)!important;background:#fff!important}
+.destination-search,.primary{background:#00FF66!important;color:#102016!important;box-shadow:0 4px 16px rgba(0,255,102,.18);transition:box-shadow .18s,transform .18s}
+.destination-search:active,.primary:active{box-shadow:0 0 0 3px rgba(0,255,102,.25),0 0 22px rgba(0,255,102,.35);transform:scale(.99)}
+.map-control.loc{color:#00FF66!important;border-color:#E5E7EB}
+.route-symbol{background:#00FF66;box-shadow:0 0 0 4px rgba(0,255,102,.12),0 0 12px rgba(0,255,102,.3)}
+.select-map:focus-visible,.route-field input:focus-visible,.destination-search:focus-visible,.primary:focus-visible,.trip-type:focus-visible,.map-control:focus-visible,.map-menu:focus-visible{outline:3px solid rgba(0,255,102,.65);outline-offset:3px}
+.toast{background:#fff!important;color:#17221b!important;border:1px solid #E5E7EB!important;box-shadow:0 6px 24px rgba(20,40,25,.12)!important}
+.custom-user{border-color:#00FF66;box-shadow:0 0 0 3px #fff,0 0 0 6px rgba(0,255,102,.3),0 3px 14px rgba(20,40,25,.15)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}

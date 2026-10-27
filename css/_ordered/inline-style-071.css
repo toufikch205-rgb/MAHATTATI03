@@ -1,0 +1,50 @@
+/* Original inline style block 71 from index.html; order intentionally preserved. */
+
+/* Arabic typography and copy-layout normalization pass */
+:root{
+ --type-ink:#171A1C;--type-muted:#687078;--type-line:1.55;
+ --type-xs:clamp(11px,2.9vw,12px);--type-sm:clamp(12px,3.2vw,14px);
+ --type-md:clamp(14px,3.7vw,16px);--type-lg:clamp(17px,4.5vw,20px);
+ --type-xl:clamp(21px,5.5vw,27px)
+}
+html,body,.app,button,input,select,textarea{font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
+body{font-size:var(--type-md);line-height:var(--type-line);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button,input,select,textarea{letter-spacing:normal;line-height:1.4}
+input,select,textarea{font-size:16px}
+button{overflow-wrap:anywhere}
+h1,h2,h3,h4,p,label{overflow-wrap:anywhere}
+h1{font-size:clamp(25px,6.4vw,34px);line-height:1.25;font-weight:850;letter-spacing:0;margin-block:0 12px}
+h2{font-size:clamp(21px,5.5vw,28px);line-height:1.3;font-weight:800;letter-spacing:0;margin-block:0 12px}
+h3,h4{font-size:var(--type-lg);line-height:1.35;font-weight:750;letter-spacing:0}
+p{line-height:1.65;margin-block:0 10px}
+label{font-size:var(--type-sm);line-height:1.45;font-weight:650}
+small,.muted,.hint,.helper-text,.field-hint{line-height:1.5}
+.primary,.destination-search,.trip-search-offers{line-height:1.4;white-space:normal;text-align:center}
+.destination-search{font-size:clamp(17px,4.7vw,23px)!important;font-weight:800!important;line-height:1.35!important;text-align:right!important}
+.primary{font-size:var(--type-md);font-weight:800}
+.map-location small{font-size:var(--type-xs)!important;line-height:1.4!important}
+.map-location strong{font-size:var(--type-md)!important;line-height:1.35!important}
+.trip-type{font-size:var(--type-sm)!important;line-height:1.35!important;font-weight:750!important;text-align:center}
+.route-field label,.route-modal-field,.sf-custom-time-label,.comment-label{font-size:var(--type-sm);line-height:1.45}
+.route-field input,.pickup-search-box input{font-size:16px!important;line-height:1.4}
+.pickup-search-title{font-size:var(--type-md)!important;line-height:1.4!important}
+.pickup-search-result{font-size:var(--type-sm)!important;line-height:1.55!important}
+.promo-copy strong{font-size:clamp(16px,4.3vw,19px)!important;line-height:1.5!important}
+.promo-copy p{font-size:var(--type-sm)!important;line-height:1.6!important}
+.fare-title{font-size:var(--type-md);line-height:1.4;font-weight:750}
+.fare-amount{line-height:1.25;font-variant-numeric:tabular-nums}
+.fare-meta,.fare-sub{font-size:var(--type-xs);line-height:1.5}
+.request-history-page h1,.request-history-page h2,.request-history-page h3,.route-modal h2{text-wrap:balance}
+.route-modal h2{line-height:1.3!important;margin-bottom:clamp(20px,5vh,36px)!important}
+.bottom-nav-item{font-size:var(--type-xs);line-height:1.35;text-align:center}
+.toast{font-size:var(--type-sm);line-height:1.5;overflow-wrap:anywhere}
+input::placeholder,textarea::placeholder{opacity:1;color:#858B91}
+input,textarea,select{min-width:0;max-width:100%}
+@media(max-width:360px){
+ .bottom-sheet{padding-inline:12px}
+ .destination-search{gap:8px!important;padding-inline:10px!important;font-size:16px!important}
+ .map-location{max-width:calc(100% - 62px)!important}
+ .route-fields{padding:10px}
+ .primary{font-size:14px}
+}
+@media(min-width:650px){body{font-size:16px}}

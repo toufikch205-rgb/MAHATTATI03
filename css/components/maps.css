@@ -1,0 +1,95 @@
+/* SEMANTIC REVIEW COPY — NOT LOADED BY index.html YET.
+   Runtime CSS remains in css/_ordered/ to preserve the original cascade.
+   Move these rules into the live stylesheet only after visual regression checks. */
+
+
+/* Source fragment: inline-style-010.css */
+/* Original inline style block 10 from index.html; order intentionally preserved. */
+
+/* Destination prompt: white base with a restrained neon-green signature */
+.destination-search{
+  background:#FFFFFF!important;
+  color:#202522!important;
+  border:1.5px solid #E6EAE7!important;
+  box-shadow:0 3px 12px rgba(20,30,20,.05)!important;
+  transition:background .2s,border-color .2s,box-shadow .2s,transform .2s!important;
+}
+.destination-search .search-icon{color:#00FF66!important;text-shadow:0 0 8px rgba(0,255,102,.22)!important}
+.destination-search:active,.destination-search:focus-visible{
+  background:#FFFFFF!important;color:#202522!important;border-color:#00FF66!important;
+  box-shadow:0 0 0 3px rgba(0,255,102,.13),0 0 18px rgba(0,255,102,.20)!important;
+}
+
+/* Source fragment: inline-style-016.css */
+/* Original inline style block 16 from index.html; order intentionally preserved. */
+
+/* The trip-selection page has its own bottom actions; keep the global tabs off this screen. */
+body.trip-page-active #mainBottomNav,
+body.trip-page-active .main-bottom-nav { display:none !important; visibility:hidden !important; pointer-events:none !important; }
+body.trip-page-active #tripMapPage { z-index: 1600; }
+
+/* Source fragment: inline-style-052.css */
+/* Original inline style block 52 from index.html; order intentionally preserved. */
+
+/* Elegant soft gray text to draw attention without disturbing the white/green design */
+.destination-search #destinationPrompt{
+ color:#626A66!important;
+ text-shadow:0 1px 0 rgba(255,255,255,.95)!important;
+}
+.destination-search{
+ background:linear-gradient(180deg,#FFFFFF 0%,#F7F8F7 100%)!important;
+ border-color:#E2E6E3!important;
+ box-shadow:0 4px 13px rgba(20,30,24,.06), inset 0 1px 0 rgba(255,255,255,.95)!important;
+}
+.destination-search .search-icon{color:#00FF66!important}
+.destination-search:active,.destination-search:focus-visible{border-color:#00FF66!important;box-shadow:0 0 0 3px rgba(0,255,102,.13),0 5px 16px rgba(20,30,24,.07)!important}
+
+/* Source fragment: inline-style-066.css */
+/* Original inline style block 66 from index.html; order intentionally preserved. */
+
+#mahattatiLiveDispatch{margin:14px 0;padding:14px;border:1px solid #dfe9e1;border-radius:18px;background:#fff;color:#23352a;direction:rtl}
+#mahattatiLiveDispatch h3{margin:0 0 8px;font-size:18px}#mahattatiLiveDispatch .mld-note{font-size:12px;color:#69786d;line-height:1.7;margin:4px 0 12px}
+#mahattatiLiveDispatch .mld-card{padding:12px;margin:9px 0;border:1px solid #e5ece6;border-radius:14px;background:#f9fcf9}
+#mahattatiLiveDispatch .mld-route{font-weight:750;line-height:1.8;overflow-wrap:anywhere}#mahattatiLiveDispatch .mld-meta{font-size:12px;color:#647268;margin-top:5px}
+#mahattatiLiveDispatch button{border:0;border-radius:10px;padding:10px 13px;font:inherit;font-weight:800;cursor:pointer;margin:8px 5px 0 0}
+#mahattatiLiveDispatch .mld-accept,#mahattatiLiveDispatch .mld-complete{background:#b7f34a;color:#18320a}#mahattatiLiveDispatch .mld-reload,#mahattatiLiveDispatch .mld-online{background:#edf4ee;color:#25442f}#mahattatiLiveDispatch button:disabled{opacity:.6;cursor:wait}
+#mahattatiLiveDispatch .mld-status{font-size:12px;color:#287b45;margin-top:8px;white-space:pre-wrap}
+
+/* Source fragment: inline-style-073.css */
+/* Original inline style block 73 from index.html; order intentionally preserved. */
+
+/* Toast notifications used across the app */
+  .toast, #toast, .toast.show {
+    background: #FFFFFF !important;
+    color: #202820 !important;
+    border: 1px solid rgba(0,255,102,.75) !important;
+    box-shadow: 0 8px 26px rgba(15,35,20,.16) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    text-shadow: none !important;
+    font-weight: 650 !important;
+    line-height: 1.55 !important;
+  }
+  /* Map guidance messages should not appear as dark floating boxes either */
+  .map-note, #mapNote, .map-note.visible {
+    background: #FFFFFF !important;
+    color: #202820 !important;
+    border: 1px solid rgba(0,255,102,.75) !important;
+    box-shadow: 0 6px 20px rgba(15,35,20,.12) !important;
+    text-shadow: none !important;
+  }
+  .toast.show { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .toast, .map-note { transition: none !important; } }
+
+/* Source fragment: inline-style-080.css */
+/* Original inline style block 80 from index.html; order intentionally preserved. */
+
+#map{background:#e9eff2;isolation:isolate}#map .leaflet-tile-pane{filter:none;opacity:1}#map .leaflet-tile{filter:none;opacity:1;visibility:visible}
+
+/* Source fragment: inline-style-081.css */
+/* Original inline style block 81 from index.html; order intentionally preserved. */
+
+/* Clear A/B labels for pickup and destination markers */
+.route-point-letter{position:absolute;top:-3px;right:-2px;min-width:19px;height:19px;padding:0 3px;border:2px solid #fff;border-radius:11px;display:flex;align-items:center;justify-content:center;font:800 11px/1 Arial,sans-serif;color:#fff;box-shadow:0 1px 5px #0004;box-sizing:border-box;z-index:5}
+.route-point-a{background:#00a957}
+.route-point-b{background:#e53935}

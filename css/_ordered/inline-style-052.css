@@ -1,0 +1,14 @@
+/* Original inline style block 52 from index.html; order intentionally preserved. */
+
+/* Elegant soft gray text to draw attention without disturbing the white/green design */
+.destination-search #destinationPrompt{
+ color:#626A66!important;
+ text-shadow:0 1px 0 rgba(255,255,255,.95)!important;
+}
+.destination-search{
+ background:linear-gradient(180deg,#FFFFFF 0%,#F7F8F7 100%)!important;
+ border-color:#E2E6E3!important;
+ box-shadow:0 4px 13px rgba(20,30,24,.06), inset 0 1px 0 rgba(255,255,255,.95)!important;
+}
+.destination-search .search-icon{color:#00FF66!important}
+.destination-search:active,.destination-search:focus-visible{border-color:#00FF66!important;box-shadow:0 0 0 3px rgba(0,255,102,.13),0 5px 16px rgba(20,30,24,.07)!important}

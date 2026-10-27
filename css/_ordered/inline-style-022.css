@@ -1,0 +1,36 @@
+/* Original inline style block 22 from index.html; order intentionally preserved. */
+
+/* Visual consistency pass: icon alignment, touch targets, spacing, and responsive safety. */
+:root{--ui-radius:18px;--ui-border:#E5E7EB;--ui-shadow:0 6px 20px rgba(20,30,20,.08)}
+button,[role="button"],input,select,textarea{font-family:inherit;-webkit-tap-highlight-color:transparent}
+button{touch-action:manipulation}
+button:focus-visible,[role="button"]:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #00FF66;outline-offset:2px}
+button:disabled{opacity:.55;cursor:not-allowed}
+/* Keep small decorative icons aligned with their labels. */
+.map-location .pin,.option-icon,.mi-icon,.bottom-nav-icon,.trip-type img,.trip-type svg,.trip-type .trip-icon{flex-shrink:0;object-fit:contain;vertical-align:middle}
+.trip-type img,.trip-type svg{width:clamp(27px,8vw,38px);height:clamp(27px,8vw,38px);max-width:100%;display:block}
+.trip-type{min-width:0;overflow:hidden;justify-content:center;gap:8px}
+.trip-type span,.trip-type strong,.trip-type small{min-width:0;overflow-wrap:anywhere}
+/* Consistent surface and icon sizing across map controls. */
+.map-control,.map-menu{display:flex;align-items:center;justify-content:center;line-height:1;box-shadow:0 4px 14px rgba(0,0,0,.10);transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.map-control:active,.map-menu:active,.bottom-nav-item:active,.primary:active,.trip-search-offers:active{transform:scale(.97)}
+.map-control svg,.map-menu svg{width:21px;height:21px;max-width:100%;max-height:100%}
+/* Cards use one border language without forcing the same dimensions. */
+.fare-card,.history-card,.menu-item,.pickup-search-panel,.route-fields,.trip-type,.promo-card{border-color:var(--ui-border)}
+.fare-card,.history-card,.promo-card{box-shadow:var(--ui-shadow)}
+.fare-card{min-width:0;gap:clamp(7px,2vw,12px)}
+.fare-info{min-width:0;overflow-wrap:anywhere}
+.fare-title,.fare-amount,.fare-meta,.fare-sub{max-width:100%;overflow-wrap:anywhere}
+/* Navigation icons remain visually balanced and never stretch. */
+.bottom-nav-item{min-width:0;padding:7px 4px;white-space:normal}
+.bottom-nav-icon{display:flex;align-items:center;justify-content:center;min-height:25px;font-size:22px;line-height:1}
+.bottom-nav-icon svg{width:22px;height:22px;display:block}
+/* Prevent content from spilling on narrow phones. */
+@media(max-width:380px){
+ .map-head{left:10px;right:10px}
+ .map-location{min-width:0;max-width:74%;gap:8px;padding:10px 11px}
+ .trip-type{gap:6px;padding-inline:7px}
+ .bottom-nav-item{font-size:11px;gap:2px}
+ .fare-card{padding:9px 8px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

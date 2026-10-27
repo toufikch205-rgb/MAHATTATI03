@@ -1,0 +1,14 @@
+/* Original inline style block 77 from index.html; order intentionally preserved. */
+
+#driverPermissionsPage .dperm-item{align-items:flex-start}
+#driverPermissionsPage .dperm-copy{flex:1;min-width:0}
+#driverPermissionsPage .dperm-options{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+#driverPermissionsPage .dperm-options button{min-width:82px;min-height:36px;padding:7px 13px;border:1px solid #dfe6d4;border-radius:11px;background:#fff;color:#37412d;font:800 12px Tahoma,Arial,sans-serif;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
+#driverPermissionsPage .dperm-options button:active{transform:scale(.97)}
+#driverPermissionsPage .dperm-options button.selected[data-choice="allow"]{background:#dff4b6;border-color:#00FF66;color:#00FF66;box-shadow:inset 0 0 0 1px rgba(78,126,24,.08)}
+#driverPermissionsPage .dperm-options button.selected[data-choice="deny"]{background:#fff0eb;border-color:#e8b5a5;color:#9b3d28}
+#driverPermissionsPage .dperm-result{display:block;margin-top:5px;font-size:11px;color:#818875}
+#driverPermissionsPage .permission-allowed .dperm-result{color:#00FF66;font-weight:800}
+#driverPermissionsPage .permission-denied .dperm-result{color:#a04430;font-weight:800}
+#driverPermissionsPage .dperm-item{min-height:0;padding:14px 13px}
+@media(max-width:370px){#driverPermissionsPage .dperm-options button{min-width:72px;padding:7px 10px}#driverPermissionsPage .dperm-item{gap:9px}}

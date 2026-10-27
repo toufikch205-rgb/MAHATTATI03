@@ -1,0 +1,7 @@
+/* Original inline style block 69 from index.html; order intentionally preserved. */
+
+/* Make the destination prompt prominent and use the full button width */
+.destination-search{width:100%!important;min-height:clamp(64px,10vh,78px)!important;height:auto!important;padding:12px clamp(12px,3vw,20px)!important;gap:clamp(8px,2.5vw,14px)!important;justify-content:space-between!important}
+.destination-search #destinationPrompt{flex:1 1 auto!important;min-width:0!important;display:block!important;text-align:center!important;font-size:clamp(21px,6.1vw,32px)!important;font-weight:900!important;line-height:1.25!important;letter-spacing:0!important;white-space:normal!important}
+.destination-search .search-icon{flex:0 0 auto!important;font-size:clamp(30px,8vw,40px)!important;line-height:1!important}
+@media(max-width:360px){.destination-search #destinationPrompt{font-size:clamp(19px,5.8vw,23px)!important}.destination-search{padding-inline:10px!important}}

@@ -1,0 +1,24 @@
+/* Original inline style block 73 from index.html; order intentionally preserved. */
+
+/* Toast notifications used across the app */
+  .toast, #toast, .toast.show {
+    background: #FFFFFF !important;
+    color: #202820 !important;
+    border: 1px solid rgba(0,255,102,.75) !important;
+    box-shadow: 0 8px 26px rgba(15,35,20,.16) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    text-shadow: none !important;
+    font-weight: 650 !important;
+    line-height: 1.55 !important;
+  }
+  /* Map guidance messages should not appear as dark floating boxes either */
+  .map-note, #mapNote, .map-note.visible {
+    background: #FFFFFF !important;
+    color: #202820 !important;
+    border: 1px solid rgba(0,255,102,.75) !important;
+    box-shadow: 0 6px 20px rgba(15,35,20,.12) !important;
+    text-shadow: none !important;
+  }
+  .toast.show { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .toast, .map-note { transition: none !important; } }

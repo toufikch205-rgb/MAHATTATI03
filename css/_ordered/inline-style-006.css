@@ -1,0 +1,6 @@
+/* Original inline style block 6 from index.html; order intentionally preserved. */
+
+/* Neon-green edge glow when the user touches the screen */
+html::after{content:"";position:fixed;inset:0;z-index:99999;pointer-events:none;border:3px solid rgba(0,255,102,0);box-shadow:inset 0 0 0 rgba(0,255,102,0);transition:border-color .18s ease,box-shadow .18s ease;}
+html.screen-touch-glow::after{border-color:rgba(0,255,102,.95);box-shadow:inset 0 0 22px rgba(0,255,102,.22),inset 0 0 55px rgba(0,255,102,.12),0 0 16px rgba(0,255,102,.22);}
+@media(prefers-reduced-motion:reduce){html::after{transition:none}}

@@ -1,0 +1,11 @@
+/* Original inline style block 9 from index.html; order intentionally preserved. */
+
+:root{--lime:#00FF66!important;--glow:#00FF66!important;--green:#00FF66!important}
+button:focus-visible,input:focus-visible,select:focus-visible,.route-modal-field:focus-visible{outline-color:#00FF66!important}
+.pickup-options,.pickup-search-panel,.route-modal-pickup-menu,.destination-modal-search{border-color:rgba(0,255,102,.55)!important}
+.pickup-option:active,.pickup-option:focus-visible,.pickup-search-result:hover,.pickup-search-result:focus-visible,.route-modal-pickup-option:hover,.route-modal-pickup-option:focus-visible,.route-modal-pickup-option:active{border-color:#00FF66!important;box-shadow:0 0 0 2px rgba(0,255,102,.16)!important;background:#FFFFFF!important}
+.pickup-search-box:focus-within,.route-modal-field.pickup-active,.route-modal-pickup-wrap:has(.route-modal-pickup-menu.open)>.route-modal-field{border-color:#00FF66!important;box-shadow:0 0 0 2px rgba(0,255,102,.2)!important}
+.route-modal-icon,.pickup-option .option-icon,.map-location .pin,.select-map{color:#00FF66!important}
+.route-symbol{background:#00FF66!important;box-shadow:0 0 10px rgba(0,255,102,.4)!important}
+.fare-amount{background:rgba(0,255,102,.08)!important;color:#00FF66!important;border:1px solid rgba(0,255,102,.35)!important}
+.trip-type.active{border-color:#00FF66!important;box-shadow:0 0 0 2px rgba(0,255,102,.18),0 0 18px rgba(0,255,102,.22)!important}

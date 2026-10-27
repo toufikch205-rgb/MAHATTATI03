@@ -1,0 +1,98 @@
+/* SEMANTIC REVIEW COPY — NOT LOADED BY index.html YET.
+   Runtime CSS remains in css/_ordered/ to preserve the original cascade.
+   Move these rules into the live stylesheet only after visual regression checks. */
+
+
+/* Source fragment: inline-style-023.css */
+/* Original inline style block 23 from index.html; order intentionally preserved. */
+
+#mahattatiSafetyPage{position:fixed;inset:0;z-index:3250;display:none;background:#f7f9f7;color:#172018;direction:rtl;overflow:auto;padding:calc(12px + env(safe-area-inset-top)) 14px calc(24px + env(safe-area-inset-bottom));font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
+#mahattatiSafetyPage.open{display:block}#mahattatiSafetyPage *{box-sizing:border-box}.msf-shell{width:100%;max-width:520px;margin:0 auto}.msf-header{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:8px;margin-bottom:16px}.msf-back{width:42px;height:42px;border:1px solid #e3e9e3;border-radius:14px;background:#fff;color:#172018;font-size:27px;cursor:pointer}.msf-header h1{font-size:clamp(22px,5.8vw,28px);margin:0;text-align:center;font-weight:850}.msf-hero{background:linear-gradient(135deg,#123c25,#00FF66);color:white;border-radius:22px;padding:19px;margin-bottom:16px}.msf-hero-icon{font-size:35px}.msf-hero h2{font-size:20px;margin:7px 0 5px}.msf-hero p{font-size:13px;line-height:1.7;margin:0;color:#e7f6eb}.msf-label{font-size:14px;font-weight:850;color:#647064;margin:18px 4px 8px}.msf-card{background:#fff;border:1px solid #e6ebe6;border-radius:18px;overflow:hidden;box-shadow:0 5px 18px rgba(22,40,22,.04)}.msf-row{display:flex;align-items:flex-start;gap:12px;padding:14px;border-bottom:1px solid #eef1ee}.msf-row:last-child{border-bottom:0}.msf-icon{width:39px;height:39px;flex:0 0 39px;border-radius:13px;display:grid;place-items:center;background:#effff5;color:#00FF66;font-size:20px}.msf-copy{min-width:0}.msf-copy strong{display:block;font-size:14px;margin:1px 0 4px}.msf-copy p{font-size:12px;color:#687568;line-height:1.65;margin:0}.msf-action{width:100%;border:0;background:#fff;color:#00FF66;display:flex;align-items:center;justify-content:space-between;text-align:right;gap:12px;padding:14px;min-height:58px;font:750 14px system-ui;cursor:pointer;border-bottom:1px solid #eef1ee}.msf-action:last-child{border-bottom:0}.msf-action small{display:block;font-size:11px;font-weight:500;color:#7b857b;margin-top:4px}.msf-note{font-size:11px;color:#7b857b;line-height:1.7;margin:12px 5px}
+
+/* Source fragment: inline-style-028.css */
+/* Original inline style block 28 from index.html; order intentionally preserved. */
+
+#driverSignupPage{position:fixed;inset:0;z-index:5100;display:none;background:#fff;color:#171717;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow:auto;padding:calc(env(safe-area-inset-top) + 8px) 0 calc(env(safe-area-inset-bottom) + 20px);box-sizing:border-box}
+#driverSignupPage.open{display:flex;flex-direction:column}
+#driverSignupPage *{box-sizing:border-box}
+#driverSignupPage .dsp-header{height:92px;flex:none;border-bottom:1px solid #eee;box-shadow:0 2px 4px #0000000a;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,5vw,34px)}
+#driverSignupPage .dsp-header button{border:0;background:transparent;padding:8px 0;font:500 clamp(18px,4.5vw,23px) system-ui;color:#171717}
+#driverSignupPage #driverSignupHelp{color:#548fcf}
+#driverSignupPage .dsp-main{padding:clamp(30px,7vh,58px) clamp(22px,4.5vw,31px) 24px;flex:1;min-height:0}
+#driverSignupPage h1{font-size:clamp(28px,6.8vw,40px);line-height:1.35;margin:0 0 clamp(30px,6vh,52px);font-weight:800;letter-spacing:-.6px}
+#driverSignupPage .dsp-photo{width:clamp(130px,28vw,180px);height:clamp(130px,28vw,180px);margin:0 0 32px auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;color:#171717}
+#driverSignupPage #driverPhotoPreview{width:100%;height:calc(100% - 34px);border-radius:28px;background:#f4f4f4;display:flex;align-items:center;justify-content:center;font-size:clamp(34px,8vw,48px);overflow:hidden;background-size:cover;background-position:center}
+#driverSignupPage .dsp-photo small{font-size:clamp(16px,4vw,21px);line-height:1.4;white-space:nowrap}
+#driverSignupPage #driverSignupForm{display:flex;flex-direction:column;gap:clamp(16px,3.7vh,26px)}
+#driverSignupPage #driverSignupForm input{width:100%;height:clamp(68px,10vh,86px);border:0;border-radius:17px;background:#f4f4f4;padding:0 22px;text-align:right;font:500 clamp(21px,5vw,29px) system-ui;color:#222;outline:none}
+#driverSignupPage #driverSignupForm input::placeholder{color:#777;opacity:1}
+#driverSignupPage #driverSignupForm input:focus{box-shadow:0 0 0 2px #00FF66;background:#fafafa}
+#driverSignupPage .dsp-footer{flex:none;padding:12px clamp(22px,4.5vw,31px) 0;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:end}
+#driverSignupPage .dsp-progress-label{font-size:clamp(25px,6vw,34px);font-weight:800;text-align:right;grid-column:2;grid-row:1}
+#driverSignupPage .dsp-progress{height:10px;background:#dedede;border-radius:20px;overflow:hidden;grid-column:1;grid-row:2;align-self:center}
+#driverSignupPage .dsp-progress span{display:block;width:25%;height:100%;background:#00FF66;border-radius:20px;margin-right:0}
+#driverSignupPage .dsp-actions{grid-column:1 / -1;display:flex;gap:14px;align-items:center;margin-top:6px}
+#driverSignupPage .dsp-actions button{height:clamp(66px,9vh,78px);border:0;border-radius:24px;font:750 clamp(22px,5.2vw,29px) system-ui}
+#driverSignupPage #driverSignupNext{flex:1;background:#00FF66;color:#171717}
+#driverSignupPage #driverSignupBack{width:clamp(72px,16vw,100px);background:#f8f8f8;color:#bbb}
+#driverSignupPage #driverSignupBack:disabled{opacity:1}
+@media(max-height:700px){#driverSignupPage .dsp-header{height:72px}#driverSignupPage .dsp-main{padding-top:24px}#driverSignupPage h1{margin-bottom:20px}#driverSignupPage .dsp-photo{width:112px;height:112px;margin-bottom:18px}#driverSignupPage #driverSignupForm{gap:12px}#driverSignupPage #driverSignupForm input{height:58px}#driverSignupPage .dsp-actions button{height:58px}}
+
+/* Source fragment: inline-style-030.css */
+/* Original inline style block 30 from index.html; order intentionally preserved. */
+
+#driverLicensePage{position:fixed;inset:0;z-index:5200;display:none;background:#fbfcf8;color:#20231d;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow:auto;padding:calc(env(safe-area-inset-top) + 8px) 0 calc(env(safe-area-inset-bottom) + 14px);box-sizing:border-box}
+#driverLicensePage.open{display:flex;flex-direction:column}#driverLicensePage *{box-sizing:border-box}
+#driverLicensePage .dsp-header{height:76px;flex:none;border-bottom:1px solid #edf0e8;box-shadow:0 2px 8px rgba(28,38,16,.035);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(22px,5vw,30px)}
+#driverLicensePage .dsp-header button{border:0;background:transparent;padding:8px 0;font:600 clamp(16px,4vw,20px) system-ui;color:#20231d}#driverLicensePage #driverLicenseHelp{color:#00FF66}
+#driverLicensePage .dsp-main{padding:clamp(26px,5vh,42px) clamp(22px,4.5vw,31px) 20px;flex:1;min-height:0}
+#driverLicensePage h1{font-size:clamp(27px,6.2vw,35px);line-height:1.35;margin:0 0 clamp(24px,5vh,42px);font-weight:750;letter-spacing:-.35px}
+#driverLicensePage .dl-photo-row{display:flex;gap:clamp(14px,4vw,24px);justify-content:flex-start;margin-bottom:clamp(28px,5vh,44px)}
+#driverLicensePage .dl-photo{width:clamp(120px,28vw,164px);height:clamp(164px,31vh,218px);display:flex;flex-direction:column;align-items:center;gap:10px;cursor:pointer;text-align:center;color:#454a3e;font-size:clamp(15px,3.8vw,18px);font-weight:550;line-height:1.35}
+#driverLicensePage .dl-photo span{width:100%;height:calc(100% - 46px);min-height:110px;border-radius:24px;background:#f0f3eb;border:1px solid #e8eddf;color:#00FF66;display:flex;align-items:center;justify-content:center;font-size:36px;background-size:cover;background-position:center;overflow:hidden}
+#driverLicensePage #driverLicenseForm{display:flex;flex-direction:column;gap:14px}
+#driverLicensePage #driverLicenseForm input{width:100%;height:clamp(60px,8.2vh,72px);border:1px solid #edf0e8;border-radius:15px;background:#f3f5ef;padding:0 18px;text-align:right;font:450 clamp(18px,4.7vw,23px) system-ui;color:#25291f;outline:none}
+#driverLicensePage #driverLicenseForm input::placeholder{color:#777d70;opacity:1}#driverLicensePage #driverLicenseForm input:focus{border-color:#00FF66;box-shadow:0 0 0 3px rgba(0,255,102,.18);background:#fff}
+#driverLicensePage .dsp-footer{flex:none;padding:12px clamp(22px,5vw,30px) 0;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end}
+#driverLicensePage .dsp-progress-label{font-size:clamp(22px,5.3vw,29px);font-weight:750;text-align:right;grid-column:2;grid-row:1}#driverLicensePage .dsp-progress{height:7px;background:#e5e8df;border-radius:20px;overflow:hidden;grid-column:1;grid-row:2}#driverLicensePage .dsp-progress span{display:block;height:100%;background:#00FF66;border-radius:20px}
+#driverLicensePage .dsp-actions{grid-column:1/-1;display:flex;gap:10px;align-items:center;margin-top:4px}#driverLicensePage .dsp-actions button{height:clamp(58px,8vh,68px);border:0;border-radius:19px;font:700 clamp(20px,4.8vw,25px) system-ui}
+#driverLicensePage #driverLicenseNext{flex:1;background:#00FF66;color:#20231d;box-shadow:0 4px 12px rgba(0,255,102,.12)}#driverLicensePage #driverLicenseBack{width:clamp(60px,14vw,76px);background:#f1f3ed;color:#7c8275}
+@media(max-height:700px){#driverLicensePage .dsp-header{height:64px}#driverLicensePage .dsp-main{padding-top:20px}#driverLicensePage h1{margin-bottom:18px}#driverLicensePage .dl-photo{height:150px}#driverLicensePage .dl-photo-row{margin-bottom:22px}#driverLicensePage .dsp-actions button{height:54px}}
+
+/* Source fragment: inline-style-031.css */
+/* Original inline style block 31 from index.html; order intentionally preserved. */
+
+#vehicleRegistrationPage{position:fixed;inset:0;z-index:5102;display:none;flex-direction:column;background:#fbfcf8;color:#20231d;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;overflow:auto;padding:calc(env(safe-area-inset-top) + 8px) 0 calc(env(safe-area-inset-bottom) + 14px);box-sizing:border-box}
+#vehicleRegistrationPage.open{display:flex}
+#vehicleRegistrationPage *{box-sizing:border-box}
+#vehicleRegistrationPage .dsp-header{height:76px;flex:none;border-bottom:1px solid #edf0e8;box-shadow:0 2px 8px rgba(28,38,16,.035);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(22px,5vw,30px)}
+#vehicleRegistrationPage .dsp-header button{border:0;background:transparent;padding:10px 0;font:600 clamp(16px,4vw,20px) system-ui;color:#20231d}
+#vehicleRegistrationPage #vehicleRegistrationHelp{color:#00FF66}
+#vehicleRegistrationPage .dsp-main{padding:clamp(54px,11vh,100px) clamp(22px,5vw,30px) 20px;flex:1;min-height:0}
+#vehicleRegistrationPage h1{font-size:clamp(27px,6.4vw,38px);line-height:1.35;letter-spacing:-.4px;margin:0 0 clamp(28px,5vh,42px);font-weight:800;color:#20231d}
+#vehicleRegistrationPage #vehicleRegistrationForm{width:100%}
+#vehicleRegistrationPage .vr-intro{margin:-8px 0 24px;color:#70766a;font-size:clamp(15px,3.8vw,18px);line-height:1.65;font-weight:450}
+#vehicleRegistrationPage .vr-options{display:grid;grid-template-columns:1fr;gap:14px;width:100%}
+#vehicleRegistrationPage .vr-option{width:100%;min-height:88px;display:flex;align-items:center;gap:15px;text-align:right;direction:rtl;padding:17px 18px;border:1.5px solid #e5e8df;border-radius:20px;background:#f5f6f3;color:#20231d;box-shadow:0 3px 10px rgba(28,38,16,.035);font:650 clamp(18px,4.8vw,23px)/1.4 system-ui;transition:border-color .18s,background .18s,transform .18s;cursor:pointer}
+#vehicleRegistrationPage .vr-option:active{transform:scale(.99)}
+#vehicleRegistrationPage .vr-option .vr-icon{width:48px;height:48px;flex:none;border-radius:15px;display:grid;place-items:center;background:#e8ebdf;color:#454b3e}
+#vehicleRegistrationPage .vr-option .vr-icon svg{width:27px;height:27px;display:block}
+#vehicleRegistrationPage .vr-option .vr-option-text{flex:1}
+#vehicleRegistrationPage .vr-option .vr-check{width:23px;height:23px;flex:none;border:2px solid #cbd0c3;border-radius:50%;display:grid;place-items:center;background:#fff}
+#vehicleRegistrationPage .vr-option .vr-check::after{content:'';width:9px;height:9px;border-radius:50%;background:transparent}
+#vehicleRegistrationPage .vr-option.selected{border-color:#00FF66;background:#f8ffe5;box-shadow:0 0 0 2px rgba(189,240,24,.15)}
+#vehicleRegistrationPage .vr-option.selected .vr-icon{background:#00FF66;color:#20231d}
+#vehicleRegistrationPage .vr-option.selected .vr-check{border-color:#20231d}
+#vehicleRegistrationPage .vr-option.selected .vr-check::after{background:#20231d}
+#vehicleRegistrationPage .vr-select-wrap{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+#vehicleRegistrationPage .vr-select-wrap span{font-size:16px}
+#vehicleRegistrationPage .vr-select-wrap select{width:1px;height:1px;opacity:0}
+#vehicleRegistrationPage .dsp-footer{flex:none;padding:12px clamp(22px,5vw,30px) 0;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end}
+#vehicleRegistrationPage .dsp-progress-label{font-size:clamp(22px,5.3vw,29px);font-weight:750;text-align:right;grid-column:2;grid-row:1;color:#25291f}
+#vehicleRegistrationPage .dsp-progress{height:7px;background:#e5e8df;border-radius:20px;overflow:hidden;grid-column:1;grid-row:2;align-self:center}
+#vehicleRegistrationPage .dsp-progress span{display:block;height:100%;background:#00FF66;border-radius:20px;margin-right:0}
+#vehicleRegistrationPage .dsp-actions{grid-column:1 / -1;display:flex;gap:10px;align-items:center;margin-top:4px}
+#vehicleRegistrationPage .dsp-actions button{height:clamp(66px,9vh,78px);border:0;border-radius:24px;font:750 clamp(22px,5.2vw,29px) system-ui}
+#vehicleRegistrationPage #vehicleRegistrationNext{flex:1;background:#00FF66;color:#171717}
+#vehicleRegistrationPage #vehicleRegistrationBack{width:clamp(72px,16vw,100px);background:#f2f3ef;color:#333}
+@media(max-height:700px){#vehicleRegistrationPage .dsp-header{height:68px}#vehicleRegistrationPage .dsp-main{padding-top:34px}#vehicleRegistrationPage h1{margin-bottom:22px}#vehicleRegistrationPage .dsp-actions button{height:58px}}

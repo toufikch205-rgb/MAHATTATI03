@@ -1,0 +1,5 @@
+/* Original inline style block 40 from index.html; order intentionally preserved. */
+
+/* Keep driver navigation visible above the ride-request screen */
+/* Bottom spacing is defined once in #mddRideRequestPage canonical styles. */
+body.mdd-request-nav-pinned #driverDashboardPage .mdd-nav, body.mdd-request-nav-pinned > .mdd-nav{position:fixed !important;left:0 !important;right:0 !important;bottom:0 !important;top:auto !important;width:100% !important;display:grid !important;visibility:visible !important;opacity:1 !important;z-index:2147483647 !important;pointer-events:auto !important;background:rgba(255,255,255,.99) !important;box-shadow:0 -5px 18px rgba(20,40,22,.12) !important;}

@@ -1,0 +1,28 @@
+/* Original inline style block 48 from index.html; order intentionally preserved. */
+
+/* Requested home layout: map ~75% and ride/search panel ~25%, preserve existing app behavior */
+.bottom-sheet{
+  height:25dvh!important;
+  min-height:205px!important;
+  max-height:285px!important;
+  bottom:66px!important;
+  padding:7px clamp(12px,4.2vw,22px) calc(8px + env(safe-area-inset-bottom))!important;
+  overflow-y:auto!important;
+}
+.sheet-handle{height:12px!important}
+.sheet-handle span{height:4px!important}
+.trip-types{margin:3px 0 9px!important;gap:9px!important}
+.trip-type{min-height:clamp(55px,8vh,70px)!important;padding:5px 4px!important;border-radius:17px!important;gap:3px!important}
+.trip-emoji{font-size:clamp(24px,7vw,31px)!important}
+.destination-search{height:clamp(50px,7.5vh,62px)!important;min-height:50px!important;margin-bottom:7px!important;border-radius:19px!important;font-size:clamp(16px,4.8vw,25px)!important}
+.search-icon{font-size:clamp(26px,7.5vw,33px)!important}
+.map-controls{bottom:calc(25dvh + 78px)!important}
+.toast{bottom:calc(25dvh + 82px)!important}
+@media(max-height:700px){
+ .bottom-sheet{height:29dvh!important;min-height:185px!important;max-height:230px!important;padding-top:5px!important}
+ .trip-type{min-height:52px!important}
+ .destination-search{height:48px!important;min-height:48px!important;margin-bottom:5px!important}
+ .map-controls{bottom:calc(29dvh + 76px)!important}
+ .toast{bottom:calc(29dvh + 80px)!important}
+}
+@media(min-width:650px){.bottom-sheet{height:25dvh!important;max-height:285px!important;bottom:66px!important}}

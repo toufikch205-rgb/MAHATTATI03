@@ -1,0 +1,26 @@
+{
+  "phase": "map-location-route-function-extraction",
+  "moved_functions": [
+    "updateRouteSummary",
+    "drawSelectedRoute",
+    "mahattatiSearchPlaces",
+    "reverseGeocode",
+    "setUser",
+    "locate",
+    "setSelectMode",
+    "searchDestinationPlaces",
+    "showTripMapPage",
+    "hideTripMapPage"
+  ],
+  "destination": "js/features/maps/map-controller.js",
+  "source": "js/core/legacy-main-controller.js",
+  "load_order": "map-controller.js is inserted immediately before legacy-main-controller.js so declarations are available when the original controller wires handlers.",
+  "shared_dependencies": "Functions deliberately continue to reference the original shared global lexical bindings (Leaflet map, markers, language, fare state, helpers, and DOM). They were not converted to modules and no state ownership was changed.",
+  "checks": {
+    "javascript_syntax": "pending",
+    "missing_local_references": "pending",
+    "browser_runtime": "not run",
+    "live_database": "not run"
+  },
+  "next": "After browser regression validation, extract search-specific and route-specific functions into separate modules if the current shared dependency model behaves correctly."
+}

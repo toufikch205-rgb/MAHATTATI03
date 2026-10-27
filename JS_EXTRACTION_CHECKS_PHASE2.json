@@ -1,0 +1,18 @@
+{
+  "moved_functions": [
+    "startRideSearchTimer",
+    "stopRideSearchTimer",
+    "stopPassengerAcceptancePolling",
+    "checkPassengerRequestStatus",
+    "startPassengerAcceptancePolling"
+  ],
+  "js_files_checked": 32,
+  "syntax_errors": [],
+  "missing_local_references": [],
+  "script_order_indices": {
+    "js/features/maps/map-controller.js": 3,
+    "js/features/customer/ride-booking.js": 4,
+    "js/core/legacy-main-controller.js": 5
+  },
+  "acceptance_condition": "Database row must show driver_id + accepted_at + accepted status; no browser or live DB test was performed."
+}

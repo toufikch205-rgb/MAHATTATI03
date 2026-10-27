@@ -1,0 +1,23 @@
+/* SEMANTIC REVIEW COPY — NOT LOADED BY index.html YET.
+   Runtime CSS remains in css/_ordered/ to preserve the original cascade.
+   Move these rules into the live stylesheet only after visual regression checks. */
+
+
+/* Source fragment: inline-style-014.css */
+/* Original inline style block 14 from index.html; order intentionally preserved. */
+
+#carService .trip-emoji.trip-car-photo{border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;}
+#carService .trip-emoji.trip-car-photo img{border:0!important;outline:0!important;box-shadow:none!important;}
+
+/* Source fragment: inline-style-015.css */
+/* Original inline style block 15 from index.html; order intentionally preserved. */
+
+#carService .trip-emoji.trip-car-photo{border:0!important;outline:0!important;box-shadow:none!important;background:#fff!important;padding:0!important;overflow:hidden!important}
+#carService .trip-emoji.trip-car-photo img{border:0!important;outline:0!important;box-shadow:none!important;background:#fff!important}
+
+/* Source fragment: inline-style-044.css */
+/* Original inline style block 44 from index.html; order intentionally preserved. */
+
+.promo-art.promo-car-image{background:#fff!important;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:0;position:relative}
+.promo-art .promo-car-photo{display:block;width:100%;height:100%;min-height:112px;object-fit:contain;object-position:center;background:#fff}
+.promo-art.promo-car-image span{z-index:1;top:7px;right:7px;background:#fff;border:1px solid #00FF66;border-radius:50%;width:25px;height:25px;display:grid;place-items:center;color:#00FF66!important;font-size:15px!important}

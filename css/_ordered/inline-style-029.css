@@ -1,0 +1,47 @@
+/* Original inline style block 29 from index.html; order intentionally preserved. */
+
+/* تحسين بصري لصفحة المعلومات الشخصية فقط */
+#driverSignupPage{background:#fbfcf8;color:#20231d;padding-bottom:calc(env(safe-area-inset-bottom) + 14px)}
+#driverSignupPage .dsp-header{height:76px;padding-inline:clamp(22px,5vw,30px);border-bottom:1px solid #edf0e8;box-shadow:0 2px 8px rgba(28,38,16,.035)}
+#driverSignupPage .dsp-header button{font-size:clamp(16px,4vw,20px);font-weight:600;letter-spacing:0}
+#driverSignupPage #driverSignupClose{padding:10px 0}
+#driverSignupPage #driverSignupHelp{color:#00FF66}
+#driverSignupPage .dsp-main{padding:clamp(26px,5vh,42px) clamp(22px,5vw,30px) 20px;flex:1;min-height:0}
+#driverSignupPage h1{font-size:clamp(27px,6.2vw,35px);line-height:1.35;letter-spacing:-.35px;margin:0 0 clamp(22px,4vh,32px);font-weight:750;color:#20231d}
+#driverSignupPage .dsp-photo{width:clamp(112px,26vw,148px);height:clamp(112px,26vw,148px);margin:0 0 26px auto;gap:7px;color:#33392d}
+#driverSignupPage #driverPhotoPreview{height:calc(100% - 30px);border-radius:24px;background:#f0f3eb;border:1px solid #e8eddf;color:#00FF66;font-size:36px;transition:background .2s,box-shadow .2s}
+#driverSignupPage .dsp-photo:focus-within #driverPhotoPreview,
+#driverSignupPage .dsp-photo:active #driverPhotoPreview{box-shadow:0 0 0 3px rgba(0,255,102,.24)}
+#driverSignupPage .dsp-photo small{font-size:clamp(15px,3.8vw,18px);font-weight:550;color:#454a3e;line-height:1.4}
+#driverSignupPage #driverSignupForm{gap:14px}
+#driverSignupPage #driverSignupForm input{height:clamp(60px,8.2vh,72px);border:1px solid #edf0e8;border-radius:15px;background:#f3f5ef;padding:0 18px;text-align:right;font-size:clamp(18px,4.7vw,23px);font-weight:450;color:#25291f;transition:border-color .18s,box-shadow .18s,background .18s}
+#driverSignupPage #driverSignupForm input::placeholder{color:#777d70;opacity:1}
+#driverSignupPage #driverSignupForm input:focus{border-color:#00FF66;box-shadow:0 0 0 3px rgba(0,255,102,.18);background:#fff;outline:none}
+#driverSignupPage #driverSignupForm input[type="date"]{color:#25291f}
+#driverSignupPage .dsp-footer{padding:12px clamp(22px,5vw,30px) 0;gap:10px}
+#driverSignupPage .dsp-progress-label{font-size:clamp(22px,5.3vw,29px);font-weight:750;color:#25291f}
+#driverSignupPage .dsp-progress{height:7px;background:#e5e8df}
+#driverSignupPage .dsp-progress span{background:#00FF66}
+#driverSignupPage .dsp-actions{gap:10px;margin-top:4px}
+#driverSignupPage .dsp-actions button{height:clamp(58px,8vh,68px);border-radius:19px;font-size:clamp(20px,4.8vw,25px);font-weight:700}
+#driverSignupPage #driverSignupNext{background:#00FF66;box-shadow:0 4px 12px rgba(0,255,102,.12)}
+#driverSignupPage #driverSignupNext:active{transform:scale(.99)}
+#driverSignupPage #driverSignupBack{width:clamp(60px,14vw,76px);background:#f1f3ed;color:#7c8275}
+#driverSignupPage button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+@media(max-height:700px){
+ #driverSignupPage .dsp-header{height:64px}
+ #driverSignupPage .dsp-main{padding-top:20px}
+ #driverSignupPage h1{font-size:27px;margin-bottom:16px}
+ #driverSignupPage .dsp-photo{width:100px;height:100px;margin-bottom:16px}
+ #driverSignupPage #driverSignupForm{gap:10px}
+ #driverSignupPage #driverSignupForm input{height:54px;font-size:18px}
+ #driverSignupPage .dsp-actions button{height:54px}
+}
+@media(max-width:360px){
+ #driverSignupPage .dsp-main{padding-inline:18px}
+ #driverSignupPage h1{font-size:26px}
+ #driverSignupPage .dsp-photo{width:104px;height:104px}
+ #driverSignupPage #driverSignupForm input{padding-inline:15px;font-size:18px}
+ #driverSignupPage .dsp-footer{padding-inline:18px}
+}
+@media(prefers-reduced-motion:reduce){#driverSignupPage *{transition:none!important}}

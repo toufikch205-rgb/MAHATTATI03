@@ -1,0 +1,10 @@
+/* Original inline style block 19 from index.html; order intentionally preserved. */
+
+/* Search-offers page: center the fair-trip title and place the price directly beneath it. */
+#tripMapPage .fare-card{grid-template-columns:auto minmax(0,1fr) auto!important;column-gap:clamp(7px,2vw,12px)!important}
+#tripMapPage .fare-info{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:2px!important}
+#tripMapPage .fare-title{order:1!important;text-align:center!important;width:100%!important;font-size:clamp(16px,4.4vw,22px)!important;font-weight:800!important}
+#tripMapPage .fare-amount{order:2!important;align-self:center!important;margin-top:3px!important;font-size:clamp(18px,4.8vw,24px)!important;padding:5px 11px!important}
+#tripMapPage .fare-meta{order:3!important;text-align:center!important;font-size:clamp(12px,3.3vw,15px)!important;color:#737373!important}
+#tripMapPage .fare-sub{order:4!important;text-align:center!important;font-size:clamp(11px,3vw,14px)!important;margin-top:1px!important}
+@media(max-width:360px){#tripMapPage .fare-title{font-size:15px!important}#tripMapPage .fare-amount{font-size:17px!important;padding:4px 8px!important}#tripMapPage .fare-edit{width:34px!important;height:34px!important}}

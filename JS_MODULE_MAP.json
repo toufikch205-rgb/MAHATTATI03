@@ -11,17 +11,14 @@
     "js/services/cloud-session-tracking.js": "Supabase-backed auth/session, cloud request loading, passenger trip tracking and resume behavior.",
     "js/core/navigation.js": "Navigation and menu compatibility helpers.",
     "js/services/supabase-client.js": "Driver settings-related Supabase initialization/behavior block (not a pure client singleton).",
-    "js/features/driver/live-ride-dispatch.js": "Live driver request queue, online/offline state, GPS location sync, realtime/poll refresh, accept_trip_request RPC, active-trip display, and complete_my_trip RPC. Moved from the customer folder without changing its implementation.",
+    "js/features/customer/ride-booking-fixes.js": "Ride-request compatibility fixes and request UI helpers.",
     "js/features/driver/driver-dashboard.js": "Driver dashboard and merchant/staff helper block.",
     "js/features/driver/ride-requests.js": "Driver ride request handling.",
     "js/features/agent/agent-registration.js": "Agent/driver registration flow compatibility handlers.",
     "js/features/admin/driver-approval.js": "Driver approval/request-map block (shared original scope; not admin page-only).",
     "js/features/agent/customer-recharge.js": "Published-version menu shortcut visibility and related compatibility code.",
     "js/features/maps/map-controller.js": "Driver-code display/utility block; not the primary map controller.",
-    "js/features/admin/agent-approval.js": "Agent approval logic on admin.html.",
-    "js/features/driver/ride-request-ui.js": "Driver-side request presentation: populate request details, open/close request and order-detail views, and preserve existing accept/skip/price-proposal UI handlers. Does not alter live Supabase acceptance RPC in live-ride-dispatch.js."
+    "js/features/admin/agent-approval.js": "Agent approval logic on admin.html."
   },
-  "remaining_decomposition": "Phase 8.2 extracts request presentation handlers only. Live database-backed driver queue, location, realtime subscription, accept_trip_request RPC, and trip completion are now isolated in js/features/driver/live-ride-dispatch.js. Their implementation and RPC calls are preserved unchanged; browser and database runtime testing remains required.",
-  "js/features/driver/driver-dashboard.js": "Driver dashboard tab navigation and section visibility (Phase 8.1).",
-  "js/features/driver/merchant-portal.js": "Merchant application portal and staff helper block, retained from the previous driver-dashboard.js file."
+  "remaining_decomposition": "Extract functions into the target service/feature files only after dependency mapping and browser regression tests. Placeholder target files do not contain live business logic."
 }

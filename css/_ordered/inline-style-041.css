@@ -1,0 +1,131 @@
+/* Original inline style block 41 from index.html; order intentionally preserved. */
+
+/* Consistent fare display and keyboard focus */
+.fare-amount{display:inline-flex;align-items:center;gap:4px;margin-top:5px;padding:4px 9px;border-radius:10px;background:#FFFFFF;color:#00FF66;font-size:14px;font-weight:850;direction:rtl}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #00FF66;outline-offset:2px}
+
+/* Separate fare proposal screen opened by the pencil button */
+#suggestFarePage{display:none;position:fixed;inset:0;z-index:5000;background:#FFFFFF;direction:rtl;overflow-y:auto;padding:calc(10px + env(safe-area-inset-top)) 0 calc(16px + env(safe-area-inset-bottom));color:#171717;}
+#suggestFarePage.open{display:flex;flex-direction:column;gap:8px}
+#suggestFarePage .sf-header{height:58px;display:flex;align-items:center;justify-content:center;position:relative;padding:0 22px}
+#suggestFarePage .sf-header h1{font-size:clamp(21px,6vw,30px);margin:0;font-weight:750}
+#suggestFarePage #sfClose{position:absolute;left:22px;top:0;border:0;background:transparent;font-size:42px;line-height:1;width:44px;height:48px;color:#171717}
+#suggestFarePage .sf-price-card,#suggestFarePage .sf-cash-card,#suggestFarePage .sf-route-card{background:#fff;border-radius:30px;padding:20px 24px}
+#suggestFarePage .sf-price-card{min-height:190px;display:flex;flex-direction:column;justify-content:flex-end}
+#suggestFarePage .sf-price-card label{font-size:14px;color:#777}
+#suggestFarePage .sf-price-line{display:flex;align-items:baseline;justify-content:flex-start;gap:8px;border-bottom:2px solid #E5E7EB;padding:0 0 12px}
+#suggestFarePage .sf-price-line input{width:100%;min-width:0;border:0;outline:0;background:transparent;text-align:right;font:800 clamp(58px,17vw,100px)/1.1 system-ui;color:#171717;direction:ltr}
+#suggestFarePage .sf-price-line span{font-size:clamp(42px,12vw,68px);font-weight:800;color:#777}
+#suggestFarePage .sf-cash-card{min-height:230px}
+#suggestFarePage .sf-cash-title{display:flex;align-items:center;gap:18px;font-size:clamp(22px,6vw,32px);padding-bottom:24px}
+#suggestFarePage .sf-cash-title span:first-child{color:#00FF66;font-size:28px}
+#suggestFarePage .sf-chevron{margin-right:auto;color:#777}
+#suggestFarePage .sf-auto-row{display:flex;align-items:center;gap:16px;width:100%;border:0;background:transparent;text-align:right;font:600 clamp(18px,5.2vw,27px)/1.45 system-ui;color:#171717;padding:8px 0}
+#suggestFarePage .sf-switch{width:86px;height:42px;border-radius:24px;background:#FFFFFF;padding:4px;flex:0 0 auto;display:flex;align-items:center}
+#suggestFarePage .sf-switch i{width:34px;height:34px;border-radius:50%;background:#fff;box-shadow:0 1px 5px #0002;display:block;transition:transform .18s}
+#suggestFarePage .sf-auto-row.enabled .sf-switch{background:#00FF66}
+#suggestFarePage .sf-auto-row.enabled .sf-switch i{transform:translateX(-42px)}
+#suggestFarePage .sf-auto-row>span:nth-child(2){flex:1}
+#suggestFarePage .sf-plane{font-size:26px;transform:rotate(-25deg)}
+#suggestFarePage .sf-route-card{display:grid;gap:0;padding-top:12px;padding-bottom:12px}
+#suggestFarePage .sf-route-row{min-height:74px;display:flex;align-items:center;gap:18px;font-size:clamp(17px,5vw,27px);font-weight:600;overflow-wrap:anywhere}
+#suggestFarePage .sf-route-row+ .sf-route-row{border-top:1px solid #eee}
+#suggestFarePage .sf-route-icon{width:38px;flex:0 0 38px;font-size:30px;text-align:center}
+#suggestFarePage .sf-actions{margin-top:auto;display:flex;gap:14px;padding:12px 24px 0}
+#suggestFarePage .sf-actions button{border:0;border-radius:20px;background:#00FF66;color:#111;font:750 clamp(20px,5.8vw,30px) system-ui;min-height:76px}
+#suggestFarePage #sfFilters{width:124px;flex:0 0 124px;font-size:35px}
+#suggestFarePage #sfSearch{flex:1}
+@media(max-height:700px){#suggestFarePage .sf-price-card{min-height:145px;padding:14px 20px}#suggestFarePage .sf-cash-card{min-height:180px;padding:15px 20px}#suggestFarePage .sf-route-card{padding:8px 18px}#suggestFarePage .sf-route-row{min-height:54px}#suggestFarePage .sf-actions button{min-height:58px}}
+
+/* Dedicated trip/map page shown after the destination is selected */
+#tripMapPage{display:none;position:fixed;inset:0;z-index:1200;pointer-events:none;direction:rtl}
+#tripMapPage.open{display:block}
+#tripMapPage .route-summary-badge{position:absolute;z-index:1190;top:38%;left:50%;transform:translateX(-50%);min-width:170px;max-width:calc(100vw - 36px);padding:10px 16px;border:1px solid rgba(0,217,104,.3);border-radius:18px;background:rgba(255,255,255,.96);box-shadow:0 5px 20px #0002;text-align:center;color:#17211a;pointer-events:none;backdrop-filter:blur(8px)}#tripMapPage .route-summary-main{font-size:clamp(17px,4.6vw,23px);font-weight:850;color:#00a94f;line-height:1.4;direction:rtl}#tripMapPage .route-summary-sub{font-size:12px;font-weight:650;color:#68716b;margin-top:2px;direction:rtl}#tripMapPage .route-summary-badge.pending .route-summary-main{color:#525b55;font-size:14px}#tripMapPage .route-summary-badge[hidden]{display:none!important}
+#tripMapPage .trip-top-card{position:absolute;top:calc(12px + env(safe-area-inset-top));left:14px;right:14px;pointer-events:auto;background:#fff;border-radius:32px;padding:12px 18px;box-shadow:0 8px 28px #0002;display:grid;gap:4px}
+#tripMapPage .trip-location-row{display:flex;align-items:center;gap:14px;min-height:62px;font-size:clamp(17px,4.7vw,27px);font-weight:650}
+#tripMapPage .trip-location-row .trip-row-icon{width:36px;flex:0 0 36px;text-align:center;font-size:32px;color:#171717}
+#tripMapPage .trip-location-row .trip-row-text{flex:1;min-width:0;overflow-wrap:anywhere}
+#tripMapPage .trip-location-row .trip-row-action{font-size:30px;border:0;background:transparent;min-width:42px;color:#111}
+#tripMapPage .trip-bottom{position:absolute;left:0;right:0;bottom:0;pointer-events:auto;padding:12px 14px calc(14px + env(safe-area-inset-bottom));background:#fff;border-radius:32px 32px 0 0;box-shadow:0 -6px 25px #0002}
+#tripMapPage .fare-card{border:1px solid #E5E7EB;border-radius:32px;padding:14px 13px;background:#FFFFFF;display:flex;align-items:center;gap:12px}
+#tripMapPage .fare-info{flex:1;min-width:0;text-align:right}
+#tripMapPage .fare-title{font-size:clamp(18px,5vw,27px);font-weight:700;line-height:1.35}
+#tripMapPage .fare-meta{font-size:clamp(16px,4.4vw,23px);font-weight:650;line-height:1.5}
+#tripMapPage .fare-sub{font-size:clamp(14px,4vw,21px);color:#777}
+#tripMapPage .fare-car{font-size:48px;flex:0 0 auto}
+#tripMapPage .fare-edit{border:0;border-radius:50%;width:46px;height:46px;background:#f1f1eb;font-size:22px;flex:0 0 auto}
+#tripMapPage .suggest-fare{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:15px 5px 5px;font-size:clamp(18px,5vw,26px);font-weight:650;text-align:center}
+#tripMapPage .fare-step{border:0;border-radius:50%;width:58px;height:58px;background:#FFFFFF;font-size:32px;color:#aaa;flex:0 0 auto}
+#tripMapPage .trip-bottom-actions{display:flex;align-items:center;gap:14px;margin-top:16px;padding-top:14px;border-top:1px solid #eee}
+#tripMapPage .trip-filter{border:0;background:transparent;font-size:28px;padding:8px}
+#tripMapPage .trip-search-offers{flex:1;border:0;border-radius:22px;background:#00FF66;min-height:72px;font:750 clamp(20px,5.7vw,30px) system-ui;color:#111}
+#tripMapPage .trip-cash{font-size:24px;color:#00FF66}
+#tripMapPage .trip-back{position:absolute;top:calc(17px + env(safe-area-inset-top));left:22px;z-index:3;pointer-events:auto;border:0;background:#f1f1eb;border-radius:50%;width:42px;height:42px;font-size:26px}
+body.trip-page-active .bottom-sheet{display:none!important}
+body.trip-page-active .map-head{display:none!important}
+body.trip-page-active .map-controls{bottom:calc(285px + env(safe-area-inset-bottom))!important;left:12px!important}
+body.trip-page-active .map-note{display:none!important}
+@media(max-height:700px){#tripMapPage .trip-location-row{min-height:49px}#tripMapPage .trip-bottom{padding-top:8px}#tripMapPage .fare-card{padding:9px}#tripMapPage .trip-search-offers{min-height:58px}}
+
+/* Center the location-search panel on the visible screen */
+.pickup-search-panel.open{
+  position:fixed !important;
+  top:50% !important;
+  left:50% !important;
+  right:auto !important;
+  bottom:auto !important;
+  transform:translate(-50%,-50%) !important;
+  width:min(560px, calc(100vw - 32px)) !important;
+  max-width:calc(100vw - 32px) !important;
+  max-height:min(72dvh, 620px) !important;
+  overflow-y:auto !important;
+  padding:clamp(14px, 3.5vw, 22px) !important;
+  border:2px solid #00FF66 !important;
+  border-radius:22px !important;
+  box-shadow:0 18px 60px rgba(0,0,0,.28) !important;
+  z-index:3000 !important;
+}
+.pickup-search-panel.open .pickup-search-title{font-size:clamp(15px,4vw,19px);}
+.pickup-search-panel.open .pickup-search-box input{height:clamp(46px,12vw,58px);font-size:clamp(15px,4vw,18px);}
+.pickup-search-panel.open .pickup-search-results{max-height:34dvh;}
+@media(max-width:380px){
+ .pickup-search-panel.open{width:calc(100vw - 22px) !important;max-width:calc(100vw - 22px) !important;padding:12px !important;}
+}
+
+/* Final layout correction: keep the centered pickup search above all map and sheet controls */
+.map-head:has(.pickup-search-panel.open){
+  z-index: 4000 !important;
+}
+.map-head:has(.pickup-search-panel.open) .map-menu{
+  visibility:hidden !important;
+  pointer-events:none !important;
+}
+.map-controls{z-index:450 !important;}
+.pickup-search-panel.open{
+  z-index:4100 !important;
+  margin:0 !important;
+  left:50% !important;
+  right:auto !important;
+  transform:translate(-50%,-50%) !important;
+  box-sizing:border-box !important;
+}
+.pickup-search-panel.open .pickup-search-header{
+  min-height:42px;
+  align-items:center !important;
+}
+.pickup-search-panel.open .pickup-search-box{
+  min-height:58px;
+  gap:10px;
+  padding:5px 8px;
+}
+.pickup-search-panel.open .pickup-search-box input{
+  min-width:0;
+  flex:1 1 auto;
+  text-align:right;
+}
+.pickup-search-panel.open #pickupSearchButton{
+  width:48px !important; height:48px !important; border-radius:12px !important; flex:0 0 48px !important;
+}
+.pickup-search-panel.open #pickupSearchBack{
+  width:40px !important; height:40px !important; flex:0 0 40px !important;
+}

@@ -1,0 +1,193 @@
+{
+  "phase": "phase-3-semantic-review-split",
+  "runtime_safety": "Original CSS fragment order remains active through css/core/utilities.css; semantic copies are intentionally not linked yet.",
+  "semantic_css_files": {
+    "css/core/variables.css": {
+      "source_fragments": [
+        "inline-style-005.css",
+        "inline-style-008.css",
+        "inline-style-009.css",
+        "inline-style-011.css",
+        "inline-style-034.css"
+      ],
+      "rules_source_copied": 7386
+    },
+    "css/core/reset.css": {
+      "source_fragments": [],
+      "rules_source_copied": 0
+    },
+    "css/core/typography.css": {
+      "source_fragments": [],
+      "rules_source_copied": 0
+    },
+    "css/layout/app-layout.css": {
+      "source_fragments": [
+        "inline-style-006.css"
+      ],
+      "rules_source_copied": 601
+    },
+    "css/layout/navigation.css": {
+      "source_fragments": [],
+      "rules_source_copied": 0
+    },
+    "css/layout/responsive.css": {
+      "source_fragments": [
+        "inline-style-001.css",
+        "inline-style-002.css",
+        "inline-style-003.css",
+        "inline-style-004.css",
+        "inline-style-007.css",
+        "inline-style-012.css",
+        "inline-style-013.css",
+        "inline-style-017.css",
+        "inline-style-018.css",
+        "inline-style-019.css",
+        "inline-style-020.css",
+        "inline-style-021.css",
+        "inline-style-022.css",
+        "inline-style-024.css",
+        "inline-style-025.css",
+        "inline-style-026.css",
+        "inline-style-027.css",
+        "inline-style-029.css",
+        "inline-style-032.css",
+        "inline-style-033.css",
+        "inline-style-035.css",
+        "inline-style-036.css",
+        "inline-style-038.css",
+        "inline-style-039.css",
+        "inline-style-041.css",
+        "inline-style-042.css",
+        "inline-style-043.css",
+        "inline-style-045.css",
+        "inline-style-046.css",
+        "inline-style-047.css",
+        "inline-style-048.css",
+        "inline-style-049.css",
+        "inline-style-050.css",
+        "inline-style-051.css",
+        "inline-style-053.css",
+        "inline-style-055.css",
+        "inline-style-056.css",
+        "inline-style-057.css",
+        "inline-style-060.css",
+        "inline-style-061.css",
+        "inline-style-063.css",
+        "inline-style-064.css",
+        "inline-style-065.css",
+        "inline-style-067.css",
+        "inline-style-068.css",
+        "inline-style-069.css",
+        "inline-style-070.css",
+        "inline-style-071.css",
+        "inline-style-072.css",
+        "inline-style-074.css",
+        "inline-style-075.css",
+        "inline-style-076.css",
+        "inline-style-077.css",
+        "inline-style-078.css",
+        "inline-style-079.css",
+        "inline-style-082.css",
+        "inline-style-083.css",
+        "inline-style-084.css",
+        "inline-style-085.css"
+      ],
+      "rules_source_copied": 247619
+    },
+    "css/components/buttons.css": {
+      "source_fragments": [],
+      "rules_source_copied": 0
+    },
+    "css/components/forms.css": {
+      "source_fragments": [
+        "inline-style-023.css",
+        "inline-style-028.css",
+        "inline-style-030.css",
+        "inline-style-031.css"
+      ],
+      "rules_source_copied": 14075
+    },
+    "css/components/cards.css": {
+      "source_fragments": [],
+      "rules_source_copied": 0
+    },
+    "css/components/modals.css": {
+      "source_fragments": [
+        "inline-style-054.css",
+        "inline-style-062.css"
+      ],
+      "rules_source_copied": 2442
+    },
+    "css/components/notifications.css": {
+      "source_fragments": [],
+      "rules_source_copied": 0
+    },
+    "css/components/maps.css": {
+      "source_fragments": [
+        "inline-style-010.css",
+        "inline-style-016.css",
+        "inline-style-052.css",
+        "inline-style-066.css",
+        "inline-style-073.css",
+        "inline-style-080.css",
+        "inline-style-081.css"
+      ],
+      "rules_source_copied": 4840
+    },
+    "css/pages/home.css": {
+      "source_fragments": [
+        "inline-style-014.css",
+        "inline-style-015.css",
+        "inline-style-044.css"
+      ],
+      "rules_source_copied": 1337
+    },
+    "css/pages/account.css": {
+      "source_fragments": [],
+      "rules_source_copied": 0
+    },
+    "css/pages/rides.css": {
+      "source_fragments": [],
+      "rules_source_copied": 0
+    },
+    "css/pages/driver.css": {
+      "source_fragments": [],
+      "rules_source_copied": 0
+    },
+    "css/pages/agent.css": {
+      "source_fragments": [],
+      "rules_source_copied": 0
+    },
+    "css/pages/admin.css": {
+      "source_fragments": [
+        "inline-style-037.css",
+        "inline-style-040.css",
+        "inline-style-058.css",
+        "inline-style-059.css"
+      ],
+      "rules_source_copied": 2998
+    }
+  },
+  "runtime_html_script_tags": [
+    {
+      "html": "index.html",
+      "inline_script_tags_remaining": 0
+    },
+    {
+      "html": "admin.html",
+      "inline_script_tags_remaining": 0
+    }
+  ],
+  "javascript_note": "Extracted inline script files retain their original insertion positions. Some scripts are large mixed-responsibility blocks; they must be decomposed only after dependency mapping, rather than guessing and risking behavior changes.",
+  "supabase_functions_and_tests": "scaffolding_only",
+  "publish_ready": false,
+  "checks": [
+    "local HTML/CSS/JS references",
+    "node --check on JavaScript files"
+  ],
+  "not_checked": [
+    "browser visual regression",
+    "live Supabase/database behavior",
+    "end-to-end ride acceptance, wallet, auth and permissions"
+  ]
+}

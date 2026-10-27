@@ -1,0 +1,32 @@
+/* Original inline style block 42 from index.html; order intentionally preserved. */
+
+/* Compact trip options button and accessible passenger/comment dialog */
+#suggestFarePage #sfFilters{width:clamp(68px,20vw,92px)!important;flex:0 0 clamp(68px,20vw,92px)!important;min-height:clamp(68px,18vw,88px)!important;border-radius:22px!important;font-size:clamp(25px,7vw,32px)!important;box-shadow:0 3px 10px rgba(0,0,0,.06)}
+.trip-options-overlay{position:fixed;inset:0;z-index:10050;background:rgba(20,24,15,.42);display:none;align-items:center;justify-content:center;padding:20px;padding-bottom:calc(20px + env(safe-area-inset-bottom));}
+.trip-options-overlay.open{display:flex}
+.trip-options-card{width:min(100%,430px);max-height:calc(100dvh - 40px);overflow:auto;background:#fff;border-radius:26px;padding:22px;box-shadow:0 18px 60px rgba(0,0,0,.22);direction:rtl;color:#171717;font-family:inherit}
+.trip-options-card header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+.trip-options-card h2{font-size:clamp(21px,5.5vw,27px);margin:0}
+#tripOptionsClose{border:0;background:#FFFFFF;width:42px;height:42px;border-radius:50%;font-size:30px;line-height:1;color:#222}
+.passenger-option{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid #eceee8}
+.passenger-option strong,.comment-label{display:block;font-size:18px;font-weight:700}
+.passenger-option small{display:block;color:#777;font-size:13px;margin-top:5px}
+.passenger-stepper{display:flex;align-items:center;gap:12px;direction:ltr;flex-shrink:0}
+.passenger-stepper button{width:38px;height:38px;border:0;border-radius:13px;background:#00FF66;font-size:24px;font-weight:700;color:#202414}
+.passenger-stepper output{min-width:20px;text-align:center;font-size:20px;font-weight:700}
+.comment-label{margin:20px 0 9px}
+#tripComment{width:100%;min-height:92px;resize:vertical;border:1.5px solid #E5E7EB;border-radius:16px;padding:13px;font:inherit;font-size:16px;outline:none;background:#FFFFFF;box-sizing:border-box}
+#tripComment:focus{border-color:#00FF66;box-shadow:0 0 0 3px rgba(0,255,102,.18)}
+.trip-options-actions{display:flex;justify-content:stretch;margin-top:18px}
+#tripOptionsSave{width:100%;min-height:50px;border:0;border-radius:16px;background:#00FF66;color:#151515;font:inherit;font-size:18px;font-weight:700}
+@media(max-width:360px){.trip-options-card{padding:17px;border-radius:22px}.passenger-option strong,.comment-label{font-size:16px}.passenger-stepper{gap:8px}.passenger-stepper button{width:34px;height:34px}}
+
+/* Main bottom navigation */
+.main-bottom-nav{position:fixed;z-index:1500;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:7px 14px calc(7px + env(safe-area-inset-bottom));background:rgba(255,255,255,.98);border-top:1px solid #E5E7EB;box-shadow:0 -5px 20px rgba(0,0,0,.09);backdrop-filter:blur(12px)}
+.bottom-nav-item{min-height:52px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border:0;border-radius:14px;background:transparent;color:#687067;font:600 12px/1.2 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;cursor:pointer;touch-action:manipulation}
+.bottom-nav-icon{font-size:23px;line-height:1.1;color:#6b7867}
+.bottom-nav-item.active{background:#FFFFFF;color:#26351c}.bottom-nav-item.active .bottom-nav-icon{color:#00FF66}
+.bottom-nav-item:focus-visible{outline:2px solid #00FF66;outline-offset:2px}
+.bottom-sheet{bottom:calc(66px + env(safe-area-inset-bottom))!important;height:calc(44.5dvh - 6px);min-height:220px!important;max-height:420px!important}
+@media(min-width:650px){.main-bottom-nav{left:50%;right:auto;transform:translateX(-50%);width:100%;max-width:480px}.bottom-sheet{bottom:66px!important}}
+@media(max-height:600px){.bottom-sheet{height:calc(43dvh - 4px);min-height:195px!important}.main-bottom-nav{padding-top:4px;padding-bottom:calc(4px + env(safe-area-inset-bottom))}.bottom-nav-item{min-height:44px}}

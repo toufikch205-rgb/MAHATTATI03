@@ -1,0 +1,20 @@
+{
+  "moved_functions": [
+    "updateRouteSummary",
+    "drawSelectedRoute",
+    "mahattatiSearchPlaces",
+    "reverseGeocode",
+    "setUser",
+    "locate",
+    "setSelectMode",
+    "searchDestinationPlaces",
+    "showTripMapPage",
+    "hideTripMapPage"
+  ],
+  "js_files_checked": 32,
+  "syntax_errors": [],
+  "missing_local_references": [],
+  "browser_runtime": "not tested in this environment",
+  "database_and_realtime": "not tested",
+  "safety_note": "This is a source-level extraction only. Browser testing remains required before deployment."
+}

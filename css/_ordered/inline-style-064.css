@@ -1,0 +1,35 @@
+/* Original inline style block 64 from index.html; order intentionally preserved. */
+
+/* Repair driver bottom navigation layout without shrinking the page content */
+#driverDashboardPage .mdd-nav{
+  position:fixed!important;left:0!important;right:0!important;bottom:0!important;
+  z-index:2147483001!important;display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  align-items:stretch!important;gap:4px!important;
+  width:100%!important;box-sizing:border-box!important;
+  min-height:82px!important;height:auto!important;
+  padding:7px 8px calc(7px + env(safe-area-inset-bottom))!important;
+  background:rgba(255,255,255,.98)!important;border-top:1px solid #e7ece7!important;
+}
+#driverDashboardPage .mdd-nav button{
+  min-width:0!important;width:100%!important;max-width:100%!important;
+  display:flex!important;flex-direction:column!important;
+  align-items:center!important;justify-content:center!important;
+  gap:4px!important;padding:5px 2px!important;margin:0!important;
+  box-sizing:border-box!important;white-space:normal!important;
+  overflow:hidden!important;font-size:clamp(9px,2.7vw,12px)!important;
+  line-height:1.25!important;text-align:center!important;
+}
+#driverDashboardPage .mdd-nav button span{
+  display:grid!important;place-items:center!important;flex:0 0 28px!important;
+  width:28px!important;height:28px!important;max-width:28px!important;
+  margin:0!important;font-size:19px!important;line-height:1!important;
+}
+#driverDashboardPage .mdd-nav button.active{border-radius:14px!important}
+#driverDashboardPage{padding-bottom:calc(88px + env(safe-area-inset-bottom))!important}
+
+@media(max-width:380px){
+ #driverDashboardPage .mdd-nav{gap:2px!important;padding-inline:5px!important}
+ #driverDashboardPage .mdd-nav button{font-size:9px!important;padding-inline:1px!important}
+ #driverDashboardPage .mdd-nav button span{width:25px!important;height:25px!important;flex-basis:25px!important;font-size:17px!important}
+}

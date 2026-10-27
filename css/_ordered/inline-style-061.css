@@ -1,0 +1,7 @@
+/* Original inline style block 61 from index.html; order intentionally preserved. */
+
+/* Keep ratings as a real dashboard screen, not buried below the ride list. */
+#driverDashboardPage #mddRatingsPage[hidden]{display:none!important}
+#driverDashboardPage #mddRatingsPage.mdd-ratings-open{position:fixed!important;top:env(safe-area-inset-top)!important;left:0!important;right:0!important;bottom:calc(82px + env(safe-area-inset-bottom))!important;z-index:5460!important;display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;height:auto!important;max-height:none!important;min-height:0!important;margin:0!important;padding:0 15px 22px!important;overflow-y:auto!important;overflow-x:hidden!important;background:#f5f8f5!important;color:#243228!important;box-sizing:border-box!important;-webkit-overflow-scrolling:touch}
+#driverDashboardPage #mddRatingsPage.mdd-ratings-open .mdd-wallet-header{margin:0 -15px 14px!important;padding-inline:15px!important}
+@media(min-width:700px){#driverDashboardPage #mddRatingsPage.mdd-ratings-open{left:50%!important;right:auto!important;transform:translateX(-50%);width:min(680px,100%)!important;padding-inline:24px!important}#driverDashboardPage #mddRatingsPage.mdd-ratings-open .mdd-wallet-header{margin-inline:-24px!important;padding-inline:24px!important}}

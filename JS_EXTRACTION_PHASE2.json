@@ -1,0 +1,22 @@
+{
+  "phase": "ride-search-and-acceptance-function-extraction",
+  "moved_functions": [
+    "startRideSearchTimer",
+    "stopRideSearchTimer",
+    "stopPassengerAcceptancePolling",
+    "checkPassengerRequestStatus",
+    "startPassengerAcceptancePolling"
+  ],
+  "destination": "js/features/customer/ride-booking.js",
+  "source": "js/core/legacy-main-controller.js",
+  "load_order": [
+    "js/features/maps/map-controller.js",
+    "js/features/customer/ride-booking.js",
+    "js/core/legacy-main-controller.js"
+  ],
+  "acceptance_guard_unchanged": "checkPassengerRequestStatus still requires a matching request row with driver_id, accepted_at, and an explicitly accepted status before showing the accepted-trip screen. The realtime event alone does not trigger the screen.",
+  "logic_changes": "None to the moved function bodies; this pass changes function placement and script order only.",
+  "browser_runtime": "Not run",
+  "database_realtime": "Not run",
+  "publish_ready": false
+}

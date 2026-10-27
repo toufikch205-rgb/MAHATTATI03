@@ -1,0 +1,15 @@
+/* MAHATTATI emergency layout recovery — keeps existing components and behavior intact */
+*,*::before,*::after{box-sizing:border-box}
+html{width:100%;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%}
+body{width:100%;max-width:100%;min-width:0;margin:0;overflow-x:hidden}
+img,svg,video,canvas,iframe{max-width:100%;height:auto}
+img{object-fit:contain}
+button,input,select,textarea{max-width:100%;font:inherit}
+#mahattatiWelcome,#mahattatiWelcome *{max-width:100%}
+#mahattatiWelcome .mw-photo{display:block;width:100%;height:100%;max-height:100%;object-fit:cover}
+a img,button img{width:auto;max-width:100%;height:auto}
+@media (max-width:600px){
+  body{font-size:16px}
+  main,section,article,.page,.screen,.container{min-width:0;max-width:100%}
+  img,svg{max-width:100%}
+}

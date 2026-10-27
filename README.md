@@ -26,3 +26,8 @@ This package keeps the original application behavior as the priority.
 - Added `JS_MODULE_MAP.json` with the responsibilities actually found in each extracted block.
 - The ride/map/fare/navigation logic is still a shared legacy controller. It has not been chopped into separate files because that would risk breaking globals, event handlers, realtime acceptance checks, and GPS/map flows.
 - Empty target files remain placeholders, not claimed implementations. The next safe step is function-level extraction with compatibility bridges and browser tests.
+
+## Project structure and safe refactor
+See [docs/PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md) for the current file map, load-order constraints, and staged plan for completing the organization without breaking existing ride, authentication, driver, agent, admin, map, or database flows.
+
+**Important:** the project is still in an intermediate refactor state. The 85 ordered CSS fragments and legacy compatibility controller remain active intentionally; semantic CSS copies are not all runtime-ready, and full page separation/browser regression testing has not been completed. Do not treat this repository as fully refactored or production-verified yet.

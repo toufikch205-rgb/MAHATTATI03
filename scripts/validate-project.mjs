@@ -23,8 +23,12 @@ function existsLocal(fromFile, reference) {
   const clean = reference.split(/[?#]/, 1)[0];
   if (!clean || clean.startsWith('#') || /^(?:https?:|data:|blob:|mailto:|tel:|javascript:)/i.test(clean)) return true;
   if (clean.startsWith('//')) return true;
-  const decoded = decodeURIComponent(clean);
-  const target = path.resolve(path.dirname(fromFile), decoded.replace(/^\//, ''));
+  let decoded;
+  try { decoded = decodeURIComponent(clean); }
+  catch { return false; }
+  const target = decoded.startsWith('/')
+    ? path.resolve(root, decoded.slice(1))
+    : path.resolve(path.dirname(fromFile), decoded);
   return fs.existsSync(target);
 }
 

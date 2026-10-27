@@ -47,17 +47,22 @@ The old `ride-booking-fixes.js` reference was removed; Phase 8's `live-ride-disp
 - Not found by exact symbol name: none
 
 ### agent_and_funding
-- Found: loadAgentFundingRequests, loadMerchantApplications, reviewMerchant
-- Not found by exact symbol name: customerRecharge, agentFunding
+- Found in the existing customer-home module: agent application status, wallet balance lookup, `agent_request_wallet_funding`, `agent_find_approved_driver`, and `agent_recharge_driver`.
+- `js/features/agent/agent-funding.js` is a placeholder and `js/features/agent/customer-recharge.js` is intentionally not loaded; the older latter script forcibly hid role-controlled menu shortcuts.
 
 ### admin_approvals
 - Found: loadAgentFundingRequests, loadMerchantApplications, reviewMerchant, renderMerchantApplications
 - Not found by exact symbol name: none
 
 ## Validation
-- JavaScript syntax errors: 0
-- Missing local HTML references: 0
-- JavaScript files inspected: 32
+- All 17 local scripts loaded by `index.html`, plus the standalone admin script, passed JavaScript syntax parsing.
+- `index.html`: 19 script tags, all deferred; no duplicate IDs and no missing local references.
+- `admin.html`: no duplicate IDs or missing local references. Its Supabase CDN script remains synchronous intentionally so the admin script at the end of the body can use the global.
+- CSS: all 85 ordered imports exist; the 104 CSS files passed a basic brace-balance check.
+- The repository file set matches the 162-file Phase 8 archive exactly.
+- GitHub Pages build and deploy jobs succeeded for the audited commit.
 
-## Important limitation
-The largest ride/map controller remains a shared global-scope block. Its functions call other functions and reference DOM nodes and state initialized elsewhere. Automatically moving them now would risk changing when listeners attach and when the ride-acceptance polling starts. The next edit should be function-group extraction with a compatibility bridge, tested in a browser before deployment.
+## Outstanding risks and limitations
+- Browser end-to-end tests have not been run, so map permissions, realtime delivery, ride acceptance, agent recharge receipts, and admin actions still require live interaction tests.
+- The read-only Supabase advisor scan reported security findings: two tables with RLS enabled but no policies, two SECURITY DEFINER functions executable by `anon`, 18 SECURITY DEFINER functions executable by authenticated users, and leaked-password protection disabled. Performance findings include three unindexed foreign keys, nine RLS init-plan warnings, five sets of multiple permissive policies, two unused indexes, and one duplicate index. These database settings were not changed during this GitHub-only pass.
+- The largest ride/map controller remains a shared global-scope block. Further extraction should be done in small function groups with browser regression tests.

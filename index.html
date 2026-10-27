@@ -141,6 +141,8 @@
 <script defer src="js/services/supabase-client.js"></script>
 <script defer src="js/features/driver/live-ride-dispatch.js"></script>
 <script defer src="js/features/driver/merchant-portal.js"></script>
+<script defer src="js/features/agent/agent-funding.js"></script>
+<script defer src="js/features/agent/customer-recharge.js"></script>
 <script defer src="js/features/driver/ride-requests.js"></script>
 <script defer src="js/features/agent/agent-registration.js"></script>
 <script defer src="js/features/admin/driver-approval.js"></script>
@@ -747,7 +749,7 @@
      <label class="merchant-field">اسم المتجر أو النشاط التجاري<input id="merchantBusinessName" maxlength="120" required autocomplete="organization" placeholder="مثال: متجر محطتي"></label>
      <label class="merchant-field">اسم صاحب النشاط<input id="merchantOwnerName" maxlength="100" required autocomplete="name" placeholder="الاسم الكامل"></label>
      <label class="merchant-field">رقم الهاتف<input id="merchantPhone" type="tel" maxlength="30" required autocomplete="tel" placeholder="05 / 06 / 07"></label>
-     <label class="merchant-field">نوع النشاط<select id="merchantBusinessType" required><option value="store">متجر / بيع منتجات</option><option value="restaurant">مطعم / أكل</option><option value="pharmacy">صيدلية</option><option value="services">خدمات</option><option value="other">نشاط آخر</option></select></label>
+     <label class="merchant-field">نوع النشاط<select id="merchantBusinessType" required><option value="store">متجر / بيع منتجات</option><option value="restaurant">مطعم / أكل</option><option value="pharmacy">صيدلية</option><option value="services">خدمات</option><option value="other">نشاط آخر</option><option value="agent">وكيل محطتي — شحن أرصدة السائقين</option></select></label>
      <label class="merchant-field">الولاية<input id="merchantWilaya" maxlength="80" required placeholder="الولاية"></label>
      <label class="merchant-field">العنوان<input id="merchantAddress" maxlength="240" required autocomplete="street-address" placeholder="عنوان النشاط"></label>
      <label class="merchant-field">وصف مختصر للنشاط<textarea id="merchantDescription" maxlength="700" placeholder="ما الذي يقدمه نشاطك؟"></textarea></label>
@@ -758,6 +760,30 @@
     <div class="merchant-status"><strong>تم تفعيل حساب التاجر ✓</strong><span id="merchantApprovedSummary">حسابك معتمد ويمكنك استخدام واجهة التاجر.</span></div>
     <div class="merchant-stat-grid"><div class="merchant-stat"><b>مفعّل</b><span>حالة الحساب</span></div><div class="merchant-stat"><b id="merchantBusinessTypeLabel">متجر</b><span>نوع النشاط</span></div></div>
     <div class="merchant-status"><strong id="merchantDashboardBusinessName"></strong><span id="merchantDashboardBusinessDetails"></span></div>
+    <section id="agentWalletPanel" hidden aria-label="محفظة وكيل محطتي" style="margin-top:16px">
+     <div class="merchant-status"><strong>محفظة وكيل محطتي</strong><span>الرصيد المتاح: <b id="agentWalletBalance">0</b> عملة</span></div>
+     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0">
+      <button class="merchant-primary" id="agentFundingToggle" type="button">تمويل الرصيد</button>
+      <button class="merchant-secondary" id="agentRechargeToggle" type="button">الشحن للعملاء</button>
+     </div>
+     <div class="merchant-message" id="agentWalletMessage" role="status" aria-live="polite"></div>
+     <form id="agentFundingForm" hidden>
+      <label class="merchant-field">عدد العملات المطلوبة<input id="agentFundingAmount" type="number" min="1" max="100000000" step="1" inputmode="numeric" required placeholder="أدخل المبلغ بالعملات"></label>
+      <label class="merchant-field">ملاحظة للإدارة (اختياري)<textarea id="agentFundingNote" maxlength="500" rows="2" placeholder="اكتب ملاحظة مختصرة"></textarea></label>
+      <button class="merchant-primary" id="agentFundingSubmit" type="submit">إرسال طلب التمويل</button>
+     </form>
+     <section id="agentRechargePanel" hidden>
+      <label class="merchant-field">ابحث عن السائق برقم الشريك أو الهاتف<input id="agentDriverSearch" type="text" maxlength="80" autocomplete="off" placeholder="مثال: MHD-123456 أو رقم الهاتف"></label>
+      <button class="merchant-secondary" id="agentFindDriver" type="button">البحث عن السائق</button>
+      <div id="agentDriverResults" aria-live="polite" style="margin-top:10px"></div>
+      <div id="agentSelectedDriver" hidden></div>
+      <form id="agentRechargeForm" hidden>
+       <label class="merchant-field">مبلغ الشحن بالعملات<input id="agentRechargeAmount" type="number" min="1" max="1000000" step="1" inputmode="numeric" required placeholder="أدخل عدد العملات"></label>
+       <button class="merchant-primary" id="agentRechargeSubmit" type="submit">تأكيد الشحن</button>
+      </form>
+      <div id="agentRechargeReceipt" hidden class="merchant-status" role="status" aria-live="polite"></div>
+     </section>
+    </section>
     <button class="merchant-secondary" id="merchantRefreshStatus" type="button">تحديث حالة الحساب</button>
    </section>
   </div>

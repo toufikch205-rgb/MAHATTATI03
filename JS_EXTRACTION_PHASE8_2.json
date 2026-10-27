@@ -1,0 +1,33 @@
+{
+  "phase": "8.2-live-driver-dispatch-isolation",
+  "source": "js/features/customer/ride-booking-fixes.js",
+  "destination": "js/features/driver/live-ride-dispatch.js",
+  "change_type": "file relocation and script-reference update only",
+  "implementation_unchanged": true,
+  "preserved_database_calls": [
+    "accept_trip_request",
+    "complete_my_trip",
+    "set_my_driver_online",
+    "update_my_driver_location"
+  ],
+  "preserved_behaviors": [
+    "driver auth and approval checks",
+    "online/offline state",
+    "GPS location sync",
+    "pending request queue",
+    "realtime subscription",
+    "five-second polling fallback",
+    "active trip display and completion"
+  ],
+  "validation": {
+    "javascript_syntax": "passed for all local JavaScript files",
+    "local_script_references": "18 checked; none missing",
+    "script_reference_count": 1,
+    "module_map_json": "valid",
+    "dependency_report_json": "valid",
+    "source_vs_destination": "byte-for-byte identical",
+    "browser_runtime": "not run",
+    "database_realtime": "not run"
+  },
+  "deployment": "not performed"
+}

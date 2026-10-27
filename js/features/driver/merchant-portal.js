@@ -4,7 +4,7 @@
  const $=id=>document.getElementById(id);
  const client=()=>window.mahattatiSupabase;
  const statusText={pending:'قيد المراجعة',under_review:'قيد التدقيق',approved:'مقبول',rejected:'مرفوض'};
- const typeText={store:'متجر / بيع منتجات',restaurant:'مطعم / أكل',pharmacy:'صيدلية',services:'خدمات',other:'نشاط آخر',agent:'وكيل محطتي — شحن أرصدة السائقين', 'وكيل':'وكيل محطتي — شحن أرصدة السائقين',agent_partner:'وكيل محطتي — شحن أرصدة السائقين'};
+ const typeText={store:'متجر / بيع منتجات',restaurant:'مطعم / أكل',pharmacy:'صيدلية',services:'خدمات',other:'نشاط آخر'};
  let currentApplication=null;
  function showMessage(id,message,ok=false){const el=$(id);if(!el)return;el.textContent=message;el.classList.add('show');el.style.background=ok?'#e9fbeF':'#fff4e5';el.style.color=ok?'#176534':'#8a4b08';}
  function hideMessage(id){const el=$(id);if(el){el.textContent='';el.classList.remove('show');}}
@@ -17,27 +17,18 @@
   currentApplication=app;
   $('merchantApplicationForm').hidden=!!app;
   $('merchantApprovedDashboard').hidden=!(app&&app.status==='approved');
-  const isAgent=!!(app&&app.status==='approved'&&['agent','وكيل','agent_partner'].includes(String(app.business_type||'').toLowerCase()));
-  const agentPanel=$('agentWalletPanel'),refreshButton=$('merchantRefreshStatus');
-  if(agentPanel)agentPanel.hidden=!isAgent;
-  if(refreshButton)refreshButton.hidden=isAgent;
-  if(!app){
-   $('merchantApplicationForm').hidden=false;
-   window.dispatchEvent(new CustomEvent('mahattati:merchant-application',{detail:null}));
-   return;
-  }
+  if(!app){$('merchantApplicationForm').hidden=false;return;}
   if(app.status==='approved'){
    $('merchantApprovedDashboard').hidden=false;
    $('merchantDashboardBusinessName').textContent=app.business_name||'النشاط التجاري';
    $('merchantBusinessTypeLabel').textContent=typeText[app.business_type]||app.business_type||'نشاط تجاري';
    $('merchantDashboardBusinessDetails').textContent=[app.owner_name,app.phone,app.wilaya,app.address].filter(Boolean).join(' · ');
-   showMessage('merchantPortalMessage',isAgent?'حسابك معتمد. يمكنك الآن تمويل محفظتك أو شحن أرصدة السائقين.':'حسابك مقبول. تم ربطه بواجهة التاجر.',true);
+   showMessage('merchantPortalMessage','حسابك مقبول. تم ربطه بواجهة التاجر.',true);
   }else{
    $('merchantApprovedDashboard').hidden=true;$('merchantApplicationForm').hidden=true;
    const note=app.reviewer_note?' ملاحظة الإدارة: '+app.reviewer_note:'';
    showMessage('merchantPortalMessage','حالة طلبك: '+(statusText[app.status]||app.status)+'. '+(app.status==='rejected'?'تواصل مع الدعم لتصحيح البيانات قبل إعادة التقديم.':'ستظهر واجهة التاجر بعد الموافقة.')+note);
   }
-  window.dispatchEvent(new CustomEvent('mahattati:merchant-application',{detail:app}));
  }
  async function openMerchant(){
   openPage('merchantPortal');hideMessage('merchantPortalMessage');$('merchantApplicationForm').hidden=true;$('merchantApprovedDashboard').hidden=true;

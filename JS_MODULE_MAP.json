@@ -11,7 +11,6 @@
     "js/services/cloud-session-tracking.js": "Supabase-backed auth/session, cloud request loading, passenger trip tracking and resume behavior.",
     "js/core/navigation.js": "Navigation and driver request-detail page compatibility helpers.",
     "js/services/supabase-client.js": "Driver settings UI and saved preferences (despite the filename, not the Supabase client singleton).",
-    "js/features/customer/ride-booking-fixes.js": "Ride-request compatibility fixes and request UI helpers.",
     "js/features/driver/driver-dashboard.js": "Driver dashboard bottom-navigation and section visibility controller.",
     "js/features/driver/ride-requests.js": "Driver application approval portal and staff-only visibility checks (not the live trip queue).",
     "js/features/agent/agent-registration.js": "Quick price suggestion buttons for the driver request UI (not agent registration).",

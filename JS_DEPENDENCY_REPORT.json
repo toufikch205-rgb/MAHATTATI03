@@ -1,25 +1,26 @@
 {
-  "status": "static dependency map; no business logic moved in this pass",
+  "status": "Static dependency map after Phase 8 wiring and menu/agent-flow audit; browser runtime not tested.",
   "script_load_order": {
     "index.html": [
       "js/core/events.js",
       "js/core/app.js",
       "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js",
-      "js/core/legacy-main-controller.js",
+      "js/features/maps/map-controller.js",
       "js/features/customer/ride-booking.js",
+      "js/core/legacy-main-controller.js",
+      "js/features/driver/ride-request-ui.js",
+      "js/features/driver/driver-dashboard.js",
       "js/features/customer/customer-home.js",
       "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2",
       "js/features/customer/booking-history.js",
       "js/services/cloud-session-tracking.js",
       "js/core/navigation.js",
       "js/services/supabase-client.js",
-      "js/features/customer/ride-booking-fixes.js",
-      "js/features/driver/driver-dashboard.js",
+      "js/features/driver/live-ride-dispatch.js",
+      "js/features/driver/merchant-portal.js",
       "js/features/driver/ride-requests.js",
       "js/features/agent/agent-registration.js",
-      "js/features/admin/driver-approval.js",
-      "js/features/agent/customer-recharge.js",
-      "js/features/maps/map-controller.js"
+      "js/features/admin/driver-approval.js"
     ],
     "admin.html": [
       "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2",
@@ -478,14 +479,10 @@
       "function_count": 1
     },
     "js/features/agent/customer-recharge.js": {
-      "bytes": 1319,
-      "function_declarations": [
-        "hideUnwantedMenuButtons"
-      ],
-      "top_levelish_variables": [
-        "selectors"
-      ],
-      "function_count": 1
+      "bytes": 269,
+      "function_declarations": [],
+      "top_levelish_variables": [],
+      "function_count": 0
     },
     "js/features/customer/booking-history.js": {
       "bytes": 732,
@@ -583,44 +580,6 @@
       ],
       "function_count": 7
     },
-    "js/features/customer/ride-booking-fixes.js": {
-      "bytes": 9722,
-      "function_declarations": [
-        "accept",
-        "completeTrip",
-        "getDriver",
-        "getUser",
-        "loadRequests",
-        "mount",
-        "startLocation",
-        "status",
-        "stopLocation",
-        "toggleOnline"
-      ],
-      "top_levelish_variables": [
-        "activeHost",
-        "box",
-        "btn",
-        "channel",
-        "client",
-        "dashboard",
-        "driver",
-        "el",
-        "esc",
-        "filtered",
-        "host",
-        "l",
-        "lat",
-        "list",
-        "nav",
-        "next",
-        "now",
-        "onlineBtn",
-        "services",
-        "user"
-      ],
-      "function_count": 10
-    },
     "js/features/customer/ride-booking.js": {
       "bytes": 1472,
       "function_declarations": [],
@@ -631,59 +590,14 @@
       "function_count": 0
     },
     "js/features/driver/driver-dashboard.js": {
-      "bytes": 17299,
+      "bytes": 2225,
       "function_declarations": [
-        "assertStaff",
-        "closeMenuSafe",
-        "closePage",
-        "getApplication",
-        "getUser",
-        "hideMessage",
-        "loadAgentFundingRequests",
-        "loadMerchantApplications",
-        "openMerchant",
-        "openPage",
-        "refreshAdminMessage",
-        "refreshStaffShortcut",
-        "renderApplication",
-        "review",
-        "showMessage",
-        "updateStatus"
+        "mddShowTab"
       ],
       "top_levelish_variables": [
-        "$",
-        "actions",
-        "agentApps",
-        "amount",
-        "app",
-        "approve",
-        "body",
-        "button",
-        "c",
-        "card",
-        "client",
-        "currentApplication",
-        "details",
-        "el",
-        "existing",
-        "fund",
-        "heading",
-        "list",
-        "meta",
-        "note",
-        "otherApps",
-        "payload",
-        "pending",
-        "raw",
-        "reject",
-        "result",
-        "statusText",
-        "title",
-        "typeText",
-        "user",
-        "wrap"
+        "$"
       ],
-      "function_count": 16
+      "function_count": 1
     },
     "js/features/driver/earnings.js": {
       "bytes": 128,
@@ -902,6 +816,66 @@
       "function_declarations": [],
       "top_levelish_variables": [],
       "function_count": 0
+    },
+    "js/features/driver/live-ride-dispatch.js": {
+      "bytes": 9907,
+      "function_declarations": [
+        "mount",
+        "status",
+        "getUser",
+        "getDriver",
+        "stopLocation",
+        "startLocation",
+        "toggleOnline",
+        "completeTrip",
+        "loadRequests",
+        "accept"
+      ],
+      "top_levelish_variables": [
+        "client",
+        "channel",
+        "watchId",
+        "refreshing"
+      ],
+      "function_count": 10
+    },
+    "js/features/driver/ride-request-ui.js": {
+      "bytes": 6879,
+      "function_declarations": [
+        "mddPopulateRequest",
+        "mddCloseRequest",
+        "mddOpenOrderDetails",
+        "mddCloseOrderDetails"
+      ],
+      "top_levelish_variables": [
+        "$",
+        "mddDetailModal"
+      ],
+      "function_count": 4
+    },
+    "js/features/driver/merchant-portal.js": {
+      "bytes": 17299,
+      "function_declarations": [
+        "showMessage",
+        "hideMessage",
+        "openPage",
+        "closePage",
+        "getUser",
+        "getApplication",
+        "renderApplication",
+        "openMerchant",
+        "assertStaff",
+        "loadMerchantApplications",
+        "loadAgentFundingRequests"
+      ],
+      "top_levelish_variables": [
+        "$",
+        "client",
+        "statusText",
+        "typeText",
+        "currentApplication"
+      ],
+      "function_count": 11
     }
   },
   "critical_flow_symbol_check": {
@@ -944,14 +918,14 @@
     },
     "agent_and_funding": {
       "symbols_found": [
-        "loadAgentFundingRequests",
-        "loadMerchantApplications",
-        "reviewMerchant"
+        "openAgentPage",
+        "showAgentApplicationStatus",
+        "agent_request_wallet_funding",
+        "agent_find_approved_driver",
+        "agent_recharge_driver",
+        "refresh agent wallet balance"
       ],
-      "symbols_not_found": [
-        "customerRecharge",
-        "agentFunding"
-      ]
+      "symbols_not_found": []
     },
     "admin_approvals": {
       "symbols_found": [
@@ -966,8 +940,9 @@
   "syntax_errors": [],
   "missing_local_references": [],
   "limitations": [
-    "Static checks cannot prove runtime behavior.",
-    "Inline JS files share global scope and DOM assumptions; moving functions without browser integration tests could break ride acceptance, maps, wallet and approval flows."
+    "Static syntax and path checks do not prove browser behavior.",
+    "Live database schema and RPC signatures were inspected read-only; no database schema or permission changes were made.",
+    "Browser end-to-end tests for map permissions, realtime acceptance, agent recharge, and admin approvals have not been run."
   ],
-  "next_safe_step": "Move one cohesive function group at a time only after confirming its globals, event listeners, initialization timing, and callers; then run browser regression checks."
+  "next_safe_step": "Run browser regression tests for customer login, map search, request creation, true driver acceptance, live driver queue, agent approval/funding/recharge, and admin review before treating the deployment as fully verified."
 }

@@ -1,0 +1,23 @@
+{
+  "phase": "8.1-driver-dashboard-navigation",
+  "moved_functions": [
+    "mddShowTab",
+    "driver dashboard tab click listeners"
+  ],
+  "source": "js/core/legacy-main-controller.js",
+  "destination": "js/features/driver/driver-dashboard.js",
+  "renamed_existing_module": {
+    "from": "js/features/driver/driver-dashboard.js",
+    "to": "js/features/driver/merchant-portal.js",
+    "reason": "existing file contained merchant portal/staff helper functions"
+  },
+  "script_order": [
+    "js/core/legacy-main-controller.js",
+    "js/features/driver/driver-dashboard.js"
+  ],
+  "ride_acceptance_logic_changed": false,
+  "database_logic_changed": false,
+  "browser_runtime": "Not run",
+  "supabase_runtime": "Not run",
+  "publish_ready": false
+}

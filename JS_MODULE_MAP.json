@@ -1,24 +1,28 @@
 {
   "purpose": "Accurate inventory of extracted runtime blocks and their current responsibilities.",
-  "policy": "Do not split mixed-scope blocks mechanically: they share globals and depend on original script execution order. The extracted files remain referenced at their original positions.",
+  "policy": "Keep shared-global scripts as classic deferred scripts in the documented order. Avoid duplicate agent flows; the existing agent registration, funding, and recharge UI lives in js/features/customer/customer-home.js.",
   "modules": {
     "js/core/events.js": "Small screen wake/glow interaction handler.",
     "js/core/app.js": "Welcome/startup transition.",
     "js/core/legacy-main-controller.js": "Legacy main controller: maps, geocoding, A/B route, fare, ride request/search/acceptance state, navigation, and driver registration. Mixed responsibilities remain intentionally together because of shared globals.",
-    "js/features/customer/ride-booking.js": "Safety-page setup; despite folder placement, not the main ride booking implementation.",
-    "js/features/customer/customer-home.js": "Customer home and agent page/status/funding UI handlers.",
+    "js/features/customer/ride-booking.js": "Safety-page setup plus passenger acceptance polling and accepted-trip tracking helpers.",
+    "js/features/customer/customer-home.js": "Customer account settings and the existing agent registration, approval-status, wallet funding request, driver lookup, and recharge workflows.",
     "js/features/customer/booking-history.js": "Compatibility bridge for booking-history calls.",
     "js/services/cloud-session-tracking.js": "Supabase-backed auth/session, cloud request loading, passenger trip tracking and resume behavior.",
-    "js/core/navigation.js": "Navigation and menu compatibility helpers.",
-    "js/services/supabase-client.js": "Driver settings-related Supabase initialization/behavior block (not a pure client singleton).",
+    "js/core/navigation.js": "Navigation and driver request-detail page compatibility helpers.",
+    "js/services/supabase-client.js": "Driver settings UI and saved preferences (despite the filename, not the Supabase client singleton).",
     "js/features/customer/ride-booking-fixes.js": "Ride-request compatibility fixes and request UI helpers.",
-    "js/features/driver/driver-dashboard.js": "Driver dashboard and merchant/staff helper block.",
-    "js/features/driver/ride-requests.js": "Driver ride request handling.",
-    "js/features/agent/agent-registration.js": "Agent/driver registration flow compatibility handlers.",
-    "js/features/admin/driver-approval.js": "Driver approval/request-map block (shared original scope; not admin page-only).",
-    "js/features/agent/customer-recharge.js": "Published-version menu shortcut visibility and related compatibility code.",
-    "js/features/maps/map-controller.js": "Driver-code display/utility block; not the primary map controller.",
-    "js/features/admin/agent-approval.js": "Agent approval logic on admin.html."
+    "js/features/driver/driver-dashboard.js": "Driver dashboard bottom-navigation and section visibility controller.",
+    "js/features/driver/ride-requests.js": "Driver application approval portal and staff-only visibility checks (not the live trip queue).",
+    "js/features/agent/agent-registration.js": "Quick price suggestion buttons for the driver request UI (not agent registration).",
+    "js/features/admin/driver-approval.js": "Driver request map UI and map lifecycle helpers (not the standalone admin approval page).",
+    "js/features/agent/customer-recharge.js": "Deprecated, intentionally not loaded. The old file force-hid menu shortcuts; the actual agent recharge flow remains in customer-home.js.",
+    "js/features/maps/map-controller.js": "Primary map/location selection and route-control helpers.",
+    "js/features/admin/agent-approval.js": "Standalone admin.html dashboard for driver/agent approval and funding requests.",
+    "js/features/driver/ride-request-ui.js": "Driver request-detail modal/page helpers; relies on shared legacy globals and demo cards are removed when live dispatch initializes.",
+    "js/features/driver/live-ride-dispatch.js": "Live driver request queue, approval/online checks, location sync, real RPC acceptance, realtime subscription, polling fallback, and trip completion.",
+    "js/features/driver/merchant-portal.js": "Merchant application submission and staff-only merchant/agent application review portal.",
+    "js/features/agent/agent-funding.js": "Unused planned extraction target; funding UI remains in customer-home.js."
   },
-  "remaining_decomposition": "Extract functions into the target service/feature files only after dependency mapping and browser regression tests. Placeholder target files do not contain live business logic."
+  "remaining_decomposition": "The 85 ordered CSS blocks remain the runtime source of truth. Semantic CSS files and several target JS files are review scaffolds, not live modules. index.html uses ordered defer scripts; static syntax and path checks pass, but browser interaction, realtime, and database end-to-end tests remain required."
 }

@@ -1,5 +1,5 @@
 {
-  "status": "Static dependency map after Phase 8 script wiring and menu/agent-flow audit; browser runtime not tested.",
+  "status": "Static checks passed on 5f2bf478e937af8c01a04cb7cee95088ac34b951; a subsequent targeted GPS watcher fix passed JS syntax and is awaiting workflow validation.",
   "script_load_order": {
     "index.html": [
       "js/core/events.js",
@@ -944,7 +944,7 @@
     "Live database schema and RPC signatures were inspected read-only; no database schema or permission changes were made.",
     "Browser end-to-end tests for map permissions, realtime acceptance, agent recharge, and admin approvals have not been run."
   ],
-  "next_safe_step": "Run browser regression tests for customer login, map search, request creation, true driver acceptance, live driver queue, agent approval/funding/recharge, and admin review before treating the deployment as fully verified.",
+  "next_safe_step": "Confirm GitHub Actions static validation and Pages deployment after the GPS watcher fix, then perform browser end-to-end regression tests.",
   "database_audit": {
     "inspected_read_only": true,
     "schema_and_rpc_checks": {
@@ -965,5 +965,11 @@
       "2 unused indexes and 1 duplicate index."
     ],
     "database_changed": false
+  },
+  "recent_targeted_fix": {
+    "file": "js/features/driver/live-ride-dispatch.js",
+    "change": "startLocation now returns when a geolocation watch is already active, preventing every five-second request refresh from restarting GPS tracking.",
+    "commit": "6383fa6320a5a5a072f799fac4a04cd27bd6ecc8",
+    "syntax_check": "passed"
   }
 }

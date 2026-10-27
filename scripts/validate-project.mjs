@@ -34,7 +34,7 @@ function existsLocal(fromFile, reference) {
 
 walk(root);
 
-const jsFiles = files.filter(file => file.endsWith('.js') || file.endsWith('.mjs'));
+const jsFiles = files.filter(file => file.endsWith('.js'));
 for (const file of jsFiles) {
   try {
     // Parse only; do not execute application code or call external services.

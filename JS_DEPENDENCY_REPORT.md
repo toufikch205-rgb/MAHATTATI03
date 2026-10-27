@@ -3,29 +3,35 @@
 Generated from the current extracted files. This is a static map, not proof of runtime correctness.
 
 ## Script load order
+
+All scripts in `index.html` are classic scripts loaded with `defer`; their source order is preserved so the DOM exists before UI modules initialize.
+
 ### index.html
 1. `js/core/events.js`
 2. `js/core/app.js`
 3. `https://unpkg.com/leaflet@1.9.4/dist/leaflet.js`
-4. `js/core/legacy-main-controller.js`
+4. `js/features/maps/map-controller.js`
 5. `js/features/customer/ride-booking.js`
-6. `js/features/customer/customer-home.js`
-7. `https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2`
-8. `js/features/customer/booking-history.js`
-9. `js/services/cloud-session-tracking.js`
-10. `js/core/navigation.js`
-11. `js/services/supabase-client.js`
-12. `js/features/customer/ride-booking-fixes.js`
-13. `js/features/driver/driver-dashboard.js`
-14. `js/features/driver/ride-requests.js`
-15. `js/features/agent/agent-registration.js`
-16. `js/features/admin/driver-approval.js`
-17. `js/features/agent/customer-recharge.js`
-18. `js/features/maps/map-controller.js`
+6. `js/core/legacy-main-controller.js`
+7. `js/features/driver/ride-request-ui.js`
+8. `js/features/driver/driver-dashboard.js`
+9. `js/features/customer/customer-home.js`
+10. `https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2`
+11. `js/features/customer/booking-history.js`
+12. `js/services/cloud-session-tracking.js`
+13. `js/core/navigation.js`
+14. `js/services/supabase-client.js`
+15. `js/features/driver/live-ride-dispatch.js`
+16. `js/features/driver/merchant-portal.js`
+17. `js/features/driver/ride-requests.js`
+18. `js/features/agent/agent-registration.js`
+19. `js/features/admin/driver-approval.js`
 
 ### admin.html
 1. `https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2`
 2. `js/features/admin/agent-approval.js`
+
+The old `ride-booking-fixes.js` reference was removed; Phase 8's `live-ride-dispatch.js` is the active driver-queue module. The legacy `customer-recharge.js` file is intentionally not loaded because it forcibly hid role-controlled menu shortcuts. Agent registration, funding requests, and driver recharge are handled by `customer-home.js`.
 
 ## Critical flow symbol check
 ### locations_and_routes

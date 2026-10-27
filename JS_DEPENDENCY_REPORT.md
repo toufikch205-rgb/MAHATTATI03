@@ -55,12 +55,12 @@ The old `ride-booking-fixes.js` reference was removed; Phase 8's `live-ride-disp
 - Not found by exact symbol name: none
 
 ## Validation
-- All 17 local scripts loaded by `index.html`, plus the standalone admin script, passed JavaScript syntax parsing.
-- `index.html`: 19 script tags, all deferred; no duplicate IDs and no missing local references.
+- GitHub Actions static validator passed on commit `be7dcbee75a1b09183828171a077392dd9d7c47d`: 34 JavaScript files parsed, 2 HTML files checked, and 104 CSS files scanned for import references.
+- `index.html`: 19 script tags; no duplicate IDs and no missing local references.
 - `admin.html`: no duplicate IDs or missing local references. Its Supabase CDN script remains synchronous intentionally so the admin script at the end of the body can use the global.
 - CSS: all 85 ordered imports exist; the 104 CSS files passed a basic brace-balance check.
-- The repository file set matches the 162-file Phase 8 archive exactly.
-- GitHub Pages build and deploy jobs succeeded for the audited commit.
+- The project contains all 162 files from the Phase 8 archive, plus the new static validation script and workflow.
+- GitHub Pages deployment for the audited commit is tracked in the Actions runs.
 
 ## Outstanding risks and limitations
 - Browser end-to-end tests have not been run, so map permissions, realtime delivery, ride acceptance, agent recharge receipts, and admin actions still require live interaction tests.

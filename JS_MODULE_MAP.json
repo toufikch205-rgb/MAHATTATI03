@@ -21,7 +21,21 @@
     "js/features/driver/ride-request-ui.js": "Driver request-detail modal/page helpers; relies on shared legacy globals and demo cards are removed when live dispatch initializes.",
     "js/features/driver/live-ride-dispatch.js": "Live driver request queue, approval/online checks, location sync, real RPC acceptance, realtime subscription, polling fallback, and trip completion.",
     "js/features/driver/merchant-portal.js": "Merchant application submission and staff-only merchant/agent application review portal.",
-    "js/features/agent/agent-funding.js": "Unused planned extraction target; funding UI remains in customer-home.js."
+    "js/features/agent/agent-funding.js": "Unused planned extraction target; funding UI remains in customer-home.js.",
+    "js/core/state.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/features/admin/funding-approval.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/features/driver/earnings.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/features/driver/ratings.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/features/maps/location-search.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/features/maps/route-manager.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/services/auth-service.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/services/notification-service.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/services/profile-service.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/services/ride-service.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/services/wallet-service.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/utils/error-handler.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/utils/formatting.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation.",
+    "js/utils/validation.js": "Scaffold placeholder only; not loaded at runtime and not a live implementation."
   },
   "remaining_decomposition": "The 85 ordered CSS blocks remain the runtime source of truth. Semantic CSS files and several target JS files are review scaffolds, not live modules. index.html uses ordered defer scripts; static syntax and path checks pass, but browser interaction, realtime, and database end-to-end tests remain required."
 }

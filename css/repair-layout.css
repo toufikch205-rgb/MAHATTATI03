@@ -249,3 +249,35 @@ input,select,textarea,button{min-width:0}
  #mahattatiAuthOverlay{padding:calc(14px + env(safe-area-inset-top)) 14px calc(14px + env(safe-area-inset-bottom))!important}
  #mahattatiAuthOverlay .mauth-card{padding:22px 18px!important;border-radius:22px!important}
 }
+
+
+/* Icon sizing recovery: constrain decorative/icon images without shrinking
+   the welcome artwork, map tiles, vehicle illustrations or content photos. */
+:where(button,a,[role="button"],nav,[role="navigation"],.nav-item,.menu-item,.tab-item,.service-card,.action-card,.icon,.icon-wrap,.app-icon,.feature-icon,.bottom-nav) > img,
+:where(button,a,[role="button"],nav,[role="navigation"],.nav-item,.menu-item,.tab-item,.service-card,.action-card,.icon,.icon-wrap,.app-icon,.feature-icon,.bottom-nav) img[alt=""],
+:where(button,a,[role="button"],nav,[role="navigation"],.nav-item,.menu-item,.tab-item,.service-card,.action-card,.icon,.icon-wrap,.app-icon,.feature-icon,.bottom-nav) img[class*="icon"],
+:where(button,a,[role="button"],nav,[role="navigation"],.nav-item,.menu-item,.tab-item,.service-card,.action-card,.icon,.icon-wrap,.app-icon,.feature-icon,.bottom-nav) img[class*="Icon"]{
+  display:inline-block!important;
+  width:clamp(18px,5vw,30px)!important;
+  height:clamp(18px,5vw,30px)!important;
+  max-width:30px!important;
+  max-height:30px!important;
+  object-fit:contain!important;
+  flex:0 0 auto!important;
+  vertical-align:middle!important;
+}
+:where(nav,[role="navigation"],.bottom-nav,.nav-item,.menu-item,.tab-item) svg{
+  width:24px!important;height:24px!important;max-width:24px!important;max-height:24px!important;flex:0 0 24px!important;
+}
+:where(nav,[role="navigation"],.bottom-nav,.nav-item,.menu-item,.tab-item){
+  min-width:0;
+}
+:where(nav,[role="navigation"],.bottom-nav,.nav-item,.menu-item,.tab-item) :where(span,strong,small){
+  min-width:0;overflow-wrap:anywhere;
+}
+@media(max-width:600px){
+  :where(nav,[role="navigation"],.bottom-nav) img,
+  :where(nav,[role="navigation"],.bottom-nav) svg{
+    width:22px!important;height:22px!important;max-width:22px!important;max-height:22px!important;
+  }
+}

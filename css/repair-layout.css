@@ -300,3 +300,69 @@ input,select,textarea,button{min-width:0}
 .destination-search .search-icon{color:#00ed70!important;font-size:34px!important;flex:0 0 auto!important}
 .main-bottom-nav{position:fixed!important;left:0!important;right:0!important;bottom:0!important;z-index:1500!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;background:rgba(255,255,255,.98)!important;border-top:1px solid #e9ece9!important}
 @media(max-width:600px){.bottom-sheet{padding-left:20px!important;padding-right:20px!important}.trip-types>.trip-type{min-height:86px!important}.trip-types>.trip-type .trip-emoji.trip-car-photo{max-width:120px!important;height:42px!important;max-height:42px!important;flex-basis:42px!important}.trip-types>.trip-type #carTitle,.trip-types>.trip-type #intercityTitle{font-size:13px!important}}
+
+
+/* Reference screenshot alignment: compact trip cards and visible destination prompt. */
+/* Keep the trip chooser as two compact horizontal cards. Use the real DOM
+   hierarchy and high-specificity selectors because the legacy stylesheet has
+   many later rules targeting generic images and buttons. */
+.app > .bottom-sheet{
+  box-sizing:border-box!important;
+  position:absolute!important;
+  z-index:650!important;
+  left:0!important;right:0!important;bottom:0!important;
+  height:44.5dvh!important;min-height:340px!important;max-height:490px!important;
+  overflow-y:auto!important;overflow-x:hidden!important;
+  padding:8px 20px calc(88px + env(safe-area-inset-bottom))!important;
+  border-radius:30px 30px 0 0!important;
+  background:rgba(255,255,255,.98)!important;
+}
+.app > .bottom-sheet > .trip-types{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:stretch!important;gap:12px!important;width:100%!important;
+  margin:6px 0 16px!important;
+}
+.app > .bottom-sheet > .trip-types > button.trip-type{
+  box-sizing:border-box!important;display:flex!important;position:relative!important;
+  flex-direction:column!important;align-items:center!important;justify-content:center!important;
+  gap:5px!important;width:100%!important;min-width:0!important;min-height:92px!important;
+  max-height:112px!important;padding:8px!important;overflow:hidden!important;
+  border:1.5px solid #e3e8e4!important;border-radius:22px!important;
+  background:#fff!important;color:#242b26!important;
+}
+.app > .bottom-sheet > .trip-types > button.trip-type.active{
+  border:2px solid #00ed70!important;box-shadow:0 0 0 2px #00ed7018!important;
+}
+.app > .bottom-sheet > .trip-types > button.trip-type > .trip-emoji.trip-car-photo{
+  box-sizing:border-box!important;display:flex!important;align-items:center!important;
+  justify-content:center!important;flex:0 0 42px!important;width:100%!important;
+  height:42px!important;min-height:42px!important;max-height:42px!important;
+  max-width:132px!important;overflow:hidden!important;margin:0!important;padding:0!important;
+}
+.app > .bottom-sheet > .trip-types > button.trip-type > .trip-emoji.trip-car-photo img{
+  display:block!important;width:100%!important;height:100%!important;
+  min-width:0!important;min-height:0!important;max-width:132px!important;
+  max-height:42px!important;object-fit:contain!important;flex:none!important;
+}
+.app > .bottom-sheet > .trip-types > button.trip-type > #carTitle,
+.app > .bottom-sheet > .trip-types > button.trip-type > #intercityTitle{
+  display:block!important;width:100%!important;min-width:0!important;
+  margin:0!important;font-size:14px!important;font-weight:750!important;
+  line-height:1.35!important;text-align:center!important;white-space:normal!important;
+}
+.app > .bottom-sheet > button.destination-search{
+  box-sizing:border-box!important;display:flex!important;width:100%!important;
+  min-height:88px!important;height:auto!important;max-height:none!important;
+  align-items:center!important;justify-content:center!important;gap:12px!important;
+  margin:0 0 14px!important;padding:16px!important;border:1.5px solid #e2e7e3!important;
+  border-radius:25px!important;background:#fff!important;box-shadow:0 3px 12px #1b2a1d08!important;
+  color:#626a64!important;font-size:clamp(20px,5.2vw,29px)!important;
+  line-height:1.4!important;font-weight:800!important;text-align:center!important;
+}
+.app > .bottom-sheet > button.destination-search .search-icon{color:#00ed70!important;font-size:32px!important}
+@media(max-width:600px){
+ .app > .bottom-sheet{padding-left:20px!important;padding-right:20px!important}
+ .app > .bottom-sheet > .trip-types > button.trip-type{min-height:88px!important;max-height:104px!important}
+ .app > .bottom-sheet > .trip-types > button.trip-type > .trip-emoji.trip-car-photo{flex-basis:38px!important;height:38px!important;min-height:38px!important;max-height:38px!important;max-width:118px!important}
+ .app > .bottom-sheet > .trip-types > button.trip-type > .trip-emoji.trip-car-photo img{max-width:118px!important;max-height:38px!important}
+}
